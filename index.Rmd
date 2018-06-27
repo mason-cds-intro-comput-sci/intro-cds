@@ -1,0 +1,27 @@
+--- 
+title: Introduction to Computational and Data Sciences
+author:
+  - James K. Glasbrenner
+  - Ajay Kulkarni
+date: "`r Sys.Date()`"
+description: Supplemental textbook for the CDS 101 course at George Mason University.
+documentclass: book
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+bibliography:
+  - bib/references.bib
+link-citations: yes
+github-repo: mason-cds-intro-comput-sci/introduction-computational-and-data-sciences
+---
+
+Frontmatter
+===========
+
+License
+-------
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Introduction to Computational and Data Sciences</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

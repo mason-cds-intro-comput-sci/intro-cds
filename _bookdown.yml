@@ -1,0 +1,16 @@
+---
+new_session: yes
+repo: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences/
+output_dir: _book
+clean:
+  - packages.bib
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: yes
+rmd_files:
+  - index.Rmd
+...

@@ -1,0 +1,28 @@
+---
+bookdown::gitbook:
+  css: css/style.css
+  split_by: section
+  dev: svg
+  config:
+    toc:
+      collapse: none
+      before: |
+        <li><a href="./">Introduction to Computational and Data Sciences</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences/edit/master/%s
+    sharing:
+      github: yes
+      facebook: no
+  pandoc_args:
+    - --csl
+    - bib/apslike.csl
+bookdown::pdf_book:
+  includes:
+    in_header: latex/preamble.tex
+  keep_tex: yes
+  latex_engine: lualatex
+  citation_package: natbib
+  dev: pdf
+  highlight: tango
+...
