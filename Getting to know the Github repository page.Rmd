@@ -1,0 +1,95 @@
+---
+title: "Getting to know the Github repository page"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = FALSE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "100%", dpi = 120,
+  fig.align = "center", cache = TRUE, dev = "svg"
+)
+
+icon_pdf <- '<i class="fas fa-file-pdf" data-fa-transform="grow-8"></i>&nbsp;'
+icon_html5 <- '<i class="fab fa-html5" data-fa-transform="grow-8"></i>&nbsp;'
+icon_github <- '<i class="fab fa-github-alt" data-fa-transform="grow-8"></i>&nbsp;'
+```
+
+In this tutorial, we will learn how to create, import and download repository from GitHub.
+
+## Creating a repository
+
+### Step - 1
+
+We saw in the last tutorial that after creating an account on GitHub, there are three ways to create a repository. The most common method of creating a repository is to click on "+" sign and then click on "New repository" option. 
+
+```{r step_1, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_1.JPG")
+```
+
+### Step - 2
+
+After clicking on "New repository" you will go to a new screen where you need to give a repository name. You will also find two options to either keep repository as public or private. In the end, there will be another option to initialize the repository with Readme.md file.  
+
+```{r step_2, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_2.JPG")
+```
+
+### Step - 3
+
+GitHub doesn't allow to create a repository without a name. Thus, it is mandatory to give a name to the repository. After providing all the details and selecting appropriate options click on "Create repository" button. 
+
+```{r step_3, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_3.JPG")
+```
+
+### Step - 4
+
+In this way, the repository will be successfully created. If you have ticked on initializing the repository with Readme.md file, then you will find the file in the repository. You can easily edit Readme.md file by clicking on the file.
+
+```{r step_4, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_4.JPG")
+```
+
+### Step - 5
+
+After clicking Readme.md file if you want to add any content in that file then click on the pencil symbol. Click on "Commit" button after making changes in the file.
+
+```{r step_5, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_5.JPG")
+```
+
+## Importing a repository
+
+### Step - 1
+
+To import repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button. 
+
+```{r step_6, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_6.JPG")
+```
+
+### Step - 2
+
+The import process will start, and you will get a notification after completion of the import process. 
+
+```{r step_7, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_7.JPG")
+```
+
+### Step - 3
+
+In the end, you will be able to see the imported repository in your GitHub account.
+
+```{r step_8, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_8.JPG")
+```
+
+## Downloading a repository 
+
+The simplest way to download any repository on GitHub is to click on that repository and then click on "Clone or download" button. After that, a menu will appear and then click on "Download ZIP" option. In this way, you will be able to download any repository on your local drive. 
+
+```{r step_9, eval = TRUE, echo = FALSE}
+knitr::include_graphics("Img/Step_9.JPG")
+```
