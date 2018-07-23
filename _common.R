@@ -8,14 +8,14 @@ knitr::opts_chunk$set(
   fig.asp = 0.618,
   dpi = 120,
   message = FALSE,
-  warning = FALSE,
+  warning = FALSE
 )
 
 options(
   htmltools.dir.version = FALSE,
-  width = 55,
   digits = 4,
+  width = 55,
   warnPartialMatchAttr = FALSE,
   warnPartialMatchDollar = FALSE,
-  formatR.indent = 2,
+  formatR.indent = 2
 )
