@@ -1,0 +1,61 @@
+---
+title: "Interacting with your files on RStudio Server"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = FALSE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "100%", dpi = 120,
+  fig.align = "center", cache = TRUE, dev = "svg"
+)
+```
+
+In RStudio Server it is easy to interact with your files. We can easily upload, delete and rename the files from the menu which is present in the lower right window.
+
+```{r step_1}
+knitr::include_graphics("img/interacting_step_1.jpg")
+```
+
+### Setting path for the working directory
+
+Before starting interacting with files, it is essential to set the path of the working directory. This can be done by selecting More option and then click on Set As Working Directory. So whenever you upload or save any file that file will get stored in your working directory. Also, if you are in the different folder and you want to go in the working directory folder, then you can click on Go To Working Directory option.
+
+```{r step_5}
+knitr::include_graphics("img/interacting_step_5.jpg")
+```
+
+### Creating a folder
+
+If you want to create a new folder, then click on New Folder option. It will ask you for the name which you would like to give to that folder and then press on Ok.
+
+```{r step_2}
+knitr::include_graphics("img/interacting_step_2.jpg")
+```
+
+### Uploading a file
+
+If you want to upload any file, then click on Upload option and then upload a file from your local drive to your account on RStudio Server. Please note that you can only upload one file at a time. If you want to upload multiple files, then please create a .zip file and then upload.
+
+```{r step_3}
+knitr::include_graphics("img/interacting_step_3.jpg")
+```
+
+### Deleting or renaming a file
+
+You can also delete or rename the file easily by clicking the options which are present in the lower right window. Before removing or renaming the file, it is mandatory to click the checkbox of the file which you would like to process. 
+
+```{r step_4}
+knitr::include_graphics("img/interacting_step_4.jpg")
+```
+
+### Viewing a file
+
+First, you need to go to a folder in which the file is present. You can quickly switch from one folder to another folder by clicking on the path present in the lower right window (Home icon). To view a file, click on a file which you would like to see or edit and the file will open in the upper right window.
+
+```{r step_6}
+knitr::include_graphics("img/interacting_step_6.jpg")
+```
+
+

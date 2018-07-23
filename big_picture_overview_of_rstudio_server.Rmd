@@ -1,0 +1,32 @@
+---
+title: "Big picture overview of RStudio Server"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = FALSE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "100%", dpi = 120,
+  fig.align = "center", cache = TRUE, dev = "svg"
+)
+```
+## RStudio
+
+RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux) or in a browser connected to RStudio Server or RStudio Server Pro (Debian/Ubuntu, RedHat/CentOS, and SUSE Linux). RStudio team also contributes code to many R packages like Shiny, tidyverse, rmarkdown, etc.
+
+## RStudio Server
+
+RStudio Server is a product of RStudio which can be accessed via web browser. You can access RStudio Server by authenticating on <https://rstudio.cos.gmu.edu>. Some of the essential features of RStudio Server are given below,
+
+* Integrates the tools you use with R into a single environment.
+* Includes powerful coding tools designed to enhance your productivity.
+* Enables rapid navigation to files and functions.
+* Make it easy to start new or find existing projects.
+* Provides integrated support for Git and Subversion.
+* Supports authoring HTML, PDF, Word Documents, and slideshows.
+* Supports interactive graphics with Shiny and ggvis.
+
+## Reference
+
+* <https://www.rstudio.com>

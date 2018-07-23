@@ -1,0 +1,69 @@
+---
+title: "Using RStudio Server to clone a Github repo as a new project"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = FALSE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "100%", dpi = 120,
+  fig.align = "center", cache = TRUE, dev = "svg"
+)
+```
+
+### Step - 1
+
+Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. 
+
+```{r step_1}
+knitr::include_graphics("img/clone_step_1.jpg")
+```
+
+### Step - 2
+
+In this tutorial, we will be creating a new project in RStudio Server to clone a GitHub repository. To create a new project click on the right side (cube containing R icon) button on RStudo Server screen. After clicking the button, you will see a menu and then click on "New Project...".
+
+```{r step_2}
+knitr::include_graphics("img/clone_step_2.jpg")
+```
+
+### Step - 3
+
+A new window will open and select "Version Control" option from the window.
+
+```{r step_3}
+knitr::include_graphics("img/clone_step_3.jpg")
+```
+
+### Step - 4
+
+Now, select "Git" option from the menu.
+
+```{r step_4}
+knitr::include_graphics("img/clone_step_4.jpg")
+```
+
+### Step - 5
+
+In this step, you need to go to your GitHub account (<https://github.com>) and copy the URL of the repository which you need to clone. In this tutorial "test" repository will be used. (Please remember to copy the URL of the repository which you need to clone) 
+
+```{r step_5}
+knitr::include_graphics("img/clone_step_5.jpg")
+```
+
+### Step - 6
+
+In the last step, you have copied the URL from GitHub. Now, paste the URL in "Repository URL" textbox. RStudio Server will automatically use the same repository name from the URL and then click on "Create Project" button. 
+
+```{r step_6}
+knitr::include_graphics("img/clone_step_6.jpg")
+```
+
+### Step - 7
+
+You have successfully cloned a repository from GitHub in RStudio Server. After creating a project, you will be in the newly cloned repository. You can easily access the files from the repository in the lower right window. Also, if you want to verify the repository, then you can check it on right side (cube containing R icon) button in the RStudio Server. 
+
+```{r step_7}
+knitr::include_graphics("img/clone_step_7.jpg")
+```
