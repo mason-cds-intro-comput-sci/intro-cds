@@ -1,16 +1,18 @@
-Package: introcds
+Package: introcdsbook
 Type: Book
 Title: Introduction to Computational and Data Sciences
 Version: 0.0.1
-Authors@R: c(
-  person("James", "Glasbrenner", role = c("aut", "cre"), email = "jglasbr2@gmu.edu", comment = c(ORCID = "0000-0003-2198-2309")),
-  person("Ajay", "Kulkarni", role = c("aut"), email = "akulkar8@gmu.edu")
-)
+Authors@R: c(person("James", "Glasbrenner", role = c("aut", "cre"),
+                    email = "jglasbr2@gmu.edu",
+                    comment = c(ORCID = "0000-0003-2198-2309")),
+             person("Ajay", "Kulkarni", role = c("aut"),
+                    email = "akulkar8@gmu.edu"))
 URL: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences
+Depends:
+  R (>= 3.5)
 Imports:
-  bookdown,
-  knitr,
-  tidyverse
+  tidyverse,
+  bookdown
 Remotes:
-  rstudio/bookdown,
-  rstudio/rmarkdown
+  hadley/tidyverse,
+  rstudio/bookdown
