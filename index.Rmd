@@ -10,6 +10,8 @@ output: bookdown::gitbook
 site: bookdown::bookdown_site
 bibliography:
   - bib/references.bib
+  - bib/packages.bib
+csl: bib/apslike.csl
 link-citations: yes
 github-repo: mason-cds-intro-comput-sci/introduction-computational-and-data-sciences
 ---
@@ -21,3 +23,19 @@ github-repo: mason-cds-intro-comput-sci/introduction-computational-and-data-scie
 </a>
 
 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Introduction to Computational and Data Sciences</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+## R session information {#r-session-information .unnumbered}
+
+The R session information when compiling this book is shown below:
+
+```{r r-session-info, echo = FALSE}
+xfun::session_info(
+  packages = dplyr::combine(
+    "bookdown",
+    "knitr",
+    "rmarkdown",
+    "tinytex"
+  ),
+  dependencies = FALSE
+)
+```

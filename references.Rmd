@@ -1,0 +1,35 @@
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+
+```{r include = FALSE}
+# Borrowed from source for R Markdown: The Definitive Guide
+# URL: https://github.com/rstudio/rmarkdown-book/blob/4538b5b1fb7e29997666ddae2a1083cb3a6cad3f/20-references.Rmd
+bib = knitr::write_bib(
+  x = dplyr::combine(
+    .packages(),
+    "bookdown",
+    "knitr",
+    "rmarkdown",
+    "tinytex"
+  ),
+  file = NULL
+)
+bib = unlist(bib)
+bib = gsub("'(Htmlwidgets|iframes|TeX Live|LaTeX)'", "\\1", bib)
+xfun::write_utf8(bib, "bib/packages.bib")
+
+# embed fonts
+if (knitr::is_latex_output()) {
+  pdfs = list.files(knitr::opts_chunk$get("fig.path"), "[.]pdf$", full.names = TRUE)
+  invisible(lapply(pdfs, embedFonts))
+}
+```
+
+---
+nocite: |
+  @R-bookdown,
+  @R-knitr,
+  @R-rmarkdown,
+  @R-tinytex
+...

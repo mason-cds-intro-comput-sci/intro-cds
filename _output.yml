@@ -1,10 +1,14 @@
 ---
 bookdown::gitbook:
-  css: css/style.css
+  css:
+    - css/style.css
+  split_by: section
+  includes:
+    in_header: html/preamble.html
   dev: svg
   config:
     toc:
-      collapse: none
+      collapse: subsection
       before: |
         <li><a href="./">Introduction to Computational and Data Sciences</a></li>
       after: |
@@ -12,10 +16,8 @@ bookdown::gitbook:
     edit:
       link: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences/edit/master/%s
       text: "Edit"
+    search: yes
     sharing: no
-  pandoc_args:
-    - --csl
-    - bib/apslike.csl
 bookdown::pdf_book:
   includes:
     in_header: latex/preamble.tex

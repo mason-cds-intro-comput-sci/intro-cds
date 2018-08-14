@@ -17,4 +17,5 @@ rmd_files:
   - toolbox.Rmd
   - github.Rmd
   - rstudio.Rmd
+  - references.Rmd
 ...

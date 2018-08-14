@@ -16,6 +16,5 @@ options(
   digits = 4,
   width = 55,
   warnPartialMatchAttr = FALSE,
-  warnPartialMatchDollar = FALSE,
-  formatR.indent = 2
+  warnPartialMatchDollar = FALSE
 )

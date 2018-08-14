@@ -8,6 +8,7 @@ _publish.R
 _book
 _bookdown_files
 _main.rds
+bib/packages.bib
 
 # ---------------------------
 # BEGIN ignore basic files
