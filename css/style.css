@@ -42,6 +42,9 @@ h1.title {
 .book .book-body .page-wrapper .page-inner section.normal strong {
   font-weight: 500;
 }
+.book .book-body .page-wrapper .page-inner section.normal div.click-img ~ p {
+  margin-top: 0.85em;
+}
 .book.font-family-0 {
   font-family: "IBM Plex Serif", Georgia, serif;
 }

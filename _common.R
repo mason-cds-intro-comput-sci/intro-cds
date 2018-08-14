@@ -1,5 +1,15 @@
 set.seed(52908)
 
+knitr::knit_hooks$set(
+  click.img = function(before, options, envir) {
+    if (before) {
+      "<div class='click-img'>"
+    } else {
+      "</div>"
+    }
+  }
+)
+
 knitr::opts_chunk$set(
   cache = FALSE,
   out.width = "80%",

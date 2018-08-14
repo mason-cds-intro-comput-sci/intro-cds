@@ -5,6 +5,7 @@ bookdown::gitbook:
   split_by: section
   includes:
     in_header: html/preamble.html
+    after_body: html/postamble.html
   dev: svg
   config:
     toc:
