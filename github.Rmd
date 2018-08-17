@@ -74,58 +74,88 @@ Once you are logged in, you will be asked to approve the necessary permissions s
 
 ## Navigating the GitHub site
 
-In the first tutorial, we created an account on GitHub.
-Now in this tutorial, we will get information about different options present on the dashboard.
-When you will login into GitHub you will be able to see the following screen.
+For your convenience, the course website will contain links that take you directly to course content stored on GitHub, and you should be able to access most of your course content using just those links.
+However, you may find that you prefer to access your existing content by navigating the GitHub site itself, so let's take a short tour of the GitHub interface.
+
+### Main dashboard
+
+When you will login into GitHub for the first time you will see the main dashboard for the website.
 
 ```{r navigating-step_1, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_1.jpg")
 ```
 
-On the dashboard, there is a search box that can be used to search any repositories which are available on GitHub.
-Also, there are different options like Pull requests, Issues, Marketplace and Explore.
+At the top of the dashboard there is a searchbar that can be used to look for content on the GitHub site, such as repositories and user accounts.
+Next to the searchbar are four other links: Pull requests, Issues, Marketplace and Explore.
+Of these links, the only one you might use for the course is "Pull requests", but we'll save the discussion about Pull requests for another time. 
+Next is the bell icon, and clicking it displays your account notifications when someone tags your username, for example.
+To the right of that is the plus icon, which is used for creating content such as a repository.
 
-When you click on the Pull requests option, you will get information about pull requests which you have created as well as you have assigned.
-It will also give you information about open and closed pull requests.
-Issues option helps to provide keep track of bugs, enhancements, or other requests.
-Marketplace option contains tools and services that complement and improve your workflow.
-There are different tools in the Marketplace for maintaining code quality, code review, deployment, etc.
-The Explore option provides details about trending repositories, popular topics, popular marketplace apps, etc.
-
-```{r navigating-step_2, click.img = TRUE}
-knitr::include_graphics("img/navigating_step_2.jpg")
-```
-
-GitHub Marketplace option
-```{r navigating-step_2_1, click.img = TRUE}
-knitr::include_graphics("img/navigating_step_2_1.jpg")
-```
-
-GitHub Explore option
-```{r navigating-step_2_2, click.img = TRUE}
-knitr::include_graphics("img/navigating_step_2_2.jpg")
-```
-
-The next option is bell icon, and it shows the notifications of your GitHub account.
-The "+" icon is used for creating or importing a repository or for the creation of new gist or organization.
-You can also create a new repository by clicking on "Start a project" button or "New repository" button.
-
-```{r navigating-step_3_1, click.img = TRUE}
-knitr::include_graphics("img/navigating_step_3_1.jpg")
-```
-
-Users can also change their account settings by clicking on the profile picture.
-After clicking on the profile picture, GitHub will present you a menu and user can select appropriate option as per their requirement.
-In that menu, there is a help option which contains articles from GitHub about different topics.
+Clicking on your account's profile picture in the upper right opens up another menu containing more links.
 
 ```{r navigating-step_3_2, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_3_2.jpg")
 ```
 
-Github also provides basic tutorials, and they can be accessed by clicking on "Read the guide" button.
-You can also access video guides on YouTube <https://www.youtube.com/githubguides>
+From here you can reach your profile, account settings, the help pages, and a couple of other pages.
 
-Reference - <https://help.github.com/articles>
+### Profile page
+
+Clicking `Your profile` will take you to your account's profile page.
+
+```{r github-account-page, click.img = TRUE}
+knitr::include_graphics("img/repository_step_8.jpg")
+```
+
+Since you most likely have a new account, there won't be much here right now.
+If you click the *Respositories* tab at the top of your profile, it will display a list of respositories associated with your account, **however keep in mind that it will not have any content you work on for the class**.
+This is important to keep in mind when you are looking for your files!
+
+### Settings
+
+Clicking `Settings` takes you to the account settings page where you can inspect and update your account settings.
+Use the menu on the left to choose the setting you would like to change.
+
+```{r github-settings-menu, click.img = TRUE}
+knitr::include_graphics("img/github_account_settings_menu.png")
+```
+
+For now you may want to upload a profile picture or add a short bio under the `Profile` setting, or change how the site sends you email updates and notification alerts under the `Emails` and `Notifications` settings.
+
+### Class organization page
+
+Returning to the main dashboard, after you've joined the class organization and started using the site some more, your dashboard will begin to look more like this.
+
+```{r github-dashboard-dropdown-menu, click.img = TRUE}
+knitr::include_graphics("img/dashboard_dropdown_menu.png")
+```
+
+As we learned while looking at the profile page, your classwork will not be visible there.
+Instead, you will need to navigate to the class organization in order to find your files for the class, so let's do that now.
+Click the gray icon with your username on the left side of the page, as outlined in the above screenshot, which will open up a dropdown menu.
+
+```{r github-dashboard-dropdown-menu-open, click.img = TRUE}
+knitr::include_graphics("img/dashboard_dropdown_menu_opened.png")
+```
+
+This menu lists all the GitHub organizations your account belongs to, and you can identify our class organization as it will have `cds-101` somewhere in its name.
+Clicking the class organization in the menu will bring you to the **class organization dashboard**.
+
+```{r github-dashboard-course-organization, click.img = TRUE}
+knitr::include_graphics("img/dashboard_course_organization.png")
+```
+
+The dashboard is similar to your personal dashboard, but it will only contain content associated with the class.
+On the left you will see a list of some of your class repositories over on the left, which you can filter by typing in the `Find a repository...` search box.
+If you don't see any repositories there, don't worry, we will get around to creating them soon enough!
+
+To see a full list of your class respositories, similar to the repositories tab on your profile page, click the `View organization` button on the upper right to navigate to the class organization page.
+
+```{r github-course-organization-repo-list, click.img = TRUE}
+knitr::include_graphics("img/course_organization_repo_list.png")
+```
+
+Here you should be able to find all of the repositories that you've used during the class.
 
 ## Getting to know the Github repository page
 
