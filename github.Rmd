@@ -12,28 +12,28 @@ knitr::opts_chunk$set(
 
 ### Account sign-up {#github-signup}
 
-To create an account on GitHub, navigate your browser to <https://github.com/>.
+To create an account on GitHub, begin by launching your web browser and navigate to <https://github.com/>.
 
-```{r signup-step_1, click.img = TRUE, click.img = TRUE}
+```{r signup-step_1, click.img = TRUE}
 knitr::include_graphics("img/signup_step_1.jpg")
 ```
 
-Next, register on GitHub by providing **your Mason `@gmu.edu` email address** and then creating a username and password for your account.
-After providing all the details, please click on the "sign up for GitHub" button
+In the signup form, enter your **your Mason `@gmu.edu` email address**, a username, and a password, and then click on the "sign up for GitHub" button
 
 ```{r signup-step_2, click.img = TRUE}
 knitr::include_graphics("img/signup_step_2.jpg")
 ```
 
-After creating the account on GitHub, a new window will appear containing details about plans for repositories.
+After creating the account on GitHub, you will see a new page containing details about plans for repositories.
 Keep the default options and click on the "Continue" button.
 
-```{r signup-step_3, click.img = TRUE,}
+```{r signup-step_3, click.img = TRUE}
 knitr::include_graphics("img/signup_step_3.jpg")
 ```
 
-The next page asks you to provide you to provide information about your programming experience and other details.
-This is optional and if you choose, you can skip this step by clicking on "skip this step" link.
+The next page asks you to provide information about your programming experience and other details.
+This is optional.
+To skip this step, click on the "skip this step" link.
 Otherwise, once you are done entering the information, click the "Submit" button.
 
 ```{r signup-step_4, click.img = TRUE}
@@ -50,6 +50,9 @@ knitr::include_graphics("img/signup_step_5.jpg")
 
 ### Joining the class organization {#join-class-org}
 
+The next step after creating your account is to join the course organization.
+You should have received an email with a link to join the class organization on GitHub at the start of this semester.
+
 You should receive an email from the course instructor to join the class organization on GitHub at the start of the semester.
 In that email, there will be a link you need to click in order to join the organization.
 
@@ -57,27 +60,37 @@ In that email, there will be a link you need to click in order to join the organ
 knitr::include_graphics("img/signup_step_6.jpg")
 ```
 
-If you already have a GitHub account from following the [above instructions](#github-signup), then verify that you are signed in on <https://github.com> before clicking the link.
-After clicking the link, GitHub will ask you to approve the necessary permissions so that you can join the class organization.
-However, if you haven't created a Github account yet, then you will be asked to create one for the class.
+If you cannot find the email, please contact your course instructor.
+
+After clicking the link, you may be greeted with this page.
 
 ```{r signup-step_7, click.img = TRUE}
 knitr::include_graphics("img/signup_step_7.jpg")
 ```
 
-After choosing your username and password and **entering your Mason `@gmu.edu` email address**, complete your account registration by [following the instructions](#github-signup).
+This means your browser doesn't remember your sign-in, or you haven't signed up yet, which you should now do if that's the case.
+If you have an account, then click the sign-in link at the bottom and enter your username and password.
+Once you are logged in, you will be asked to approve the necessary permissions so that you can join the class organization, which you should do.
 
 ## Navigating the GitHub site
 
-In the first tutorial, we created an account on GitHub. Now in this tutorial, we will get information about different options present on the dashboard. When you will login into GitHub you will be able to see the following screen.
+In the first tutorial, we created an account on GitHub.
+Now in this tutorial, we will get information about different options present on the dashboard.
+When you will login into GitHub you will be able to see the following screen.
 
 ```{r navigating-step_1, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_1.jpg")
 ```
 
-On the dashboard, there is a search box that can be used to search any repositories which are available on GitHub. Also, there are different options like Pull requests, Issues, Marketplace and Explore.
+On the dashboard, there is a search box that can be used to search any repositories which are available on GitHub.
+Also, there are different options like Pull requests, Issues, Marketplace and Explore.
 
-When you click on the Pull requests option, you will get information about pull requests which you have created as well as you have assigned. It will also give you information about open and closed pull requests. Issues option helps to provide keep track of bugs, enhancements, or other requests. Marketplace option contains tools and services that complement and improve your workflow. There are different tools in the Marketplace for maintaining code quality, code review, deployment, etc. The Explore option provides details about trending repositories, popular topics, popular marketplace apps, etc.
+When you click on the Pull requests option, you will get information about pull requests which you have created as well as you have assigned.
+It will also give you information about open and closed pull requests.
+Issues option helps to provide keep track of bugs, enhancements, or other requests.
+Marketplace option contains tools and services that complement and improve your workflow.
+There are different tools in the Marketplace for maintaining code quality, code review, deployment, etc.
+The Explore option provides details about trending repositories, popular topics, popular marketplace apps, etc.
 
 ```{r navigating-step_2, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_2.jpg")
@@ -93,19 +106,24 @@ GitHub Explore option
 knitr::include_graphics("img/navigating_step_2_2.jpg")
 ```
 
-The next option is bell icon, and it shows the notifications of your GitHub account. The "+" icon is used for creating or importing a repository or for the creation of new gist or organization. You can also create a new repository by clicking on "Start a project" button or "New repository" button.
+The next option is bell icon, and it shows the notifications of your GitHub account.
+The "+" icon is used for creating or importing a repository or for the creation of new gist or organization.
+You can also create a new repository by clicking on "Start a project" button or "New repository" button.
 
 ```{r navigating-step_3_1, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_3_1.jpg")
 ```
 
-Users can also change their account settings by clicking on the profile picture. After clicking on the profile picture, GitHub will present you a menu and user can select appropriate option as per their requirement. In that menu, there is a help option which contains articles from GitHub about different topics.
+Users can also change their account settings by clicking on the profile picture.
+After clicking on the profile picture, GitHub will present you a menu and user can select appropriate option as per their requirement.
+In that menu, there is a help option which contains articles from GitHub about different topics.
 
 ```{r navigating-step_3_2, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_3_2.jpg")
 ```
 
-Github also provides basic tutorials, and they can be accessed by clicking on "Read the guide" button. You can also access video guides on YouTube <https://www.youtube.com/githubguides>
+Github also provides basic tutorials, and they can be accessed by clicking on "Read the guide" button.
+You can also access video guides on YouTube <https://www.youtube.com/githubguides>
 
 Reference - <https://help.github.com/articles>
 
