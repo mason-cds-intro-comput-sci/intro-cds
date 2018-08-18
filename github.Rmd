@@ -74,30 +74,33 @@ Once you are logged in, you will be asked to approve the necessary permissions s
 
 ## Navigating the GitHub site
 
-For your convenience, the course website will contain links that take you directly to course content stored on GitHub, and you should be able to access most of your course content using just those links.
-However, you may find that you prefer to access your existing content by navigating the GitHub site itself, so let's take a short tour of the GitHub interface.
+For your convenience, the course website contains links taking you directly to course content stored on GitHub.
+However, you may prefer to access your existing content by navigating the GitHub site itself, so let's take a short tour of the GitHub interface.
 
 ### Main dashboard
 
 When you will login into GitHub for the first time you will see the main dashboard for the website.
 
 ```{r navigating-step_1, click.img = TRUE}
-knitr::include_graphics("img/navigating_step_1.jpg")
+knitr::include_graphics("img/dashboard_first_icons.jpg")
 ```
 
-At the top of the dashboard there is a searchbar that can be used to look for content on the GitHub site, such as repositories and user accounts.
-Next to the searchbar are four other links: Pull requests, Issues, Marketplace and Explore.
-Of these links, the only one you might use for the course is "Pull requests", but we'll save the discussion about Pull requests for another time. 
-Next is the bell icon, and clicking it displays your account notifications when someone tags your username, for example.
-To the right of that is the plus icon, which is used for creating content such as a repository.
-
-Clicking on your account's profile picture in the upper right opens up another menu containing more links.
+At the top of the dashboard there are several buttons, boxes, and icons that you can click in order to navigate the site.
+Starting from the left, first up is the GitHub icon, which is similar to the "Home" or "Main" buttons found on other websites.
+Clicking this icon brings you back to your currently active dashboard, which is what we're already viewing.
+Next is the search bar, which you use to look for content on the GitHub site, such as repositories and user accounts, just click it and start typing.
+Next to the search bar are four other links: Pull requests, Issues, Marketplace and Explore.
+Of these links, the only one you might use for the course is "Pull requests", however we'll save the discussion about Pull requests for another time. 
+Next is the bell icon that displays your account notifications, such as when someone tags your username, for example.
+To the right of that is the plus icon, which is used for creating content, such as creating a new repository.
+The last icon on the right is your profile picture, and clicking it opens up another menu containing some additional links.
 
 ```{r navigating-step_3_2, click.img = TRUE}
 knitr::include_graphics("img/navigating_step_3_2.jpg")
 ```
 
-From here you can reach your profile, account settings, the help pages, and a couple of other pages.
+From this menu you can reach your profile, account settings, the help section, and a couple other of other pages.
+Let's take a quick look to see what the profile and settings pages look like.
 
 ### Profile page
 
