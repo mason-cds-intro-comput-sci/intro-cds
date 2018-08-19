@@ -1,4 +1,4 @@
-# Github
+# GitHub
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -129,7 +129,8 @@ Use the menu on the left to choose the setting you would like to change.
 knitr::include_graphics("img/github_account_settings_menu.png")
 ```
 
-For now you may want to upload a profile picture or add a short bio under the **Profile** setting, or change how the site sends you email updates and notification alerts under the **Emails** and **Notifications** settings.
+For now you may want to upload a profile picture or add a short bio under the **Profile** setting.
+You can also change how the site sends you email updates and notification alerts under the **Emails** and **Notifications** settings.
 
 ### Class organization page
 
@@ -154,11 +155,11 @@ Clicking the class organization in the menu will bring you to the *class organiz
 knitr::include_graphics("img/dashboard_course_organization.png")
 ```
 
-The dashboard is similar to your personal dashboard, but it will only contain content associated with the class.
-On the left you will see a list of some of your class repositories over on the left, which you can filter by typing in the *Find a repository...* search box.
+The dashboard is similar to the dashboard we saw earlier, but it will only contain content associated with the class.
+On the left you will see a list of some of your class repositories, which you can filter by typing in the *Find a repository...* search box.
 If you don't see any repositories there, don't worry, we will get around to creating them soon enough!
 
-To see a full list of your class respositories, similar to the repositories tab on your profile page, click the **View organization** button on the upper right to navigate to the class organization page.
+To see a full list of your class repositories, similar to the repositories tab on your profile page, click the **View organization** button on the upper right of the page.
 
 ```{r github-course-organization-repo-list, click.img = TRUE}
 knitr::include_graphics("img/course_organization_repo_list.png")
@@ -173,13 +174,27 @@ If you click the **GitHub icon** while you are accessing content in the class or
 To get back to the main dashboard, click the gray icon with the class organization name and then click your username in the dropdown menu.
 :::::
 
-## Getting to know the Github repository page
+## Repositories
 
-In this tutorial, we will learn how to create, import and download repository from GitHub.
+```{r demo-repo-tabs-and-buttons, click.img = TRUE}
+knitr::include_graphics("img/demo_repo_tabs_and_buttons.png")
+```
 
-### Creating a repository
+```{r demo-repo-files-list, click.img = TRUE}
+knitr::include_graphics("img/demo_repo_files_list.png")
+```
 
-#### Step - 1
+```{r repo-files-windows-folder, click.img = TRUE}
+knitr::include_graphics("img/repo_files_windows_folder.png")
+```
+
+```{r demo-repo-readme-box, click.img = TRUE}
+knitr::include_graphics("img/demo_repo_readme_box.png")
+```
+
+## Additional topics
+
+### How to create a repository
 
 We saw in the last tutorial that after creating an account on GitHub, there are three ways to create a repository. The most common method of creating a repository is to click on "+" sign and then click on "New repository" option.
 
@@ -187,15 +202,11 @@ We saw in the last tutorial that after creating an account on GitHub, there are 
 knitr::include_graphics("img/repository_step_1.jpg")
 ```
 
-#### Step - 2
-
 After clicking on "New repository" you will go to a new screen where you need to give a repository name. You will also find two options to either keep repository as public or private. In the end, there will be another option to initialize the repository with Readme.md file.
 
 ```{r getting-to-know-step_2, click.img = TRUE}
 knitr::include_graphics("img/repository_step_2.jpg")
 ```
-
-#### Step - 3
 
 GitHub doesn't allow to create a repository without a name. Thus, it is mandatory to give a name to the repository. After providing all the details and selecting appropriate options click on "Create repository" button.
 
@@ -203,15 +214,11 @@ GitHub doesn't allow to create a repository without a name. Thus, it is mandator
 knitr::include_graphics("img/repository_step_3.jpg")
 ```
 
-#### Step - 4
-
 In this way, the repository will be successfully created. If you have ticked on initializing the repository with Readme.md file, then you will find the file in the repository. You can easily edit Readme.md file by clicking on the file.
 
 ```{r getting-to-know-step_4, click.img = TRUE}
 knitr::include_graphics("img/repository_step_4.jpg")
 ```
-
-#### Step - 5
 
 After clicking Readme.md file if you want to add any content in that file then click on the pencil symbol. Click on "Commit" button after making changes in the file.
 
@@ -219,9 +226,7 @@ After clicking Readme.md file if you want to add any content in that file then c
 knitr::include_graphics("img/repository_step_5.jpg")
 ```
 
-### Importing a repository
-
-#### Step - 1
+### How to import a repository
 
 To import repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button.
 
@@ -229,15 +234,11 @@ To import repository from other account click on "+" sign and then click on "Imp
 knitr::include_graphics("img/repository_step_6.jpg")
 ```
 
-#### Step - 2
-
 The import process will start, and you will get a notification after completion of the import process.
 
 ```{r getting-to-know-step_7, click.img = TRUE}
 knitr::include_graphics("img/repository_step_7.jpg")
 ```
-
-#### Step - 3
 
 In the end, you will be able to see the imported repository in your GitHub account.
 
@@ -245,19 +246,9 @@ In the end, you will be able to see the imported repository in your GitHub accou
 knitr::include_graphics("img/repository_step_8.jpg")
 ```
 
-### Downloading a repository
-
-The simplest way to download any repository on GitHub is to click on that repository and then click on "Clone or download" button. After that, a menu will appear and then click on "Download ZIP" option. In this way, you will be able to download any repository on your local drive.
-
-```{r getting-to-know-step_9, click.img = TRUE}
-knitr::include_graphics("img/repository_step_9.jpg")
-```
-
 ## Creating and adding an SSH key to your Github account
 
 In this tutorial, we will learn step by step how to create and add an SSH key to your GitHub account.
-
-#### Step - 1
 
 Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. When RStudio Server will start then click on "Tools" option in the menu bar and then click on "Global Options..."
 
@@ -265,15 +256,11 @@ Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. When RS
 knitr::include_graphics("img/SSH_Step_1.jpg")
 ```
 
-#### Step - 2
-
 After clicking "Global Options..." you will see a new window containing different options. From that window click on "Git/SVN" which will be present on the left side and then click on "Create RSA key".
 
 ```{r ssh-key-step_2, click.img = TRUE}
 knitr::include_graphics("img/SSH_Step_2.jpg")
 ```
-
-#### Step - 3
 
 A new window will open, and there will be two textboxes. One textbox will be for entering a passphrase, and other will be for confirmation. Adding a passphrase will be an optional part. After that click on "Create" button and a new window will appear containing information about RSA key pair. Now, you can close that window by clicking on "Close" button.
 
@@ -285,8 +272,6 @@ knitr::include_graphics("img/SSH_Step_3.jpg")
 knitr::include_graphics("img/SSH_Step_4.jpg")
 ```
 
-#### Step - 4
-
 Click on the "View public key" option which will open another new window containing public key. After opening that window copy the public key and close the window.
 
 ```{r ssh-key-step_5, click.img = TRUE}
@@ -297,15 +282,11 @@ knitr::include_graphics("img/SSH_Step_5.jpg")
 knitr::include_graphics("img/SSH_Step_6.jpg")
 ```
 
-#### Step - 5
-
 In the last step, we successfully generated a public key. Now, we need to add that public key to our GitHub account. To do that go to <https://github.com/> and login to your account. After logging in click on your profile picture and then click on "Settings" option in the list.
 
 ```{r ssh-key-step_7, click.img = TRUE}
 knitr::include_graphics("img/SSH_Step_7.jpg")
 ```
-
-#### Step - 6
 
 You will see a list of options to configure your GitHub account. Now from the list click on "SSH and GPG keys" option.
 
@@ -313,23 +294,17 @@ You will see a list of options to configure your GitHub account. Now from the li
 knitr::include_graphics("img/SSH_Step_8.jpg")
 ```
 
-#### Step - 7
-
 There will be two sections SSH keys and GPG keys. Click on "New SSH key" button.
 
 ```{r ssh-key-step_9, click.img = TRUE}
 knitr::include_graphics("img/SSH_Step_9.jpg")
 ```
 
-#### Step - 8
-
 After clicking "New SSH key" button, we need to specify details of SSH key. In the first textbox, you need to give a title to the key and in the second textbox paste the copied key. After entering these details click on "Add SSH key" button.
 
 ```{r ssh-key-step_10, click.img = TRUE}
 knitr::include_graphics("img/SSH_Step_10.jpg")
 ```
-
-#### Step - 9
 
 If all the steps were followed correctly, then you will see a key in SSH keys section.
 
