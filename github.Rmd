@@ -77,7 +77,7 @@ Once you are logged in, you will be asked to approve the necessary permissions s
 For your convenience, the course website contains links taking you directly to course content stored on GitHub.
 However, you may prefer to access your existing content by navigating the GitHub site itself, so let's take a short tour of the GitHub interface.
 
-### Main dashboard
+### Main dashboard {#github-navigation-main-dashboard}
 
 When you will login into GitHub for the first time you will see the main dashboard for the website.
 
@@ -86,13 +86,19 @@ knitr::include_graphics("img/dashboard_first_icons.jpg")
 ```
 
 At the top of the dashboard there are several buttons, boxes, and icons that you can click in order to navigate the site.
-Starting from the left, first up is the GitHub icon, which is similar to the "Home" or "Main" buttons found on other websites.
-Clicking this icon brings you back to your currently active dashboard, which is what we're already viewing.
-Next is the search bar, which you use to look for content on the GitHub site, such as repositories and user accounts, just click it and start typing.
-Next to the search bar are four other links: Pull requests, Issues, Marketplace and Explore.
-Of these links, the only one you might use for the course is "Pull requests", however we'll save the discussion about Pull requests for another time. 
-Next is the bell icon that displays your account notifications, such as when someone tags your username, for example.
-To the right of that is the plus icon, which is used for creating content, such as creating a new repository.
+Starting from the left,
+
+*   **GitHub icon**: This is similar to the "Home" or "Main" buttons found on other websites.
+    Clicking this icon brings you back to your currently active dashboard, which is what we're already viewing.
+
+*   **Search bar**: Used to look for content on the GitHub site, such as repositories and user accounts, just click it and start typing.
+
+*   **Pull requests**, **Issues**, **Marketplace**, and **Explore**: Of these links, the only one you might use for the course is "Pull requests", however we'll save the discussion about Pull requests for another time. 
+
+*   **Bell icon**: This displays your account notifications, such as when someone tags your username.
+
+*   **Plus icon**: Used for creating content, such as creating a new repository.
+
 The last icon on the right is your profile picture, and clicking it opens up another menu containing some additional links.
 
 ```{r navigating-step_3_2, click.img = TRUE}
@@ -104,26 +110,26 @@ Let's take a quick look to see what the profile and settings pages look like.
 
 ### Profile page
 
-Clicking `Your profile` will take you to your account's profile page.
+Clicking **Your profile** will take you to your account's profile page.
 
 ```{r github-account-page, click.img = TRUE}
 knitr::include_graphics("img/repository_step_8.jpg")
 ```
 
 Since you most likely have a new account, there won't be much here right now.
-If you click the *Respositories* tab at the top of your profile, it will display a list of respositories associated with your account, **however keep in mind that it will not have any content you work on for the class**.
+If you click the **Repositories** tab at the top of your profile, it will display a list of repositories associated with your account, *however keep in mind that it will not have any content you work on for the class*.
 This is important to keep in mind when you are looking for your files!
 
 ### Settings
 
-Clicking `Settings` takes you to the account settings page where you can inspect and update your account settings.
+Clicking **Settings** takes you to the account settings page where you can inspect and update your account settings.
 Use the menu on the left to choose the setting you would like to change.
 
-```{r github-settings-menu, click.img = TRUE}
+```{r github-settings-menu, click.img = TRUE, out.width = "219px"}
 knitr::include_graphics("img/github_account_settings_menu.png")
 ```
 
-For now you may want to upload a profile picture or add a short bio under the `Profile` setting, or change how the site sends you email updates and notification alerts under the `Emails` and `Notifications` settings.
+For now you may want to upload a profile picture or add a short bio under the **Profile** setting, or change how the site sends you email updates and notification alerts under the **Emails** and **Notifications** settings.
 
 ### Class organization page
 
@@ -137,28 +143,35 @@ As we learned while looking at the profile page, your classwork will not be visi
 Instead, you will need to navigate to the class organization in order to find your files for the class, so let's do that now.
 Click the gray icon with your username on the left side of the page, as outlined in the above screenshot, which will open up a dropdown menu.
 
-```{r github-dashboard-dropdown-menu-open, click.img = TRUE}
+```{r github-dashboard-dropdown-menu-open, click.img = TRUE, out.width = "303px"}
 knitr::include_graphics("img/dashboard_dropdown_menu_opened.png")
 ```
 
 This menu lists all the GitHub organizations your account belongs to, and you can identify our class organization as it will have `cds-101` somewhere in its name.
-Clicking the class organization in the menu will bring you to the **class organization dashboard**.
+Clicking the class organization in the menu will bring you to the *class organization dashboard*.
 
 ```{r github-dashboard-course-organization, click.img = TRUE}
 knitr::include_graphics("img/dashboard_course_organization.png")
 ```
 
 The dashboard is similar to your personal dashboard, but it will only contain content associated with the class.
-On the left you will see a list of some of your class repositories over on the left, which you can filter by typing in the `Find a repository...` search box.
+On the left you will see a list of some of your class repositories over on the left, which you can filter by typing in the *Find a repository...* search box.
 If you don't see any repositories there, don't worry, we will get around to creating them soon enough!
 
-To see a full list of your class respositories, similar to the repositories tab on your profile page, click the `View organization` button on the upper right to navigate to the class organization page.
+To see a full list of your class respositories, similar to the repositories tab on your profile page, click the **View organization** button on the upper right to navigate to the class organization page.
 
 ```{r github-course-organization-repo-list, click.img = TRUE}
 knitr::include_graphics("img/course_organization_repo_list.png")
 ```
 
 Here you should be able to find all of the repositories that you've used during the class.
+
+::::: {.alert .alert-warning}
+<span class="h4">Keep in mind</span>
+
+If you click the **GitHub icon** while you are accessing content in the class organization, *it will bring you back to the class organization dashboard, not the [main dashboard](#github-navigation-main-dashboard) we saw earlier*.
+To get back to the main dashboard, click the gray icon with the class organization name and then click your username in the dropdown menu.
+:::::
 
 ## Getting to know the Github repository page
 

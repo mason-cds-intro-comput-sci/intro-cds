@@ -54,3 +54,9 @@ h1.title {
 .book .book-body .page-wrapper .page-inner section.normal code, .book .book-body .page-wrapper .page-inner section.normal pre {
   font-family: "Fira Mono", "Source Code Pro", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+.h4 {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  font-weight: 700;
+}
