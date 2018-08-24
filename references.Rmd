@@ -9,7 +9,11 @@ bib = knitr::write_bib(
   x = dplyr::combine(
     .packages(),
     "bookdown",
+    "dplyr",
+    "ggplot2",
+    "kableExtra",
     "knitr",
+    "readr",
     "rmarkdown",
     "tinytex"
   ),
@@ -28,8 +32,13 @@ if (knitr::is_latex_output()) {
 
 ---
 nocite: |
+  @downey14_think_stats,
   @R-bookdown,
+  @R-dplyr,
+  @R-ggplot2,
+  @R-kableExtra,
   @R-knitr,
+  @R-readr,
   @R-rmarkdown,
   @R-tinytex
 ...

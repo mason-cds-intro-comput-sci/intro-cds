@@ -34,6 +34,7 @@ xfun::session_info(
     "bookdown",
     "dplyr",
     "ggplot2",
+    "kableExtra",
     "knitr",
     "readr",
     "rmarkdown",
