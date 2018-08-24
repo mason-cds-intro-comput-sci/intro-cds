@@ -54,6 +54,14 @@ h1.title {
 .book .book-body .page-wrapper .page-inner section.normal code, .book .book-body .page-wrapper .page-inner section.normal pre {
   font-family: "Fira Mono", "Source Code Pro", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+monospace {
+  font-family: "Fira Mono", "Source Code Pro", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: inherit;
+}
+monospace::before, monospace::after {
+  letter-spacing: -.2em;
+  content: "\00a0";
+}
 .h4 {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;

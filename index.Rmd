@@ -32,7 +32,10 @@ The R session information when compiling this book is shown below:
 xfun::session_info(
   packages = dplyr::combine(
     "bookdown",
+    "dplyr",
+    "ggplot2",
     "knitr",
+    "readr",
     "rmarkdown",
     "tinytex"
   ),
