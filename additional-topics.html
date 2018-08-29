@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to Computational and Data Sciences</title>
+  <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Introduction to Computational and Data Sciences" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  <meta name="github-repo" content="mason-cds-intro-comput-sci/introduction-computational-and-data-sciences" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to Computational and Data Sciences" />
+  
+  <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  
+
+<meta name="author" content="James K. Glasbrenner">
+<meta name="author" content="Ajay Kulkarni">
+
+
+<meta name="date" content="2018-08-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="repositories.html">
+<link rel="next" href="representing-distributions.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|IBM+Plex+Serif:400,400i,500,500i|Montserrat:400,400i,500,500i,700,700i|Roboto:400,400i,500,500i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Computational and Data Sciences</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Frontmatter</a><ul>
+<li class="chapter" data-level="" data-path="r-session-information.html"><a href="r-session-information.html"><i class="fa fa-check"></i>R session information</a></li>
+</ul></li>
+<li class="part"><span><b>I Toolbox</b></span></li>
+<li class="chapter" data-level="1" data-path="toolbox-introduction.html"><a href="toolbox-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>2</b> GitHub</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2.1</b> Getting started</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="getting-started.html"><a href="getting-started.html#github-signup"><i class="fa fa-check"></i><b>2.1.1</b> Account sign-up</a></li>
+<li class="chapter" data-level="2.1.2" data-path="getting-started.html"><a href="getting-started.html#join-class-org"><i class="fa fa-check"></i><b>2.1.2</b> Joining the class organization</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html"><i class="fa fa-check"></i><b>2.2</b> Navigating the GitHub site</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#github-navigation-main-dashboard"><i class="fa fa-check"></i><b>2.2.1</b> Main dashboard</a></li>
+<li class="chapter" data-level="2.2.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#profile-page"><i class="fa fa-check"></i><b>2.2.2</b> Profile page</a></li>
+<li class="chapter" data-level="2.2.3" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#settings"><i class="fa fa-check"></i><b>2.2.3</b> Settings</a></li>
+<li class="chapter" data-level="2.2.4" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#class-organization-page"><i class="fa fa-check"></i><b>2.2.4</b> Class organization page</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="repositories.html"><a href="repositories.html"><i class="fa fa-check"></i><b>2.3</b> Repositories</a></li>
+<li class="chapter" data-level="2.4" data-path="additional-topics.html"><a href="additional-topics.html"><i class="fa fa-check"></i><b>2.4</b> Additional topics</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="additional-topics.html"><a href="additional-topics.html#how-to-create-a-repository"><i class="fa fa-check"></i><b>2.4.1</b> How to create a repository</a></li>
+<li class="chapter" data-level="2.4.2" data-path="additional-topics.html"><a href="additional-topics.html#how-to-import-a-repository"><i class="fa fa-check"></i><b>2.4.2</b> How to import a repository</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Readings</b></span></li>
+<li class="chapter" data-level="3" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>3</b> Representing distributions</a><ul>
+<li class="chapter" data-level="3.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>3.1</b> Probability mass functions</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Example dataset</a></li>
+<li class="chapter" data-level="3.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>3.1.2</b> PMFs</a></li>
+<li class="chapter" data-level="3.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>3.1.3</b> Plotting PMFs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>3.2</b> Cumulative distribution functions</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>3.2.1</b> The limits of probability mass functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>3.2.2</b> Percentiles</a></li>
+<li class="chapter" data-level="3.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>3.2.3</b> CDFs</a></li>
+<li class="chapter" data-level="3.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>3.2.4</b> Representing CDFs</a></li>
+<li class="chapter" data-level="3.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>3.2.5</b> Comparing CDFs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>3.3</b> Credits</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational and Data Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="additional-topics" class="section level2">
+<h2><span class="header-section-number">2.4</span> Additional topics</h2>
+<div id="how-to-create-a-repository" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> How to create a repository</h3>
+<p>We saw in the last tutorial that after creating an account on GitHub, there are three ways to create a repository. The most common method of creating a repository is to click on “+” sign and then click on “New repository” option.</p>
+<div class="click-img">
+<img src="img/repository_step_1.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>After clicking on “New repository” you will go to a new screen where you need to give a repository name. You will also find two options to either keep repository as public or private. In the end, there will be another option to initialize the repository with Readme.md file.</p>
+<div class="click-img">
+<img src="img/repository_step_2.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>GitHub doesn’t allow to create a repository without a name. Thus, it is mandatory to give a name to the repository. After providing all the details and selecting appropriate options click on “Create repository” button.</p>
+<div class="click-img">
+<img src="img/repository_step_3.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>In this way, the repository will be successfully created. If you have ticked on initializing the repository with Readme.md file, then you will find the file in the repository. You can easily edit Readme.md file by clicking on the file.</p>
+<div class="click-img">
+<img src="img/repository_step_4.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>After clicking Readme.md file if you want to add any content in that file then click on the pencil symbol. Click on “Commit” button after making changes in the file.</p>
+<div class="click-img">
+<img src="img/repository_step_5.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+</div>
+<div id="how-to-import-a-repository" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> How to import a repository</h3>
+<p>To import a repository from other account click on “+” sign and then click on “Import repository” option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on “Begin import” button.</p>
+<div class="click-img">
+<img src="img/repository_step_6.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>The import process will start, and you will get a notification after completion of the import process.</p>
+<div class="click-img">
+<img src="img/repository_step_7.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+<p>In the end, you will be able to see the imported repository in your GitHub account.</p>
+<div class="click-img">
+<img src="img/repository_step_8.jpg" width="100%" style="display: block; margin: auto;" />
+</div>
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
+</div>
+<script src="js/custom.js"></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="repositories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="representing-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences/edit/master/github.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
