@@ -7,7 +7,7 @@ Authors@R: c(person("James", "Glasbrenner", role = c("aut", "cre"),
                     comment = c(ORCID = "0000-0003-2198-2309")),
              person("Ajay", "Kulkarni", role = c("aut"),
                     email = "akulkar8@gmu.edu"))
-URL: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences
+URL: https://github.com/mason-cds-intro-comput-sci/intro-cds
 Depends:
   R (>= 3.5)
 Imports:

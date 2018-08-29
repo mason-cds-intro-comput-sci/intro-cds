@@ -1,6 +1,6 @@
 ---
 new_session: yes
-repo: https://github.com/mason-cds-intro-comput-sci/introduction-computational-and-data-sciences/
+repo: https://github.com/mason-cds-intro-comput-sci/intro-cds/
 output_dir: _book
 clean:
   - packages.bib

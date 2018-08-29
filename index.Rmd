@@ -13,7 +13,7 @@ bibliography:
   - bib/packages.bib
 csl: bib/apslike.csl
 link-citations: yes
-github-repo: mason-cds-intro-comput-sci/introduction-computational-and-data-sciences
+github-repo: mason-cds-intro-comput-sci/intro-cds
 ---
 
 # Frontmatter {-}
