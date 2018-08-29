@@ -31,9 +31,9 @@ The R session information when compiling this book is shown below:
 
 
 ```
-## R version 3.5.1 (2018-07-02)
+## R version 3.5.0 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 18.04.1 LTS
+## Running under: Ubuntu 14.04.5 LTS
 ## 
 ## Locale:
 ##   LC_CTYPE=en_US.UTF-8      
@@ -50,10 +50,10 @@ The R session information when compiling this book is shown below:
 ##   LC_IDENTIFICATION=C       
 ## 
 ## Package version:
-##   bookdown_0.7.15    dplyr_0.7.6       
+##   bookdown_0.7.17    dplyr_0.7.99.9000 
 ##   ggplot2_3.0.0.9000 kableExtra_0.9.0  
-##   knitr_1.20         readr_1.1.1       
+##   knitr_1.20         readr_1.2.0       
 ##   rmarkdown_1.10.12  tinytex_0.7       
 ## 
-## Pandoc version: 2.2.2
+## Pandoc version: 2.2.1
 ```

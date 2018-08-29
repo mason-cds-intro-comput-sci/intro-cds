@@ -55,7 +55,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -68,11 +68,13 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -194,9 +196,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-session-information" class="section level2 unnumbered">
 <h2>R session information</h2>
 <p>The R session information when compiling this book is shown below:</p>
-<pre><code>## R version 3.5.1 (2018-07-02)
+<pre><code>## R version 3.5.0 (2017-01-27)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 18.04.1 LTS
+## Running under: Ubuntu 14.04.5 LTS
 ## 
 ## Locale:
 ##   LC_CTYPE=en_US.UTF-8      
@@ -213,12 +215,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##   LC_IDENTIFICATION=C       
 ## 
 ## Package version:
-##   bookdown_0.7.15    dplyr_0.7.6       
+##   bookdown_0.7.17    dplyr_0.7.99.9000 
 ##   ggplot2_3.0.0.9000 kableExtra_0.9.0  
-##   knitr_1.20         readr_1.1.1       
+##   knitr_1.20         readr_1.2.0       
 ##   rmarkdown_1.10.12  tinytex_0.7       
 ## 
-## Pandoc version: 2.2.2</code></pre>
+## Pandoc version: 2.2.1</code></pre>
 
 </div>
 <!-- </div> -->
