@@ -16,7 +16,7 @@ rmd_files:
   - index.Rmd
   - toolbox.Rmd
   - github.Rmd
-  - rstudio.Rmd
+# - rstudio.Rmd
   - readings.Rmd
   - distributions.Rmd
   - references.Rmd

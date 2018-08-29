@@ -8,6 +8,8 @@ R										=		R
 RSCRIPT									=		Rscript
 ROPTS									=		--slave
 
+CNAME									=		book.cds101.com
+
 GITBOOK_INDEX							=		index.Rmd
 GITBOOK_OUTPUT							=		bookdown::gitbook
 
@@ -34,3 +36,4 @@ clean :
 
 gitbook :
 	$(call render_book,$(GITBOOK_OUTPUT))
+	$(ECHO) "book.cds101.com" > _book/CNAME

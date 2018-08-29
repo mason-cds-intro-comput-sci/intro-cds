@@ -176,21 +176,50 @@ To get back to the main dashboard, click the gray icon with the class organizati
 
 ## Repositories
 
+When you access a repository on GitHub, the page will look similar to the screenshot below,
+
 ```{r demo-repo-tabs-and-buttons, click.img = TRUE}
 knitr::include_graphics("img/demo_repo_tabs_and_buttons.png")
 ```
+
+The page contains a lot of information about the repository along with multiple tabs and buttons, which can be a bit overwhelming at first.
+As it turns out, we will not need to use many of these tabs or buttons during the class, so instead let's focus on the most important ones, which have been highlighted in the red and blue rectangles.
+
+*   Red
+    *   **Code tab:** Clicking this brings you back to the main repository page, which is what is displayed in the above screenshot
+    *   **Commit tab:** takes you to the commit history for the repository, which are the series of "snapshots" that you create using the `git` tool in RStudio
+*   Blue
+    *   **Dropdown branch menu:** use this to inspect a branch that is different from the default **master** branch
+    *   **Clone or download button:** provides a link to use when obtaining a copy of a repository. For the class, you will do this by creating a new project in RStudio using the *version control* option.
+    *   **Pull requests tab:** generally used for code reviews and quality control when a user wants to contribute code to a repository. For the class, pull requests will be used to submit your work so that the instructor is able to leave line-by-line comments about your code.
+
+Below the tabs and button is a list of files stored in the repository,
 
 ```{r demo-repo-files-list, click.img = TRUE}
 knitr::include_graphics("img/demo_repo_files_list.png")
 ```
 
+Each repository will have different files.
+Clicking a file's name will bring you to another page that shows a preview of the file contents.
+The descriptions in the middle of the file list show the most recent commit message for each file and the timespan on the right shows how recently the file was last updated.
+
+The above file list also shows you what you'll see in a folder after you first obtain a copy of the repository.
+In that way, each repository can be thought of as a folder containing files,
+
 ```{r repo-files-windows-folder, click.img = TRUE}
 knitr::include_graphics("img/repo_files_windows_folder.png")
 ```
 
+The advantage of this approach is that each repository you create is isolated and separate, which helps to reduce certain kinds of coding errors.
+
+Below the repository file list is a rendered version of the `README.md` file,
+
 ```{r demo-repo-readme-box, click.img = TRUE}
 knitr::include_graphics("img/demo_repo_readme_box.png")
 ```
+
+The `README.md` file describes the contents of the repository and can be used as a form of documentation.
+It is a good idea to look at the `README.md` file of any repository you visit on GitHub to see if it gives examples or quick instructions on how to set up and use the files.
 
 ## Additional topics
 
@@ -228,7 +257,7 @@ knitr::include_graphics("img/repository_step_5.jpg")
 
 ### How to import a repository
 
-To import repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button.
+To import a repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button.
 
 ```{r getting-to-know-step_6, click.img = TRUE}
 knitr::include_graphics("img/repository_step_6.jpg")
@@ -245,71 +274,3 @@ In the end, you will be able to see the imported repository in your GitHub accou
 ```{r getting-to-know-step_8, click.img = TRUE}
 knitr::include_graphics("img/repository_step_8.jpg")
 ```
-
-## Creating and adding an SSH key to your Github account
-
-In this tutorial, we will learn step by step how to create and add an SSH key to your GitHub account.
-
-Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. When RStudio Server will start then click on "Tools" option in the menu bar and then click on "Global Options..."
-
-```{r ssh-key-step_1, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_1.jpg")
-```
-
-After clicking "Global Options..." you will see a new window containing different options. From that window click on "Git/SVN" which will be present on the left side and then click on "Create RSA key".
-
-```{r ssh-key-step_2, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_2.jpg")
-```
-
-A new window will open, and there will be two textboxes. One textbox will be for entering a passphrase, and other will be for confirmation. Adding a passphrase will be an optional part. After that click on "Create" button and a new window will appear containing information about RSA key pair. Now, you can close that window by clicking on "Close" button.
-
-```{r ssh-key-step_3, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_3.jpg")
-```
-
-```{r ssh-key-step_4, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_4.jpg")
-```
-
-Click on the "View public key" option which will open another new window containing public key. After opening that window copy the public key and close the window.
-
-```{r ssh-key-step_5, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_5.jpg")
-```
-
-```{r ssh-key-step_6, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_6.jpg")
-```
-
-In the last step, we successfully generated a public key. Now, we need to add that public key to our GitHub account. To do that go to <https://github.com/> and login to your account. After logging in click on your profile picture and then click on "Settings" option in the list.
-
-```{r ssh-key-step_7, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_7.jpg")
-```
-
-You will see a list of options to configure your GitHub account. Now from the list click on "SSH and GPG keys" option.
-
-```{r ssh-key-step_8, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_8.jpg")
-```
-
-There will be two sections SSH keys and GPG keys. Click on "New SSH key" button.
-
-```{r ssh-key-step_9, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_9.jpg")
-```
-
-After clicking "New SSH key" button, we need to specify details of SSH key. In the first textbox, you need to give a title to the key and in the second textbox paste the copied key. After entering these details click on "Add SSH key" button.
-
-```{r ssh-key-step_10, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_10.jpg")
-```
-
-If all the steps were followed correctly, then you will see a key in SSH keys section.
-
-```{r ssh-key-step_11, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_11.jpg")
-```
-
-**If you have any questions or concerns, then please contact your instructor.**
