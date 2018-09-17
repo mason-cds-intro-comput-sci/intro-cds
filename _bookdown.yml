@@ -18,6 +18,7 @@ rmd_files:
   - github.Rmd
 # - rstudio.Rmd
   - readings.Rmd
+  - describingdata.Rmd
   - distributions.Rmd
   - references.Rmd
 ...
