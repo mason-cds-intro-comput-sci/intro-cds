@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="navigating-the-github-site.html">
-<link rel="next" href="additional-topics.html">
+<link rel="prev" href="additional-topics.html">
+<link rel="next" href="representing-distributions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -194,46 +194,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="repositories" class="section level2">
-<h2><span class="header-section-number">2.3</span> Repositories</h2>
-<p>When you access a repository on GitHub, the page will look similar to the screenshot below,</p>
-<div class="click-img">
-<img src="img/demo_repo_tabs_and_buttons.png" width="100%" style="display: block; margin: auto;" />
-</div>
-<p>The page contains a lot of information about the repository along with multiple tabs and buttons, which can be a bit overwhelming at first.
-As it turns out, we will not need to use many of these tabs or buttons during the class, so instead let’s focus on the most important ones, which have been highlighted in the red and blue rectangles.</p>
+<div id="describing-numerical-data" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Describing numerical data</h1>
+<p>Many of the figures that we will be creating and analyzing during the course will be representations of univariate (meaning one variable) and bivariate (meaning two variables) data.
+You will frequently be asked to write a description about a visualization, and you should aim to be precise and consistent in your terms.
+Use the short summaries below as a guide and a reminder when writing about the features contained in a univariate or bivariate plot.</p>
+<p><span class="h2">Describing univariate data</span></p>
+<p>When describing the visual properties of univariate data, remember to discuss the following traits:</p>
 <ul>
-<li>Red
+<li><p>shape:</p>
 <ul>
-<li><strong>Code tab:</strong> Clicking this brings you back to the main repository page, which is what is displayed in the above screenshot</li>
-<li><strong>Commit tab:</strong> takes you to the commit history for the repository, which are the series of “snapshots” that you create using the <code>git</code> tool in RStudio</li>
+<li><p>right-skewed, left-skewed, symmetric (skew is to the side of the longer tail)</p></li>
+<li><p>unimodal, bimodal, multimodal, uniform</p></li>
 </ul></li>
-<li>Blue
-<ul>
-<li><strong>Dropdown branch menu:</strong> use this to inspect a branch that is different from the default <strong>master</strong> branch</li>
-<li><strong>Clone or download button:</strong> provides a link to use when obtaining a copy of a repository. For the class, you will do this by creating a new project in RStudio using the <em>version control</em> option.</li>
-<li><strong>Pull requests tab:</strong> generally used for code reviews and quality control when a user wants to contribute code to a repository. For the class, pull requests will be used to submit your work so that the instructor is able to leave line-by-line comments about your code.</li>
-</ul></li>
+<li><p>center: mean (<code>mean</code>), median (<code>median</code>), mode (not always useful)</p></li>
+<li><p>spread: range (<code>range</code>), standard deviation (<code>sd</code>), inter-quartile range (<code>IQR</code>)</p></li>
+<li><p>unusual observations</p></li>
 </ul>
-<p>Below the tabs and button is a list of files stored in the repository,</p>
-<div class="click-img">
-<img src="img/demo_repo_files_list.png" width="100%" style="display: block; margin: auto;" />
-</div>
-<p>Each repository will have different files.
-Clicking a file’s name will bring you to another page that shows a preview of the file contents.
-The descriptions in the middle of the file list show the most recent commit message for each file and the timespan on the right shows how recently the file was last updated.</p>
-<p>The above file list also shows you what you’ll see in a folder after you first obtain a copy of the repository.
-In that way, each repository can be thought of as a folder containing files,</p>
-<div class="click-img">
-<img src="img/repo_files_windows_folder.png" width="100%" style="display: block; margin: auto;" />
-</div>
-<p>The advantage of this approach is that each repository you create is isolated and separate, which helps to reduce certain kinds of coding errors.</p>
-<p>Below the repository file list is a rendered version of the <code>README.md</code> file,</p>
-<div class="click-img">
-<img src="img/demo_repo_readme_box.png" width="100%" style="display: block; margin: auto;" />
-</div>
-<p>The <code>README.md</code> file describes the contents of the repository and can be used as a form of documentation.
-It is a good idea to look at the <code>README.md</code> file of any repository you visit on GitHub to see if it gives examples or quick instructions on how to set up and use the files.</p>
+<p>For additional guidance, follow this link for a summary of what the above terms mean: <a href="http://stattrek.com/statistics/charts/data-patterns.aspx" class="uri">http://stattrek.com/statistics/charts/data-patterns.aspx</a></p>
+<p><span class="h2">Describing bivariate data</span></p>
+<p>When describing the visual properties of univariate data, you will frequently be looking at a scatterplot.
+When describing the shapes of scatterplots we highlight:</p>
+<ul>
+<li><p><strong>Direction</strong>: What direction is the data trending?
+Positive direction or negative direction?</p></li>
+<li><p><strong>Form</strong>: This is analogous to <em>shape</em> for univariate data.
+Is the dataset linear?
+Is is curved?
+Does it not have a form?</p></li>
+<li><p><strong>Strength</strong>: How clustered are the data points around the underlying form?
+Stated another way, what are the strength of the correlations?
+Typical descriptors are <em>strong</em>, <em>moderate</em>, or <em>weak</em>.</p></li>
+</ul>
+
 </div>
 <script src="js/custom.js"></script>
             </section>
@@ -241,8 +234,8 @@ It is a good idea to look at the <code>README.md</code> file of any repository y
           </div>
         </div>
       </div>
-<a href="navigating-the-github-site.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="additional-topics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="additional-topics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="representing-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -262,7 +255,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/github.Rmd",
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/describingdata.Rmd",
 "text": "Edit"
 },
 "download": null,
