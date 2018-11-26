@@ -13,15 +13,19 @@ Depends:
 Imports:
   bookdown (>= 0.7),
   dplyr (>= 0.7.6),
+  fs (>= 1.2.6),
   ggplot2 (>= 3.0.0),
+  infer (>= 0.4.0),
   kableExtra (>= 0.9.0),
   knitr (>= 1.20.6),
   readr (>= 1.1.1),
   rmarkdown (>= 1.10.12),
   tinytex (>= 0.7)
 Remotes:
+  r-lib/fs@v1.2.6,
   rstudio/bookdown,
   rstudio/rmarkdown,
+  tidymodels/infer@develop,
   tidyverse/ggplot2,
   tidyverse/dplyr,
   tidyverse/readr

@@ -20,5 +20,6 @@ rmd_files:
   - readings.Rmd
   - describingdata.Rmd
   - distributions.Rmd
+  - infer.Rmd
   - references.Rmd
 ...

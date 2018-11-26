@@ -1,21 +1,20 @@
-SHELL									=		/bin/sh
+SHELL			=		/bin/sh
 
-RM										=		rm
-ECHO									=		echo
-COPY									=		cp
+RM				=		rm
+ECHO			=		echo
+COPY			=		cp
 
-R										=		R
-RSCRIPT									=		Rscript
-ROPTS									=		--slave
+R				=		Rscript
+ROPTS			=
 
-CNAME									=		book.cds101.com
+CNAME			=		book.cds101.com
 
-GITBOOK_INDEX							=		index.Rmd
-GITBOOK_OUTPUT							=		bookdown::gitbook
+GITBOOK_INDEX	=		index.Rmd
+GITBOOK_OUTPUT	=		bookdown::gitbook
 
-ALL_FILES								=		gitbook
+ALL_FILES		=		gitbook
 
-CLEAN_FILES								=		*_cache/
+CLEAN_FILES		=		*_cache/
 
 define cleanup
 	-$(RM) -rf $(CLEAN_FILES)
