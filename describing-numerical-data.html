@@ -26,7 +26,7 @@
 <meta name="author" content="Ajay Kulkarni">
 
 
-<meta name="date" content="2018-09-17">
+<meta name="date" content="2018-11-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,6 +37,7 @@
 <link rel="next" href="representing-distributions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -173,6 +174,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>4.3</b> Credits</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>5</b> Statistical inference with infer</a><ul>
+<li class="chapter" data-level="5.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>5.1</b> Case study: Comparing work travel times</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>5.1.1</b> Work travel times in Iowa and Nebraska</a></li>
+<li class="chapter" data-level="5.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>5.1.2</b> Defining the hypothesis test</a></li>
+<li class="chapter" data-level="5.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>5.1.3</b> Building the null distribution</a></li>
+<li class="chapter" data-level="5.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>5.1.4</b> Computing the two-sided p-value</a></li>
+<li class="chapter" data-level="5.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>5.1.5</b> Computing the 95% confidence interval</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -258,6 +268,10 @@ gitbook.start({
 "link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/describingdata.Rmd",
 "text": "Edit"
 },
+"history": {
+"link": null,
+"text": null
+},
 "download": null,
 "toc": {
 "collapse": "subsection"
@@ -273,7 +287,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

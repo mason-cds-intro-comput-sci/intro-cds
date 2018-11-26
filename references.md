@@ -11,6 +11,7 @@ nocite: |
   @R-bookdown,
   @R-dplyr,
   @R-ggplot2,
+  @R-infer,
   @R-kableExtra,
   @R-knitr,
   @R-readr,

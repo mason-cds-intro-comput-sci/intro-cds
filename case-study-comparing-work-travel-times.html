@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to Computational and Data Sciences</title>
+  <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Introduction to Computational and Data Sciences" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to Computational and Data Sciences" />
+  
+  <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  
+
+<meta name="author" content="James K. Glasbrenner">
+<meta name="author" content="Ajay Kulkarni">
+
+
+<meta name="date" content="2018-11-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="statistical-inference-with-infer.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|IBM+Plex+Serif:400,400i,500,500i|Montserrat:400,400i,500,500i,700,700i|Roboto:400,400i,500,500i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Computational and Data Sciences</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Frontmatter</a><ul>
+<li class="chapter" data-level="" data-path="r-session-information.html"><a href="r-session-information.html"><i class="fa fa-check"></i>R session information</a></li>
+</ul></li>
+<li class="part"><span><b>I Toolbox</b></span></li>
+<li class="chapter" data-level="1" data-path="toolbox-introduction.html"><a href="toolbox-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>2</b> GitHub</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2.1</b> Getting started</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="getting-started.html"><a href="getting-started.html#github-signup"><i class="fa fa-check"></i><b>2.1.1</b> Account sign-up</a></li>
+<li class="chapter" data-level="2.1.2" data-path="getting-started.html"><a href="getting-started.html#join-class-org"><i class="fa fa-check"></i><b>2.1.2</b> Joining the class organization</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html"><i class="fa fa-check"></i><b>2.2</b> Navigating the GitHub site</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#github-navigation-main-dashboard"><i class="fa fa-check"></i><b>2.2.1</b> Main dashboard</a></li>
+<li class="chapter" data-level="2.2.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#profile-page"><i class="fa fa-check"></i><b>2.2.2</b> Profile page</a></li>
+<li class="chapter" data-level="2.2.3" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#settings"><i class="fa fa-check"></i><b>2.2.3</b> Settings</a></li>
+<li class="chapter" data-level="2.2.4" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#class-organization-page"><i class="fa fa-check"></i><b>2.2.4</b> Class organization page</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="repositories.html"><a href="repositories.html"><i class="fa fa-check"></i><b>2.3</b> Repositories</a></li>
+<li class="chapter" data-level="2.4" data-path="additional-topics.html"><a href="additional-topics.html"><i class="fa fa-check"></i><b>2.4</b> Additional topics</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="additional-topics.html"><a href="additional-topics.html#how-to-create-a-repository"><i class="fa fa-check"></i><b>2.4.1</b> How to create a repository</a></li>
+<li class="chapter" data-level="2.4.2" data-path="additional-topics.html"><a href="additional-topics.html#how-to-import-a-repository"><i class="fa fa-check"></i><b>2.4.2</b> How to import a repository</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Readings</b></span></li>
+<li class="chapter" data-level="3" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>3</b> Describing numerical data</a></li>
+<li class="chapter" data-level="4" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>4</b> Representing distributions</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>4.1</b> Probability mass functions</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>4.1.1</b> Example dataset</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>4.1.2</b> PMFs</a></li>
+<li class="chapter" data-level="4.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>4.1.3</b> Plotting PMFs</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>4.2</b> Cumulative distribution functions</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>4.2.1</b> The limits of probability mass functions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>4.2.2</b> Percentiles</a></li>
+<li class="chapter" data-level="4.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>4.2.3</b> CDFs</a></li>
+<li class="chapter" data-level="4.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>4.2.4</b> Representing CDFs</a></li>
+<li class="chapter" data-level="4.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>4.2.5</b> Comparing CDFs</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>4.3</b> Credits</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>5</b> Statistical inference with infer</a><ul>
+<li class="chapter" data-level="5.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>5.1</b> Case study: Comparing work travel times</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>5.1.1</b> Work travel times in Iowa and Nebraska</a></li>
+<li class="chapter" data-level="5.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>5.1.2</b> Defining the hypothesis test</a></li>
+<li class="chapter" data-level="5.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>5.1.3</b> Building the null distribution</a></li>
+<li class="chapter" data-level="5.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>5.1.4</b> Computing the two-sided p-value</a></li>
+<li class="chapter" data-level="5.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>5.1.5</b> Computing the 95% confidence interval</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational and Data Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="case-study-comparing-work-travel-times" class="section level2">
+<h2><span class="header-section-number">5.1</span> Case study: Comparing work travel times</h2>
+<p>The following is a worked example using the county complete dataset from Section <a href="representing-distributions.html#representing-distributions">4</a> that demonstrates how to use the <code>infer</code> package to test if the difference in mean values of two distributions is statistically significant.
+To follow along, load the following libraries and dataset into your R session:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Packages</span>
+<span class="kw">library</span>(dplyr)
+<span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(readr)
+<span class="kw">library</span>(infer)
+<span class="co"># Dataset</span>
+county_complete &lt;-<span class="st"> </span><span class="kw">read_rds</span>(
+  <span class="kw">url</span>(<span class="st">&quot;http://data.cds101.com/county_complete.rds&quot;</span>)
+)</code></pre>
+<div id="work-travel-times-in-iowa-and-nebraska" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Work travel times in Iowa and Nebraska</h3>
+<p>In Section <a href="representing-distributions.html#representing-distributions">4</a>, we looked at the distribution of average work travel times in Iowa and Nebraska measured on the county level.</p>
+<p><img src="infer_files/figure-html/ia-ne-travel-times-pmf-1.svg" width="100%" style="display: block; margin: auto;" /></p>
+<p>In our visual inspection of the probability mass function, we concluded that the distribution of work travel times is shifted slightly towards shorter commutes in Nebraska versus Iowa.
+The summary statistics for the two distributions seem to support this conclusion:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Filter dataset to only include counties in Iowa and Nebraska</span>
+ia_ne_county &lt;-<span class="st"> </span>county_complete <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span>)
+
+<span class="co"># Compute summary statistics of mean_work_travel column for Iowa and Nebraska</span>
+ia_ne_summary_stats &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarize</span>(
+    <span class="dt">mean =</span> <span class="kw">mean</span>(mean_work_travel),
+    <span class="dt">median =</span> <span class="kw">median</span>(mean_work_travel),
+    <span class="dt">sd =</span> <span class="kw">sd</span>(mean_work_travel),
+    <span class="dt">iqr =</span> <span class="kw">IQR</span>(mean_work_travel)
+  )</code></pre>
+<table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+state
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+median
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+iqr
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Alabama
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alaska
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arizona
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arkansas
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+California
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Colorado
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Connecticut
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Delaware
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+District of Columbia
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Florida
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Georgia
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hawaii
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Idaho
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Illinois
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Indiana
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iowa
+</td>
+<td style="text-align:right;">
+19.11
+</td>
+<td style="text-align:right;">
+18.5
+</td>
+<td style="text-align:right;">
+3.425
+</td>
+<td style="text-align:right;">
+4.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kansas
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kentucky
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Louisiana
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Maine
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Maryland
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Massachusetts
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Michigan
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Minnesota
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mississippi
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Missouri
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Montana
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nebraska
+</td>
+<td style="text-align:right;">
+17.97
+</td>
+<td style="text-align:right;">
+17.6
+</td>
+<td style="text-align:right;">
+3.823
+</td>
+<td style="text-align:right;">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nevada
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Hampshire
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Jersey
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Mexico
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New York
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+North Carolina
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+North Dakota
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ohio
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oklahoma
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oregon
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pennsylvania
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rhode Island
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+South Carolina
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+South Dakota
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tennessee
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Texas
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Utah
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vermont
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Virginia
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Washington
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+West Virginia
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wisconsin
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wyoming
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s compute the difference in means directly using <code>ia_ne_summary_stats</code>.
+First, we need to grab the <code>mean</code> column:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_means &lt;-<span class="st"> </span>ia_ne_summary_stats <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">pull</span>(mean)</code></pre>
+<p><code>ia_ne_means</code> is a simple vector that stores two numbers.</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_means</code></pre>
+<pre><code>##  [1]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+##  [9]   NaN   NaN   NaN   NaN   NaN   NaN   NaN 19.11
+## [17]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+## [25]   NaN   NaN   NaN 17.97   NaN   NaN   NaN   NaN
+## [33]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+## [41]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+## [49]   NaN   NaN   NaN</code></pre>
+<p>The first number of the vector, which we can access with <code>ia_ne_means[1]</code>, is the mean work travel times in Iowa.
+The second number of the vector, which we can access with <code>ia_ne_means[2]</code>, is the mean work travel times in Nebraska.
+Knowing this, we easily compute the difference in means,</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_means[<span class="dv">1</span>] <span class="op">-</span><span class="st"> </span>ia_ne_means[<span class="dv">2</span>]</code></pre>
+<p>obtaining the following value of <code>ia_ne_diff_in_means</code>:</p>
+<pre><code># (mean work travel time in Iowa) - (mean work travel time in Nebraska)
+ia_ne_diff_in_means = NaN minutes</code></pre>
+<p>However, only checking the numerical difference between the mean values is not enough if we want to claim there is a <strong>statistically significant</strong> difference in commute times between Iowa and Nebraska.
+There is significant overlap between the two distributions, with the standard deviation (sd) of each distribution being 3 – 4 times <em>larger</em> than the difference in means.
+Before we can conclude that the difference in means is statistically significant, we need to estimate how likely it is that this difference could have arisen from chance alone.</p>
+</div>
+<div id="defining-the-hypothesis-test" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Defining the hypothesis test</h3>
+<p>To determine whether or not there is a meaningful difference in means between the two distributions, we will conduct a two-sided hypothesis test using the following null and alternative hypotheses:</p>
+<ul>
+<li><p><strong>Null hypothesis</strong>: There is no difference between the mean work travel time in Iowa and the mean work travel time in Nebraska.</p>
+<p><span class="math display">\[\text{H}_{0}:\mu_{\text{IA}}-\mu_{\text{NE}}=0\]</span></p></li>
+<li><p><strong>Alternative hypothesis</strong>: There is a difference between the mean work travel time in Iowa and the mean work travel time in Nebraska.</p>
+<p><span class="math display">\[\text{H}_{\text{A}}:\mu_{\text{IA}}-\mu_{\text{NE}}\neq{}0\]</span></p></li>
+</ul>
+<p>We set our significance level to <span class="math inline">\(\alpha=0.05\)</span>, which we will use as a cutoff for determining whether or not a result is statistically significant.</p>
+</div>
+<div id="building-the-null-distribution" class="section level3">
+<h3><span class="header-section-number">5.1.3</span> Building the null distribution</h3>
+<p>To conduct our hypothesis test, we first must generate our null distribution using the <code>infer</code> package:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<p>Let’s explain what each of these lines is doing.
+We start by piping our filtered dataset stored in <code>ia_ne_county</code> into <code>specify</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state)</code></pre>
+<p>Here we <em>specify</em> the <strong>response</strong> variable and the <strong>explanatory</strong> variable in the <code>formula =</code> input keyword.
+The formula syntax is given as follows:</p>
+<pre><code>response ~ explanatory</code></pre>
+<p>Therefore, in our formula <code>mean_work_travel ~ state</code>, <code>mean_work_travel</code> is the response variable and <code>state</code> is the explanatory variable.
+How do we know to use <code>mean_work_travel</code> as the response variable?
+It’s because of how we formulated our null and alternative hypotheses, such that we are testing whether a person’s mean work travel time is affected by the state he or she lives in, <strong>not</strong> whether the state that a person lives in is affected by his or her mean work travel time.
+Finally, because the <strong>response variable</strong> is numerical, we don’t use the <code>success =</code> keyword in <code>specify</code>.</p>
+<p>The next line that we pipe into is:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>)</code></pre>
+<p>Here we indicate that we are conducting a hypothesis test to check whether or not the variables provided in <code>specify</code> are independent of one another.
+A basic rule of thumb is, if you specify <strong>both</strong> an explanatory and a response variable in the formula of <code>specify</code>, then you will use <code>null = &quot;independence&quot;</code>.</p>
+<p>Next we pipe into this line:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>)</code></pre>
+<p>Here we indicate that we want to <em>permute</em> the <code>mean_work_travel</code> and <code>state</code> columns 10,000 times to build up our null distribution.
+In effect, we are randomly shuffling the rows in <code>mean_work_travel</code> into a different order, and then randomly shuffling the rows in <code>state</code> into yet another order, which should remove any connections between the <code>mean_work_travel</code> and <code>state</code> columns (this is what we mean by null distribution).
+We know to use <code>type = &quot;permute&quot;</code> because we have specified both a response and an explanatory variable and we want to see what happens when we assume the two columns are independent.
+As for <code>reps = 10000</code>, this controls the overall accuracy of our hypothesis tests.
+There is no hard and fast rule for value to set, but if you want more accurate results, increase <code>reps</code>.
+However, keep in mind that the larger <code>reps</code> is, the <em>longer</em> it will take to complete the calculation.</p>
+<p>We finish up by piping into the last line:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<p>Here we indicate that we are comparing the difference in means between our two distributions (the mean work travel times in Iowa and Nebraska).
+The input <code>order = combine(&quot;Iowa&quot;, &quot;Nebraska&quot;)</code> defines the subtraction order, so we will find the difference in means by subtracting the mean time in Iowa from the mean time in Nebraska, which is the same order we used for <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.
+As for the <code>stat</code> input, we know to use <code>stat = &quot;diff in means&quot;</code> because of how we formulated our null and alternative hypotheses, i.e. we are comparing the <strong>difference</strong> in <strong>mean</strong> work travel times between Iowa and Nebraska.
+The way we know that we <strong>can’t</strong> use something like <code>stat = &quot;diff in props&quot;</code> is because at least one of our variables in <code>specify</code> is numerical (<code>mean_work_travel</code>).
+The input <code>stat = &quot;diff in props&quot;</code> only applies if <strong>both</strong> the explanatory and response variables are categorical.</p>
+<p>The null distribution that we generated looks as follows:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(
+    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
+    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span>
+  )</code></pre>
+<p><img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-1.svg" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="computing-the-two-sided-p-value" class="section level3">
+<h3><span class="header-section-number">5.1.4</span> Computing the two-sided p-value</h3>
+<p>After we’ve generated our null distribution, we can compute the <em>p</em>-value using <code>get_p_value</code>.
+To compute a <em>p</em>-value, we need an <strong>observed statistic</strong>, which is simply the difference in means we computed using the dataset itself.
+This is what we computed using <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_right &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;right&quot;</span>)</code></pre>
+<p>Since we are conducting a <strong>two-sided hypothesis test</strong>, we need to also get the p-value for the opposite case of <code>ia_ne_means[2] - ia_ne_means[1]</code>, which is just <code>-ia_ne_diff_in_means</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_left &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> <span class="op">-</span>ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;left&quot;</span>)</code></pre>
+<p>The full <em>p</em>-value for a two-sided hypothesis test is the sum of the “left” and “right” <em>p</em>-values we just obtained:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_two_sided &lt;-<span class="st"> </span>ia_ne_p_value_left <span class="op">+</span><span class="st"> </span>ia_ne_p_value_right</code></pre>
+<table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+p_value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<p>Our two-sided p-value is NA, which is NA our significance level of <span class="math inline">\(\alpha=0.05\)</span>. We therefore NA the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska NA statistically significant.</p>
+<p>We visualize the meaning of the <em>p</em>-value in the following way:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;right&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> <span class="op">-</span>ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;left&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(
+    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
+    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span>
+  )</code></pre>
+<p><img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-p-values-1.svg" width="100%" style="display: block; margin: auto;" /></p>
+<p>The portions of the null distribution that are in the shaded red area correspond to results that are <strong>more extreme</strong> than the observed values of NaN and NaN.
+The more that a null distribution lies within the red portions of the visualization, the more likely it becomes that we will fail to reject the null distribution and the difference in means that we observed in the dataset arose due to random chance alone.</p>
+</div>
+<div id="computing-the-95-confidence-interval" class="section level3">
+<h3><span class="header-section-number">5.1.5</span> Computing the 95% confidence interval</h3>
+<p>In addition to the two-sided hypothesis test, it is also good practice to compute the 95% confidence interval for the difference in mean work travel times between Iowa and Nebraska.
+To compute this, we need to generate the <strong>bootstrap distribution</strong> for the difference in means:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;bootstrap&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<p>You’ll notice that the code to generate the bootstrap distribution is pretty similar to the code used to generate the null distribution.
+All we had to do was remove the <code>hypothesize(null = &quot;independence&quot;)</code> line and change the <code>type =</code> keyword in <code>generate</code> from <code>&quot;permute&quot;</code> to <code>&quot;bootstrap&quot;</code>, and that’s it!</p>
+<p>You might be wondering, how are the methods for generating the null distribution and bootstrap distribution different?
+For this example, they differ in two important ways:</p>
+<ol style="list-style-type: decimal">
+<li><p>Unlike when we generated the null distribution, the <code>mean_work_travel</code> and <code>state</code> columns are <strong>not</strong> randomly shuffled</p></li>
+<li><p>Generating a bootstrap distribution requires <em>sampling with replacement</em>, meaning we grab different rows in <code>ia_ne_county</code> at random (we might even grab the same row more than), which we do not do if we permute the columns</p></li>
+</ol>
+<p>The bootstrap distribution we just generated looks as follows:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(
+    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
+    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times bootstrap distribution&quot;</span>
+  )</code></pre>
+<p><img src="infer_files/figure-html/ia-ne-mean-work-travel-bootstrap-visualization-1.svg" width="100%" style="display: block; margin: auto;" /></p>
+<p>This shows what could happen if we went out and collected another set of samples of the data in this dataset.
+Due to random variations in the people we survey, sometimes we might end up with a dataset where the difference between the mean work travel times in Iowa and Nebraska is closer to 2 minutes instead of 1 minute, or it might be closer to zero.
+Most of the time, it will be close to 1 minute.</p>
+<p>The 95% confidence interval is defined as the fraction of the data in the bootstrap distribution that lies between the 2.5th and 97.5th percentiles:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_ci95 &lt;-<span class="st"> </span>ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">get_confidence_interval</span>()</code></pre>
+<table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+2.5%
+</th>
+<th style="text-align:right;">
+97.5%
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.1167
+</td>
+<td style="text-align:right;">
+2.153
+</td>
+</tr>
+</tbody>
+</table>
+<p>This means that, if we keep collecting new samples of mean work travel times in Iowa and Nebraska, we expect that 95% of our samples will have a difference in mean work travel times that lies between 0.1167 and 2.1534.
+Also note that the lower bound of the confidence interval does not intersect with a difference of means equal to zero, lending further support to the conclusion we reached using our two-sided hypothesis test.</p>
+<p>We close this example by visualizing the 95% confidence interval by shading the middle 95% of the data in the bootstrap distribution:</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">shade_confidence_interval</span>(<span class="dt">endpoints =</span> ia_ne_ci95) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(
+    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
+    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times bootstrap distribution&quot;</span>
+  )</code></pre>
+<p><img src="infer_files/figure-html/ia-ne-mean-work-travel-bootstrap-visualization-ci95-1.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+<!-- </div> -->
+<script src="js/custom.js"></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="statistical-inference-with-infer.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/infer.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

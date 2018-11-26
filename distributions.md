@@ -1,5 +1,5 @@
 
-# Representing distributions
+# Representing distributions {#representing-distributions}
 
 
 
