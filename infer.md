@@ -58,111 +58,6 @@ ia_ne_summary_stats <- ia_ne_county %>%
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Alabama </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Alaska </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Arizona </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Arkansas </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> California </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Colorado </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Connecticut </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Delaware </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> District of Columbia </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Florida </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Georgia </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Hawaii </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Idaho </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Illinois </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Indiana </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Iowa </td>
    <td style="text-align:right;"> 19.11 </td>
    <td style="text-align:right;"> 18.5 </td>
@@ -170,249 +65,11 @@ ia_ne_summary_stats <- ia_ne_county %>%
    <td style="text-align:right;"> 4.4 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Kansas </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Kentucky </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Louisiana </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Maine </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Maryland </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Massachusetts </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Michigan </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Minnesota </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Mississippi </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Missouri </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Montana </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Nebraska </td>
    <td style="text-align:right;"> 17.97 </td>
    <td style="text-align:right;"> 17.6 </td>
    <td style="text-align:right;"> 3.823 </td>
    <td style="text-align:right;"> 5.0 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Nevada </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> New Hampshire </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> New Jersey </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> New Mexico </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> New York </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> North Carolina </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> North Dakota </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Ohio </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Oklahoma </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Oregon </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Pennsylvania </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Rhode Island </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> South Carolina </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> South Dakota </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tennessee </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Texas </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Utah </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Vermont </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Virginia </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Washington </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> West Virginia </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Wisconsin </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Wyoming </td>
-   <td style="text-align:right;"> NaN </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
-   <td style="text-align:right;"> NA </td>
   </tr>
 </tbody>
 </table>
@@ -434,13 +91,7 @@ ia_ne_means
 ```
 
 ```
-##  [1]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
-##  [9]   NaN   NaN   NaN   NaN   NaN   NaN   NaN 19.11
-## [17]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
-## [25]   NaN   NaN   NaN 17.97   NaN   NaN   NaN   NaN
-## [33]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
-## [41]   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
-## [49]   NaN   NaN   NaN
+## [1] 19.11 17.97
 ```
 
 The first number of the vector, which we can access with `ia_ne_means[1]`, is the mean work travel times in Iowa.
@@ -457,7 +108,7 @@ obtaining the following value of `ia_ne_diff_in_means`:
 
 ```
 # (mean work travel time in Iowa) - (mean work travel time in Nebraska)
-ia_ne_diff_in_means = NaN minutes
+ia_ne_diff_in_means = 1.15 minutes
 ```
 
 However, only checking the numerical difference between the mean values is not enough if we want to claim there is a **statistically significant** difference in commute times between Iowa and Nebraska.
@@ -593,12 +244,12 @@ ia_ne_p_value_two_sided <- ia_ne_p_value_left + ia_ne_p_value_right
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> NA </td>
+   <td style="text-align:right;"> 0.0283 </td>
   </tr>
 </tbody>
 </table>
 
-Our two-sided p-value is NA, which is NA our significance level of $\alpha=0.05$. We therefore NA the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska NA statistically significant.
+Our two-sided p-value is 0.0283, which is below our significance level of $\alpha=0.05$. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.
 
 We visualize the meaning of the *p*-value in the following way:
 
@@ -616,7 +267,7 @@ ia_ne_mean_work_travel_null %>%
 
 <img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-p-values-1.svg" width="100%" style="display: block; margin: auto;" />
 
-The portions of the null distribution that are in the shaded red area correspond to results that are **more extreme** than the observed values of NaN and NaN.
+The portions of the null distribution that are in the shaded red area correspond to results that are **more extreme** than the observed values of 1.15 and -1.15.
 The more that a null distribution lies within the red portions of the visualization, the more likely it becomes that we will fail to reject the null distribution and the difference in means that we observed in the dataset arose due to random chance alone.
 
 ### Computing the 95% confidence interval
