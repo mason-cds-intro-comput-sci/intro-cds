@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Introduction to Computational and Data Sciences</title>
-  <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences</title>
+  <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -17,20 +16,20 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
 
-<meta name="author" content="James K. Glasbrenner">
-<meta name="author" content="Ajay Kulkarni">
+<meta name="author" content="James K. Glasbrenner" />
+<meta name="author" content="Ajay Kulkarni" />
 
 
-<meta name="date" content="2018-11-27">
+<meta name="date" content="2019-04-02" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
 <link rel="prev" href="statistical-inference-with-infer.html">
@@ -308,7 +307,7 @@ Knowing this, we easily compute the difference in means,</p>
 <pre><code># (mean work travel time in Iowa) - (mean work travel time in Nebraska)
 ia_ne_diff_in_means = 1.15 minutes</code></pre>
 <p>However, only checking the numerical difference between the mean values is not enough if we want to claim there is a <strong>statistically significant</strong> difference in commute times between Iowa and Nebraska.
-There is significant overlap between the two distributions, with the standard deviation (sd) of each distribution being 3 – 4 times <em>larger</em> than the difference in means.
+There is significant overlap between the two distributions, with the standard deviation (sd) of each distribution being 3–4 times <em>larger</em> than the difference in means.
 Before we can conclude that the difference in means is statistically significant, we need to estimate how likely it is that this difference could have arisen from chance alone.</p>
 </div>
 <div id="defining-the-hypothesis-test" class="section level3">
@@ -350,7 +349,7 @@ A basic rule of thumb is, if you specify <strong>both</strong> an explanatory an
 In effect, we are randomly shuffling the rows in <code>mean_work_travel</code> into a different order, and then randomly shuffling the rows in <code>state</code> into yet another order, which should remove any connections between the <code>mean_work_travel</code> and <code>state</code> columns (this is what we mean by null distribution).
 We know to use <code>type = &quot;permute&quot;</code> because we have specified both a response and an explanatory variable and we want to see what happens when we assume the two columns are independent.
 As for <code>reps = 10000</code>, this controls the overall accuracy of our hypothesis tests.
-There is no hard and fast rule for value to set, but if you want more accurate results, increase <code>reps</code>.
+There is no hard and fast rule for the value to set, but if you want more accurate results, increase <code>reps</code>.
 However, keep in mind that the larger <code>reps</code> is, the <em>longer</em> it will take to complete the calculation.</p>
 <p>We finish up by piping into the last line:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
@@ -372,14 +371,15 @@ The input <code>stat = &quot;diff in props&quot;</code> only applies if <strong>
 <h3><span class="header-section-number">5.1.4</span> Computing the two-sided p-value</h3>
 <p>After we’ve generated our null distribution, we can compute the <em>p</em>-value using <code>get_p_value</code>.
 To compute a <em>p</em>-value, we need an <strong>observed statistic</strong>, which is simply the difference in means we computed using the dataset itself.
-This is what we computed using <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_right &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;right&quot;</span>)</code></pre>
-<p>Since we are conducting a <strong>two-sided hypothesis test</strong>, we need to also get the p-value for the opposite case of <code>ia_ne_means[2] - ia_ne_means[1]</code>, which is just <code>-ia_ne_diff_in_means</code>:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_left &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> <span class="op">-</span>ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;left&quot;</span>)</code></pre>
-<p>The full <em>p</em>-value for a two-sided hypothesis test is the sum of the “left” and “right” <em>p</em>-values we just obtained:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_two_sided &lt;-<span class="st"> </span>ia_ne_p_value_left <span class="op">+</span><span class="st"> </span>ia_ne_p_value_right</code></pre>
+This is what we computed using <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.
+However, <code>infer</code> also provides a shortcut for computing the observed statistic so that you don’t have to use <code>summarize()</code>,</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<p>Note that all we’ve done is taken the code we used to generate the null distribution and removed the <code>hypothesize()</code> and <code>generate()</code> lines.
+Now that we have our observed statistic, we can compute the <em>p</em>-value for our <strong>two-sided hypothesis test</strong>,</p>
+<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_two_sided &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>)</code></pre>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -391,23 +391,22 @@ p_value
 <tbody>
 <tr>
 <td style="text-align:right;">
-0.0283
+0.029
 </td>
 </tr>
 </tbody>
 </table>
-<p>Our two-sided p-value is 0.0283, which is below our significance level of <span class="math inline">\(\alpha=0.05\)</span>. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.</p>
+<p>Our two-sided p-value is 0.029, which is below our significance level of <span class="math inline">\(\alpha=0.05\)</span>. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.</p>
 <p>We visualize the meaning of the <em>p</em>-value in the following way:</p>
 <pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;right&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> <span class="op">-</span>ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;left&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">labs</span>(
     <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
     <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span>
   )</code></pre>
 <p><img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-p-values-1.svg" width="100%" style="display: block; margin: auto;" /></p>
-<p>The portions of the null distribution that are in the shaded red area correspond to results that are <strong>more extreme</strong> than the observed values of 1.15 and -1.15.
+<p>The portions of the null distribution that are in the shaded red area correspond to results that are <strong>more extreme</strong> than the observed value 1.15 in a two-sided hypothesis test.
 The more that a null distribution lies within the red portions of the visualization, the more likely it becomes that we will fail to reject the null distribution and the difference in means that we observed in the dataset arose due to random chance alone.</p>
 </div>
 <div id="computing-the-95-confidence-interval" class="section level3">
@@ -470,7 +469,7 @@ Also note that the lower bound of the confidence interval does not intersect wit
 <span class="st">  </span><span class="kw">shade_confidence_interval</span>(<span class="dt">endpoints =</span> ia_ne_ci95) <span class="op">+</span>
 <span class="st">  </span><span class="kw">labs</span>(
     <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
-    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times bootstrap distribution&quot;</span>
+    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times 95% confidence interval&quot;</span>
   )</code></pre>
 <p><img src="infer_files/figure-html/ia-ne-mean-work-travel-bootstrap-visualization-ci95-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 

@@ -4,7 +4,7 @@ title: Introduction to Computational and Data Sciences
 author:
   - James K. Glasbrenner
   - Ajay Kulkarni
-date: "2018-11-27"
+date: "2019-04-02"
 description: Supplemental textbook for the CDS 101 course at George Mason University.
 documentclass: book
 output: bookdown::gitbook
@@ -50,11 +50,11 @@ The R session information when compiling this book is shown below:
 ##   LC_IDENTIFICATION=C       
 ## 
 ## Package version:
-##   bookdown_0.7.24    dplyr_0.7.99.9000 
+##   bookdown_0.9.2     dplyr_0.8.0.9012  
 ##   ggplot2_3.1.0.9000 infer_0.4.0       
-##   kableExtra_0.9.0   knitr_1.20        
-##   readr_1.2.1.9000   rmarkdown_1.10.16 
-##   tinytex_0.9       
+##   kableExtra_1.1.0   knitr_1.22        
+##   readr_1.3.1.9000   rmarkdown_1.12.4  
+##   tinytex_0.11      
 ## 
 ## Pandoc version: 2.2.1
 ```
