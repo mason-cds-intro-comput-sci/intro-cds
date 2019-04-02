@@ -116,7 +116,7 @@ cat(
 ```
 
 However, only checking the numerical difference between the mean values is not enough if we want to claim there is a **statistically significant** difference in commute times between Iowa and Nebraska.
-There is significant overlap between the two distributions, with the standard deviation (sd) of each distribution being 3 -- 4 times *larger* than the difference in means.
+There is significant overlap between the two distributions, with the standard deviation (sd) of each distribution being 3--4 times *larger* than the difference in means.
 Before we can conclude that the difference in means is statistically significant, we need to estimate how likely it is that this difference could have arisen from chance alone.
 
 ### Defining the hypothesis test
@@ -183,7 +183,7 @@ Here we indicate that we want to *permute* the `mean_work_travel` and `state` co
 In effect, we are randomly shuffling the rows in `mean_work_travel` into a different order, and then randomly shuffling the rows in `state` into yet another order, which should remove any connections between the `mean_work_travel` and `state` columns (this is what we mean by null distribution).
 We know to use `type = "permute"` because we have specified both a response and an explanatory variable and we want to see what happens when we assume the two columns are independent.
 As for `reps = 10000`, this controls the overall accuracy of our hypothesis tests.
-There is no hard and fast rule for value to set, but if you want more accurate results, increase `reps`.
+There is no hard and fast rule for the value to set, but if you want more accurate results, increase `reps`.
 However, keep in mind that the larger `reps` is, the *longer* it will take to complete the calculation.
 
 We finish up by piping into the last line:
@@ -214,23 +214,20 @@ ia_ne_mean_work_travel_null %>%
 After we've generated our null distribution, we can compute the *p*-value using `get_p_value`.
 To compute a *p*-value, we need an **observed statistic**, which is simply the difference in means we computed using the dataset itself.
 This is what we computed using `ia_ne_diff_in_means <- ia_ne_means[1] - ia_ne_means[2]`.
+However, `infer` also provides a shortcut for computing the observed statistic so that you don't have to use `summarize()`,
 
-```{r ia-ne-p-value-right}
-ia_ne_p_value_right <- ia_ne_mean_work_travel_null %>%
-  get_p_value(obs_stat = ia_ne_diff_in_means, direction = "right")
+```{r obs-stat-using-infer}
+ia_ne_diff_in_means <- ia_ne_county %>%
+  specify(formula = mean_work_travel ~ state) %>%
+  calculate(stat = "diff in means", order = combine("Iowa", "Nebraska"))
 ```
 
-Since we are conducting a **two-sided hypothesis test**, we need to also get the p-value for the opposite case of `ia_ne_means[2] - ia_ne_means[1]`, which is just `-ia_ne_diff_in_means`:
-
-```{r ia-ne-p-value-left}
-ia_ne_p_value_left <- ia_ne_mean_work_travel_null %>%
-  get_p_value(obs_stat = -ia_ne_diff_in_means, direction = "left")
-```
-
-The full *p*-value for a two-sided hypothesis test is the sum of the "left" and "right" *p*-values we just obtained:
+Note that all we've done is taken the code we used to generate the null distribution and removed the `hypothesize()` and `generate()` lines.
+Now that we have our observed statistic, we can compute the *p*-value for our **two-sided hypothesis test**,
 
 ```{r ia-ne-p-value-two-sided}
-ia_ne_p_value_two_sided <- ia_ne_p_value_left + ia_ne_p_value_right
+ia_ne_p_value_two_sided <- ia_ne_mean_work_travel_null %>%
+  get_p_value(obs_stat = ia_ne_diff_in_means, direction = "both")
 ```
 
 ```{r ia-ne-p-value-two-sided-print, echo = FALSE}
@@ -262,15 +259,14 @@ We visualize the meaning of the *p*-value in the following way:
 ```{r ia-ne-diff-in-means-null-distribution-p-values}
 ia_ne_mean_work_travel_null %>%
   visualize() +
-  shade_p_value(obs_stat = ia_ne_diff_in_means, direction = "right") +
-  shade_p_value(obs_stat = -ia_ne_diff_in_means, direction = "left") +
+  shade_p_value(obs_stat = ia_ne_diff_in_means, direction = "both") +
   labs(
     x = "difference in means",
     title = "Difference in mean work travel times null distribution"
   )
 ```
 
-The portions of the null distribution that are in the shaded red area correspond to results that are **more extreme** than the observed values of `r round(ia_ne_diff_in_means, 2)` and `r round(-ia_ne_diff_in_means, 2)`.
+The portions of the null distribution that are in the shaded red area correspond to results that are **more extreme** than the observed value `r round(ia_ne_diff_in_means, 2)` in a two-sided hypothesis test.
 The more that a null distribution lies within the red portions of the visualization, the more likely it becomes that we will fail to reject the null distribution and the difference in means that we observed in the dataset arose due to random chance alone.
 
 ### Computing the 95% confidence interval
@@ -338,7 +334,7 @@ ia_ne_mean_work_travel_bootstrap %>%
   shade_confidence_interval(endpoints = ia_ne_ci95) +
   labs(
     x = "difference in means",
-    title = "Difference in mean work travel times bootstrap distribution"
+    title = "Difference in mean work travel times 95% confidence interval"
   )
 
 ```

@@ -25,7 +25,6 @@ Remotes:
   r-lib/fs@v1.2.6,
   rstudio/bookdown,
   rstudio/rmarkdown,
-  tidymodels/infer@develop,
   tidyverse/ggplot2,
   tidyverse/dplyr,
   tidyverse/readr
