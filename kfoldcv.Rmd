@@ -9,12 +9,21 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(modelr))
 suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(tidyr))
 source("R/repeated_kfold_cross_validation.R")
 ```
 
 ## Case study: Do taller people earn more?
 
 The following is a worked example using the `heights` dataset (distributed as part of the `modelr` package) that demonstrates how to perform model selection using *k-fold* cross-validation.
+The description for the dataset, accessed by running `?heights`, is as follows,
+
+> You might have heard that taller people earn more.
+> Is it true?
+> You can try and answer the question by exploring this dataset extracted from the National Longitudinal Study, which is sponsored by the U.S. Bureau of Labor Statistics.
+
+Let's see if the dataset supports the claim that "taller people earn more" and, going further, let's see if we can build a predictive model for an individual's income using different combinations of variables in the dataset.
+
 To follow along, load the following libraries, dataset, and R source file into your R session:
 
 ```r
@@ -24,20 +33,16 @@ library(dplyr)
 library(ggplot2)
 library(modelr)
 library(readr)
+library(tidyr)
 # k-fold cross validation helper functions
 source(
   url("http://data.cds101.com/repeated_kfold_cross_validation.R")
 )
 ```
 
-### Data exploration
+### About the dataset
 
-The `heights` dataset contains 8 variables (columns) and 7,006 observations (rows).
-The description for the dataset can be accessed by running `?heights`,
-
-> You might have heard that taller people earn more. Is it true? You can try and answer the question by exploring this dataset extracted from the National Longitudinal Study, which is sponsored by the U.S. Bureau of Labor Statistics.
-
-The table below, also available via `?heights`, explains the meaning of each variable in the dataset,
+The `heights` dataset contains 8 variables (columns) and 7,006 observations (rows), with the table below explaining the meaning of each variable in the dataset,
 
 | Variable    | Description                                                                                                                  |
 | ----------- | ------------------------------------------------                                                                             |
@@ -49,3 +54,105 @@ The table below, also available via `?heights`, explains the meaning of each var
 | `sex`       | Sex                                                                                                                          |
 | `education` | Years of education                                                                                                           |
 | `afqt`      | Percentile score on Armed Forces Qualification Test.                                                                         |
+
+The first several rows of the dataset look as follows,
+
+```r
+heights %>%
+  head()
+```
+
+```{r heights-head, echo = FALSE}
+heights %>%
+  head() %>%
+  knitr::kable(format = "markdown")
+```
+
+### Data exploration
+
+We begin data exploration by visualizing the distribution of our response variable `income` as a histogram,
+
+```{r heights-income-hist}
+ggplot(heights, mapping = aes(x = income, y = ..density..)) +
+  geom_histogram(binwidth = 10000)
+```
+
+We have some outliers!
+In fact, the income values in the bar on the far right are all the same,
+
+```r
+heights %>%
+  arrange(desc(income)) %>%
+  head()
+```
+
+```{r heights-reverse-sort-income, echo = FALSE}
+heights %>%
+  arrange(desc(income)) %>%
+  head() %>%
+  knitr::kable(format = "markdown")
+```
+
+Why is this happening?
+If we go to the dataset source and read how the [income data was collected](https://www.nlsinfo.org/content/cohorts/nlsy79/topical-guide/income/income), you'll find that "top coding" was applied to the `income` column to protect the confidentiality of respondents,
+
+> This algorithm takes the top two percent of respondents with valid values and averages them.
+> That averaged value replaces the values for all cases in the top range. 
+
+Because these outlier values don't reflect the actual earnings of a specific individual and will also skew our model, we exclude them from further analysis.
+
+```{r heights-no-outliers}
+heights_no_outliers <- heights %>%
+  filter(income < 343830)
+```
+
+Another thing to notice in the `income` distribution is that there are people in the dataset with a reported income of 0.
+This will also skew our analysis, particularly since the question of whether taller people earn more assumes that we're comparing non-zero incomes.
+For that reason, we will also exclude incomes of 0 from further analysis.
+
+```{r heights-filtered}
+heights_filtered <- heights_no_outliers %>%
+  filter(income > 0)
+```
+
+Now that we've removed the outliers and observations not relevant to our analysis, let's explore the dependence of `income` on the other variables in the dataset, which are candidate explanatory variables.
+We use `gather()` in tandem with `facet_wrap()` to create a grid of scatterplots for the numeric explanatory variables,
+
+```{r heights-income-other-vars-scatter}
+heights_filtered %>%
+  select(-marital, -sex) %>%
+  gather(height:afqt, key = "variable", value = "value") %>%
+  ggplot(mapping = aes(x = value, y = income)) +
+  geom_point() +
+  facet_wrap(~ variable, scales = "free_x")
+```
+
+Height and weight only seem to correlate with income at certain thresholds, such that lower incomes correlate with people shorter than 60 inches or heavier than 250 lbs.
+In contrast, the correlation between income and education and performance on the armed forces qualification test is positive and does not seem to have the same cut-off behavior.
+Age correlates with lower incomes only if you're 47 or 56 in this sample.
+
+Similarly, we create plots for the categorical explanatory variables.
+First, we visualize the distributions of income for men and women,
+
+```{r heights-income-sex-distributions}
+heights_filtered %>%
+  ggplot(mapping = aes(x = income, fill = sex)) +
+  geom_density(alpha = 0.5)
+```
+
+Both distributions are right-skewed, with the center for men's income being higher than the center for women's income.
+The right-tail for men's incomes is also longer and "fatter" than for women's incomes.
+
+If we subdivide men's and women's income by marital status, we get the following distributions,
+
+```{r heights-income-sex-marital-distributions, fig.width = 7}
+heights_filtered %>%
+  ggplot(mapping = aes(x = income, fill = sex)) +
+  geom_density(alpha = 0.5) +
+  facet_wrap(~ marital)
+```
+
+A couple of interesting observations pop out.
+Single men and single women have very similar distributions in income, as do divorcees.
+In contrast, there *is* a difference between the incomes of married or separated men compared to married or separated women, with men's incomes centered higher with longer, "fatter" tails overall.
+There is also a difference between income distributions for widowed men and women, but it is less pronounced compared to the married and separated plots.
