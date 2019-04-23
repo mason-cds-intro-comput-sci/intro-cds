@@ -1,0 +1,51 @@
+# Model selection
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  out.width = "100%"
+)
+suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(modelr))
+suppressPackageStartupMessages(library(readr))
+source("R/repeated_kfold_cross_validation.R")
+```
+
+## Case study: Do taller people earn more?
+
+The following is a worked example using the `heights` dataset (distributed as part of the `modelr` package) that demonstrates how to perform model selection using *k-fold* cross-validation.
+To follow along, load the following libraries, dataset, and R source file into your R session:
+
+```r
+# Packages
+library(broom)
+library(dplyr)
+library(ggplot2)
+library(modelr)
+library(readr)
+# k-fold cross validation helper functions
+source(
+  url("http://data.cds101.com/repeated_kfold_cross_validation.R")
+)
+```
+
+### Data exploration
+
+The `heights` dataset contains 8 variables (columns) and 7,006 observations (rows).
+The description for the dataset can be accessed by running `?heights`,
+
+> You might have heard that taller people earn more. Is it true? You can try and answer the question by exploring this dataset extracted from the National Longitudinal Study, which is sponsored by the U.S. Bureau of Labor Statistics.
+
+The table below, also available via `?heights`, explains the meaning of each variable in the dataset,
+
+| Variable    | Description                                                                                                                  |
+| ----------- | ------------------------------------------------                                                                             |
+| `income`    | Yearly income. The top two percent of values were averaged and that average was used to replace all values in the top range. |
+| `height`    | Height, in feet                                                                                                              |
+| `weight`    | Weight, in pounds                                                                                                            |
+| `age`       | Age, in years, between 47 and 56.                                                                                            |
+| `marital`   | Marital status                                                                                                               |
+| `sex`       | Sex                                                                                                                          |
+| `education` | Years of education                                                                                                           |
+| `afqt`      | Percentile score on Armed Forces Qualification Test.                                                                         |

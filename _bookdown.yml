@@ -21,5 +21,6 @@ rmd_files:
   - describingdata.Rmd
   - distributions.Rmd
   - infer.Rmd
+  - kfoldcv.Rmd
   - references.Rmd
 ...
