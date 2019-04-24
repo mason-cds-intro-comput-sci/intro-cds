@@ -157,7 +157,7 @@ Single men and single women have very similar distributions in income, as do div
 In contrast, there *is* a difference between the incomes of married or separated men compared to married or separated women, with men's incomes centered higher with longer, "fatter" tails overall.
 There is also a difference between income distributions for widowed men and women, but it is less pronounced compared to the married and separated plots.
 
-### Special topic: data imputation
+### Imputing missing values
 
 This dataset contains missing values in the `weight`, `education`, and `afqt` columns,
 
@@ -170,9 +170,10 @@ heights_filtered %>%
 ```
 
 ```{r}
-impute_education <- heights_filtered %>%
+impute_education <- heights %>%
   pull(education) %>%
-  median(na.rm = TRUE)
+  median(na.rm = TRUE) %>%
+  as.integer()
 ```
 
 ```{r}
@@ -186,9 +187,8 @@ heights_impute1 <- heights_filtered %>%
   )
 ```
 
-
 ```{r}
-ggplot(heights_impute1, aes(x = height, y = weight)) +
+ggplot(heights, aes(x = height, y = weight)) +
   geom_point() +
   geom_smooth(method = "lm") +
   facet_wrap(~ sex)
@@ -197,7 +197,7 @@ ggplot(heights_impute1, aes(x = height, y = weight)) +
 ```{r}
 impute_model_weight <- lm(
   weight ~ sex + height,
-  data = filter(heights_impute1, !is.na(weight))
+  data = filter(heights, !is.na(weight))
 )
 ```
 
@@ -216,7 +216,7 @@ heights_impute2 <- heights_impute1 %>%
 ```
 
 ```{r}
-ggplot(heights_impute2, mapping = aes(x = education, y = afqt)) +
+ggplot(heights, mapping = aes(x = education, y = afqt)) +
   geom_point() +
   geom_smooth(method = "loess", span = 0.6156541)
 ```
@@ -224,7 +224,7 @@ ggplot(heights_impute2, mapping = aes(x = education, y = afqt)) +
 ```{r}
 impute_model_afqt <- loess(
   afqt ~ education,
-  data = filter(heights_impute2, !is.na(afqt)),
+  data = filter(heights, !is.na(afqt)),
   span = 0.6156541
 )
 ```
@@ -242,30 +242,174 @@ heights_imputed <- heights_impute2 %>%
   select(-pred)
 ```
 
+### Split dataset into testing and training sets
+
+```{r}
+test_train_split <- heights_imputed %>%
+  resample_partition(
+    p = setNames(combine(0.80, 0.20), combine("train", "test"))
+  )
+heights_train <- as_tibble(purrr::pluck(test_train_split, "train"))
+heights_test <- as_tibble(purrr::pluck(test_train_split, "test"))
+```
+
 ### Univariate models
 
 Let's use cross-validation to select the best univariate model.
 To do this, we first need to create the following models using `lm()`,
 
 ```{r heights-income-univariate-models-cv}
-cv_results_model_height <- rep_kfold_cv(heights_imputed, 10, income ~ height, 3) %>% mutate(model = "height")
-cv_results_model_weight <- rep_kfold_cv(heights_imputed, 10, income ~ weight, 3) %>% mutate(model = "weight")
-cv_results_model_age <- rep_kfold_cv(heights_imputed, 10, income ~ age, 3) %>% mutate(model = "age")
-cv_results_model_marital <- rep_kfold_cv(heights_imputed, 10, income ~ marital, 3) %>% mutate(model = "marital")
-cv_results_model_sex <- rep_kfold_cv(heights_imputed, 10, income ~ sex, 3) %>% mutate(model = "sex")
-cv_results_model_education <- rep_kfold_cv(heights_imputed, 10, income ~ education, 3) %>% mutate(model = "education")
-cv_results_model_afqt <- rep_kfold_cv(heights_imputed, 10, income ~ afqt, 3) %>% mutate(model = "afqt")
+cv_results_height <- rep_kfold_cv(heights_train, 10, income ~ height, 5) %>%
+  mutate(model = "height")
+cv_results_weight <- rep_kfold_cv(heights_train, 10, income ~ weight, 5) %>%
+  mutate(model = "weight")
+cv_results_age <- rep_kfold_cv(heights_train, 10, income ~ age, 5) %>%
+  mutate(model = "age")
+cv_results_marital <- rep_kfold_cv(heights_train, 10, income ~ marital, 5) %>%
+  mutate(model = "marital")
+cv_results_sex <- rep_kfold_cv(heights_train, 10, income ~ sex, 5) %>%
+  mutate(model = "sex")
+cv_results_education <- rep_kfold_cv(heights_train, 10, income ~ education, 5) %>%
+  mutate(model = "education")
+cv_results_afqt <- rep_kfold_cv(heights_train, 10, income ~ afqt, 5) %>%
+  mutate(model = "afqt")
 ```
 
-```{r}
+```r
 bind_rows(
-  cv_results_model_height,
-  cv_results_model_weight,
-  cv_results_model_age,
-  cv_results_model_marital,
-  cv_results_model_sex,
-  cv_results_model_education,
-  cv_results_model_afqt
+  cv_results_height,
+  cv_results_weight,
+  cv_results_age,
+  cv_results_marital,
+  cv_results_sex,
+  cv_results_education,
+  cv_results_afqt
 )
 ```
 
+```{r cv-univariate-results, echo = FALSE}
+bind_rows(
+  cv_results_height,
+  cv_results_weight,
+  cv_results_age,
+  cv_results_marital,
+  cv_results_sex,
+  cv_results_education,
+  cv_results_afqt
+) %>%
+  knitr::kable(format = "markdown")
+```
+
+### Multivariate models
+
+```{r cv-multi-1}
+cv_results_multi1 <- rep_kfold_cv(
+  heights_train,
+  10,
+  income ~ education + afqt,
+  5
+) %>%
+  mutate(model = "education + afqt")
+```
+
+```{r cv-multi-2}
+cv_results_multi2 <- rep_kfold_cv(
+  heights_train,
+  10,
+  income ~ sex + marital + education + afqt,
+  5
+) %>%
+  mutate(model = "sex + marital + education + afqt")
+```
+
+```{r cv-multi-3}
+cv_results_multi3 <- rep_kfold_cv(
+  heights_train,
+  10,
+  income ~ height + weight + education + afqt,
+  5
+) %>%
+  mutate(model = "height + weight + education + afqt")
+```
+
+```{r cv-multi-4}
+cv_results_multi4 <- rep_kfold_cv(
+  heights_train,
+  10,
+  income ~ sex + marital + age + height + weight + education + afqt,
+  5
+) %>%
+  mutate(
+    model = "sex + marital + age + height + weight + education + afqt"
+  )
+```
+
+```r
+bind_rows(
+  cv_results_multi1,
+  cv_results_multi2,
+  cv_results_multi3,
+  cv_results_multi4
+)
+```
+
+```{r cv-multi-results, echo = FALSE}
+bind_rows(
+  cv_results_multi1,
+  cv_results_multi2,
+  cv_results_multi3,
+  cv_results_multi4
+) %>%
+  knitr::kable(format = "markdown")
+```
+
+### Final model evaluation
+
+```{r}
+final_model <- lm(
+  income ~ sex + marital + education + afqt,
+  data = heights_train
+)
+```
+
+```r
+final_model %>%
+  tidy()
+```
+
+```{r, echo = FALSE}
+final_model %>%
+  tidy() %>%
+  knitr::kable(format = "markdown")
+```
+
+```r
+final_model %>%
+  glance() %>%
+  gather(key = "parameter", value = "value")
+```
+
+```{r, echo = FALSE}
+final_model %>%
+  glance() %>%
+  gather(key = "parameter", value = "value") %>%
+  knitr::kable(format = "markdown")
+```
+
+```{r}
+heights_test_model_outputs <- heights_test %>%
+  add_predictions(final_model) %>%
+  add_residuals(final_model) 
+```
+
+```{r}
+ggplot(heights_test_model_outputs) +
+  geom_point(aes(pred, resid)) +
+  geom_ref_line(h = 0)
+```
+
+```{r}
+ggplot(heights_test_model_outputs) +
+  geom_qq(aes(sample = resid)) +
+  geom_qq_line(aes(sample = resid))
+```
