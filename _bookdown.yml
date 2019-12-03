@@ -17,6 +17,8 @@ rmd_files:
   - toolbox.Rmd
   - github.Rmd
 # - rstudio.Rmd
+  - Rprogramming.Rmd
+  - Rbasics.Rmd
   - readings.Rmd
   - describingdata.Rmd
   - distributions.Rmd
