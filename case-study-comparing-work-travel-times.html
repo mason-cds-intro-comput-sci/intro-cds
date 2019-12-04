@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences</title>
+  <title>6.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences</title>
   <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
-  <meta name="generator" content="bookdown  and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="6.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,24 +16,25 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="6.1 Case study: Comparing work travel times | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
 
 <meta name="author" content="James K. Glasbrenner" />
 <meta name="author" content="Ajay Kulkarni" />
+<meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2019-04-02" />
+<meta name="date" content="2019-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="statistical-inference-with-infer.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="statistical-inference-with-infer.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +42,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -58,7 +62,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -156,30 +159,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="additional-topics.html"><a href="additional-topics.html#how-to-import-a-repository"><i class="fa fa-check"></i><b>2.4.2</b> How to import a repository</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>II Readings</b></span></li>
-<li class="chapter" data-level="3" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>3</b> Describing numerical data</a></li>
-<li class="chapter" data-level="4" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>4</b> Representing distributions</a><ul>
-<li class="chapter" data-level="4.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>4.1</b> Probability mass functions</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>4.1.1</b> Example dataset</a></li>
-<li class="chapter" data-level="4.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>4.1.2</b> PMFs</a></li>
-<li class="chapter" data-level="4.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>4.1.3</b> Plotting PMFs</a></li>
+<li class="part"><span><b>II R Programming</b></span></li>
+<li class="chapter" data-level="3" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>3</b> R basics</a><ul>
+<li class="chapter" data-level="3.1" data-path="rbasics-data.html"><a href="rbasics-data.html"><i class="fa fa-check"></i><b>3.1</b> Data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="rbasics-data.html"><a href="rbasics-data.html#rbasics-numbers"><i class="fa fa-check"></i><b>3.1.1</b> Numbers</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>4.2</b> Cumulative distribution functions</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>4.2.1</b> The limits of probability mass functions</a></li>
-<li class="chapter" data-level="4.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>4.2.2</b> Percentiles</a></li>
-<li class="chapter" data-level="4.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>4.2.3</b> CDFs</a></li>
-<li class="chapter" data-level="4.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>4.2.4</b> Representing CDFs</a></li>
-<li class="chapter" data-level="4.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>4.2.5</b> Comparing CDFs</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>4.3</b> Credits</a></li>
+<li class="part"><span><b>III Readings</b></span></li>
+<li class="chapter" data-level="4" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>4</b> Describing numerical data</a></li>
+<li class="chapter" data-level="5" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>5</b> Representing distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>5.1</b> Probability mass functions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>5.1.1</b> Example dataset</a></li>
+<li class="chapter" data-level="5.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>5.1.2</b> PMFs</a></li>
+<li class="chapter" data-level="5.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>5.1.3</b> Plotting PMFs</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>5</b> Statistical inference with infer</a><ul>
-<li class="chapter" data-level="5.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>5.1</b> Case study: Comparing work travel times</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>5.1.1</b> Work travel times in Iowa and Nebraska</a></li>
-<li class="chapter" data-level="5.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>5.1.2</b> Defining the hypothesis test</a></li>
-<li class="chapter" data-level="5.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>5.1.3</b> Building the null distribution</a></li>
-<li class="chapter" data-level="5.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>5.1.4</b> Computing the two-sided p-value</a></li>
-<li class="chapter" data-level="5.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>5.1.5</b> Computing the 95% confidence interval</a></li>
+<li class="chapter" data-level="5.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>5.2</b> Cumulative distribution functions</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>5.2.1</b> The limits of probability mass functions</a></li>
+<li class="chapter" data-level="5.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>5.2.2</b> Percentiles</a></li>
+<li class="chapter" data-level="5.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>5.2.3</b> CDFs</a></li>
+<li class="chapter" data-level="5.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>5.2.4</b> Representing CDFs</a></li>
+<li class="chapter" data-level="5.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>5.2.5</b> Comparing CDFs</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>5.3</b> Credits</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>6</b> Statistical inference with infer</a><ul>
+<li class="chapter" data-level="6.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>6.1</b> Case study: Comparing work travel times</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>6.1.1</b> Work travel times in Iowa and Nebraska</a></li>
+<li class="chapter" data-level="6.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>6.1.2</b> Defining the hypothesis test</a></li>
+<li class="chapter" data-level="6.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>6.1.3</b> Building the null distribution</a></li>
+<li class="chapter" data-level="6.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>6.1.4</b> Computing the two-sided p-value</a></li>
+<li class="chapter" data-level="6.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>6.1.5</b> Computing the 95% confidence interval</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -204,37 +213,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="case-study-comparing-work-travel-times" class="section level2">
-<h2><span class="header-section-number">5.1</span> Case study: Comparing work travel times</h2>
-<p>The following is a worked example using the county complete dataset from Section <a href="representing-distributions.html#representing-distributions">4</a> that demonstrates how to use the <code>infer</code> package to test if the difference in mean values of two distributions is statistically significant.
+<h2><span class="header-section-number">6.1</span> Case study: Comparing work travel times</h2>
+<p>The following is a worked example using the county complete dataset from Section <a href="representing-distributions.html#representing-distributions">5</a> that demonstrates how to use the <code>infer</code> package to test if the difference in mean values of two distributions is statistically significant.
 To follow along, load the following libraries and dataset into your R session:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Packages</span>
-<span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(readr)
-<span class="kw">library</span>(infer)
-<span class="co"># Dataset</span>
-county_complete &lt;-<span class="st"> </span><span class="kw">read_rds</span>(
-  <span class="kw">url</span>(<span class="st">&quot;http://data.cds101.com/county_complete.rds&quot;</span>)
-)</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="co"># Packages</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="kw">library</span>(readr)</a>
+<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="kw">library</span>(infer)</a>
+<a class="sourceLine" id="cb19-6" data-line-number="6"><span class="co"># Dataset</span></a>
+<a class="sourceLine" id="cb19-7" data-line-number="7">county_complete &lt;-<span class="st"> </span><span class="kw">read_rds</span>(</a>
+<a class="sourceLine" id="cb19-8" data-line-number="8">  <span class="kw">url</span>(<span class="st">&quot;http://data.cds101.com/county_complete.rds&quot;</span>)</a>
+<a class="sourceLine" id="cb19-9" data-line-number="9">)</a></code></pre></div>
 <div id="work-travel-times-in-iowa-and-nebraska" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Work travel times in Iowa and Nebraska</h3>
-<p>In Section <a href="representing-distributions.html#representing-distributions">4</a>, we looked at the distribution of average work travel times in Iowa and Nebraska measured on the county level.</p>
+<h3><span class="header-section-number">6.1.1</span> Work travel times in Iowa and Nebraska</h3>
+<p>In Section <a href="representing-distributions.html#representing-distributions">5</a>, we looked at the distribution of average work travel times in Iowa and Nebraska measured on the county level.</p>
 <p><img src="infer_files/figure-html/ia-ne-travel-times-pmf-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>In our visual inspection of the probability mass function, we concluded that the distribution of work travel times is shifted slightly towards shorter commutes in Nebraska versus Iowa.
 The summary statistics for the two distributions seem to support this conclusion:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Filter dataset to only include counties in Iowa and Nebraska</span>
-ia_ne_county &lt;-<span class="st"> </span>county_complete <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span>)
-
-<span class="co"># Compute summary statistics of mean_work_travel column for Iowa and Nebraska</span>
-ia_ne_summary_stats &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarize</span>(
-    <span class="dt">mean =</span> <span class="kw">mean</span>(mean_work_travel),
-    <span class="dt">median =</span> <span class="kw">median</span>(mean_work_travel),
-    <span class="dt">sd =</span> <span class="kw">sd</span>(mean_work_travel),
-    <span class="dt">iqr =</span> <span class="kw">IQR</span>(mean_work_travel)
-  )</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="co"># Filter dataset to only include counties in Iowa and Nebraska</span></a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">ia_ne_county &lt;-<span class="st"> </span>county_complete <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb20-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span>)</a>
+<a class="sourceLine" id="cb20-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb20-5" data-line-number="5"><span class="co"># Compute summary statistics of mean_work_travel column for Iowa and Nebraska</span></a>
+<a class="sourceLine" id="cb20-6" data-line-number="6">ia_ne_summary_stats &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb20-7" data-line-number="7"><span class="st">  </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb20-8" data-line-number="8"><span class="st">  </span><span class="kw">summarize</span>(</a>
+<a class="sourceLine" id="cb20-9" data-line-number="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(mean_work_travel),</a>
+<a class="sourceLine" id="cb20-10" data-line-number="10">    <span class="dt">median =</span> <span class="kw">median</span>(mean_work_travel),</a>
+<a class="sourceLine" id="cb20-11" data-line-number="11">    <span class="dt">sd =</span> <span class="kw">sd</span>(mean_work_travel),</a>
+<a class="sourceLine" id="cb20-12" data-line-number="12">    <span class="dt">iqr =</span> <span class="kw">IQR</span>(mean_work_travel)</a>
+<a class="sourceLine" id="cb20-13" data-line-number="13">  )</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -294,15 +303,15 @@ Nebraska
 </table>
 <p>Let’s compute the difference in means directly using <code>ia_ne_summary_stats</code>.
 First, we need to grab the <code>mean</code> column:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_means &lt;-<span class="st"> </span>ia_ne_summary_stats <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">pull</span>(mean)</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">ia_ne_means &lt;-<span class="st"> </span>ia_ne_summary_stats <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(mean)</a></code></pre></div>
 <p><code>ia_ne_means</code> is a simple vector that stores two numbers.</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_means</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">ia_ne_means</a></code></pre></div>
 <pre><code>## [1] 19.11 17.97</code></pre>
 <p>The first number of the vector, which we can access with <code>ia_ne_means[1]</code>, is the mean work travel times in Iowa.
 The second number of the vector, which we can access with <code>ia_ne_means[2]</code>, is the mean work travel times in Nebraska.
 Knowing this, we easily compute the difference in means,</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_means[<span class="dv">1</span>] <span class="op">-</span><span class="st"> </span>ia_ne_means[<span class="dv">2</span>]</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_means[<span class="dv">1</span>] <span class="op">-</span><span class="st"> </span>ia_ne_means[<span class="dv">2</span>]</a></code></pre></div>
 <p>obtaining the following value of <code>ia_ne_diff_in_means</code>:</p>
 <pre><code># (mean work travel time in Iowa) - (mean work travel time in Nebraska)
 ia_ne_diff_in_means = 1.15 minutes</code></pre>
@@ -311,7 +320,7 @@ There is significant overlap between the two distributions, with the standard de
 Before we can conclude that the difference in means is statistically significant, we need to estimate how likely it is that this difference could have arisen from chance alone.</p>
 </div>
 <div id="defining-the-hypothesis-test" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> Defining the hypothesis test</h3>
+<h3><span class="header-section-number">6.1.2</span> Defining the hypothesis test</h3>
 <p>To determine whether or not there is a meaningful difference in means between the two distributions, we will conduct a two-sided hypothesis test using the following null and alternative hypotheses:</p>
 <ul>
 <li><p><strong>Null hypothesis</strong>: There is no difference between the mean work travel time in Iowa and the mean work travel time in Nebraska.</p>
@@ -322,16 +331,16 @@ Before we can conclude that the difference in means is statistically significant
 <p>We set our significance level to <span class="math inline">\(\alpha=0.05\)</span>, which we will use as a cutoff for determining whether or not a result is statistically significant.</p>
 </div>
 <div id="building-the-null-distribution" class="section level3">
-<h3><span class="header-section-number">5.1.3</span> Building the null distribution</h3>
+<h3><span class="header-section-number">6.1.3</span> Building the null distribution</h3>
 <p>To conduct our hypothesis test, we first must generate our null distribution using the <code>infer</code> package:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">ia_ne_mean_work_travel_null &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-3" data-line-number="3"><span class="st">  </span><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</a></code></pre></div>
 <p>Let’s explain what each of these lines is doing.
 We start by piping our filtered dataset stored in <code>ia_ne_county</code> into <code>specify</code>:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state)</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state)</a></code></pre></div>
 <p>Here we <em>specify</em> the <strong>response</strong> variable and the <strong>explanatory</strong> variable in the <code>formula =</code> input keyword.
 The formula syntax is given as follows:</p>
 <pre><code>response ~ explanatory</code></pre>
@@ -340,11 +349,11 @@ How do we know to use <code>mean_work_travel</code> as the response variable?
 It’s because of how we formulated our null and alternative hypotheses, such that we are testing whether a person’s mean work travel time is affected by the state he or she lives in, <strong>not</strong> whether the state that a person lives in is affected by his or her mean work travel time.
 Finally, because the <strong>response variable</strong> is numerical, we don’t use the <code>success =</code> keyword in <code>specify</code>.</p>
 <p>The next line that we pipe into is:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">hypothesize</span>(<span class="dt">null =</span> <span class="st">&quot;independence&quot;</span>)</a></code></pre></div>
 <p>Here we indicate that we are conducting a hypothesis test to check whether or not the variables provided in <code>specify</code> are independent of one another.
 A basic rule of thumb is, if you specify <strong>both</strong> an explanatory and a response variable in the formula of <code>specify</code>, then you will use <code>null = &quot;independence&quot;</code>.</p>
 <p>Next we pipe into this line:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;permute&quot;</span>)</a></code></pre></div>
 <p>Here we indicate that we want to <em>permute</em> the <code>mean_work_travel</code> and <code>state</code> columns 10,000 times to build up our null distribution.
 In effect, we are randomly shuffling the rows in <code>mean_work_travel</code> into a different order, and then randomly shuffling the rows in <code>state</code> into yet another order, which should remove any connections between the <code>mean_work_travel</code> and <code>state</code> columns (this is what we mean by null distribution).
 We know to use <code>type = &quot;permute&quot;</code> because we have specified both a response and an explanatory variable and we want to see what happens when we assume the two columns are independent.
@@ -352,34 +361,34 @@ As for <code>reps = 10000</code>, this controls the overall accuracy of our hypo
 There is no hard and fast rule for the value to set, but if you want more accurate results, increase <code>reps</code>.
 However, keep in mind that the larger <code>reps</code> is, the <em>longer</em> it will take to complete the calculation.</p>
 <p>We finish up by piping into the last line:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</a></code></pre></div>
 <p>Here we indicate that we are comparing the difference in means between our two distributions (the mean work travel times in Iowa and Nebraska).
 The input <code>order = combine(&quot;Iowa&quot;, &quot;Nebraska&quot;)</code> defines the subtraction order, so we will find the difference in means by subtracting the mean time in Iowa from the mean time in Nebraska, which is the same order we used for <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.
 As for the <code>stat</code> input, we know to use <code>stat = &quot;diff in means&quot;</code> because of how we formulated our null and alternative hypotheses, i.e. we are comparing the <strong>difference</strong> in <strong>mean</strong> work travel times between Iowa and Nebraska.
 The way we know that we <strong>can’t</strong> use something like <code>stat = &quot;diff in props&quot;</code> is because at least one of our variables in <code>specify</code> is numerical (<code>mean_work_travel</code>).
 The input <code>stat = &quot;diff in props&quot;</code> only applies if <strong>both</strong> the explanatory and response variables are categorical.</p>
 <p>The null distribution that we generated looks as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(
-    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
-    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span>
-  )</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb32-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb32-4" data-line-number="4">    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,</a>
+<a class="sourceLine" id="cb32-5" data-line-number="5">    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span></a>
+<a class="sourceLine" id="cb32-6" data-line-number="6">  )</a></code></pre></div>
 <p><img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="computing-the-two-sided-p-value" class="section level3">
-<h3><span class="header-section-number">5.1.4</span> Computing the two-sided p-value</h3>
+<h3><span class="header-section-number">6.1.4</span> Computing the two-sided p-value</h3>
 <p>After we’ve generated our null distribution, we can compute the <em>p</em>-value using <code>get_p_value</code>.
 To compute a <em>p</em>-value, we need an <strong>observed statistic</strong>, which is simply the difference in means we computed using the dataset itself.
 This is what we computed using <code>ia_ne_diff_in_means &lt;- ia_ne_means[1] - ia_ne_means[2]</code>.
 However, <code>infer</code> also provides a shortcut for computing the observed statistic so that you don’t have to use <code>summarize()</code>,</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">ia_ne_diff_in_means &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb33-3" data-line-number="3"><span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</a></code></pre></div>
 <p>Note that all we’ve done is taken the code we used to generate the null distribution and removed the <code>hypothesize()</code> and <code>generate()</code> lines.
 Now that we have our observed statistic, we can compute the <em>p</em>-value for our <strong>two-sided hypothesis test</strong>,</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_p_value_two_sided &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">ia_ne_p_value_two_sided &lt;-<span class="st"> </span>ia_ne_mean_work_travel_null <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="st">  </span><span class="kw">get_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>)</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -398,25 +407,25 @@ p_value
 </table>
 <p>Our two-sided p-value is 0.029, which is below our significance level of <span class="math inline">\(\alpha=0.05\)</span>. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.</p>
 <p>We visualize the meaning of the <em>p</em>-value in the following way:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(
-    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
-    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span>
-  )</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1">ia_ne_mean_work_travel_null <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb35-3" data-line-number="3"><span class="st">  </span><span class="kw">shade_p_value</span>(<span class="dt">obs_stat =</span> ia_ne_diff_in_means, <span class="dt">direction =</span> <span class="st">&quot;both&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb35-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb35-5" data-line-number="5">    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,</a>
+<a class="sourceLine" id="cb35-6" data-line-number="6">    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times null distribution&quot;</span></a>
+<a class="sourceLine" id="cb35-7" data-line-number="7">  )</a></code></pre></div>
 <p><img src="infer_files/figure-html/ia-ne-diff-in-means-null-distribution-p-values-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>The portions of the null distribution that are in the shaded red area correspond to results that are <strong>more extreme</strong> than the observed value 1.15 in a two-sided hypothesis test.
 The more that a null distribution lies within the red portions of the visualization, the more likely it becomes that we will fail to reject the null distribution and the difference in means that we observed in the dataset arose due to random chance alone.</p>
 </div>
 <div id="computing-the-95-confidence-interval" class="section level3">
-<h3><span class="header-section-number">5.1.5</span> Computing the 95% confidence interval</h3>
+<h3><span class="header-section-number">6.1.5</span> Computing the 95% confidence interval</h3>
 <p>In addition to the two-sided hypothesis test, it is also good practice to compute the 95% confidence interval for the difference in mean work travel times between Iowa and Nebraska.
 To compute this, we need to generate the <strong>bootstrap distribution</strong> for the difference in means:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;bootstrap&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">ia_ne_mean_work_travel_bootstrap &lt;-<span class="st"> </span>ia_ne_county <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb36-2" data-line-number="2"><span class="st">  </span><span class="kw">specify</span>(<span class="dt">formula =</span> mean_work_travel <span class="op">~</span><span class="st"> </span>state) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb36-3" data-line-number="3"><span class="st">  </span><span class="kw">generate</span>(<span class="dt">reps =</span> <span class="dv">10000</span>, <span class="dt">type =</span> <span class="st">&quot;bootstrap&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb36-4" data-line-number="4"><span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;diff in means&quot;</span>, <span class="dt">order =</span> <span class="kw">combine</span>(<span class="st">&quot;Iowa&quot;</span>, <span class="st">&quot;Nebraska&quot;</span>))</a></code></pre></div>
 <p>You’ll notice that the code to generate the bootstrap distribution is pretty similar to the code used to generate the null distribution.
 All we had to do was remove the <code>hypothesize(null = &quot;independence&quot;)</code> line and change the <code>type =</code> keyword in <code>generate</code> from <code>&quot;permute&quot;</code> to <code>&quot;bootstrap&quot;</code>, and that’s it!</p>
 <p>You might be wondering, how are the methods for generating the null distribution and bootstrap distribution different?
@@ -426,19 +435,19 @@ For this example, they differ in two important ways:</p>
 <li><p>Generating a bootstrap distribution requires <em>sampling with replacement</em>, meaning we grab different rows in <code>ia_ne_county</code> at random (we might even grab the same row more than), which we do not do if we permute the columns</p></li>
 </ol>
 <p>The bootstrap distribution we just generated looks as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(
-    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
-    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times bootstrap distribution&quot;</span>
-  )</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb37-2" data-line-number="2"><span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb37-3" data-line-number="3"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb37-4" data-line-number="4">    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,</a>
+<a class="sourceLine" id="cb37-5" data-line-number="5">    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times bootstrap distribution&quot;</span></a>
+<a class="sourceLine" id="cb37-6" data-line-number="6">  )</a></code></pre></div>
 <p><img src="infer_files/figure-html/ia-ne-mean-work-travel-bootstrap-visualization-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>This shows what could happen if we went out and collected another set of samples of the data in this dataset.
 Due to random variations in the people we survey, sometimes we might end up with a dataset where the difference between the mean work travel times in Iowa and Nebraska is closer to 2 minutes instead of 1 minute, or it might be closer to zero.
 Most of the time, it will be close to 1 minute.</p>
 <p>The 95% confidence interval is defined as the fraction of the data in the bootstrap distribution that lies between the 2.5th and 97.5th percentiles:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_ci95 &lt;-<span class="st"> </span>ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">get_confidence_interval</span>()</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">ia_ne_ci95 &lt;-<span class="st"> </span>ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb38-2" data-line-number="2"><span class="st">  </span><span class="kw">get_confidence_interval</span>()</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -464,13 +473,13 @@ Most of the time, it will be close to 1 minute.</p>
 <p>This means that, if we keep collecting new samples of mean work travel times in Iowa and Nebraska, we expect that 95% of our samples will have a difference in mean work travel times that lies between 0.1167 and 2.1534.
 Also note that the lower bound of the confidence interval does not intersect with a difference of means equal to zero, lending further support to the conclusion we reached using our two-sided hypothesis test.</p>
 <p>We close this example by visualizing the 95% confidence interval by shading the middle 95% of the data in the bootstrap distribution:</p>
-<pre class="sourceCode r"><code class="sourceCode r">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">shade_confidence_interval</span>(<span class="dt">endpoints =</span> ia_ne_ci95) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(
-    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,
-    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times 95% confidence interval&quot;</span>
-  )</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">ia_ne_mean_work_travel_bootstrap <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb39-2" data-line-number="2"><span class="st">  </span><span class="kw">visualize</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb39-3" data-line-number="3"><span class="st">  </span><span class="kw">shade_confidence_interval</span>(<span class="dt">endpoints =</span> ia_ne_ci95) <span class="op">+</span></a>
+<a class="sourceLine" id="cb39-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb39-5" data-line-number="5">    <span class="dt">x =</span> <span class="st">&quot;difference in means&quot;</span>,</a>
+<a class="sourceLine" id="cb39-6" data-line-number="6">    <span class="dt">title =</span> <span class="st">&quot;Difference in mean work travel times 95% confidence interval&quot;</span></a>
+<a class="sourceLine" id="cb39-7" data-line-number="7">  )</a></code></pre></div>
 <p><img src="infer_files/figure-html/ia-ne-mean-work-travel-bootstrap-visualization-ci95-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
@@ -488,11 +497,13 @@ Also note that the lower bound of the confidence interval does not intersect wit
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -507,6 +518,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -526,8 +541,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

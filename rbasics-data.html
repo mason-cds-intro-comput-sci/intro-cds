@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 GitHub | Introduction to Computational and Data Sciences</title>
+  <title>3.1 Data | Introduction to Computational and Data Sciences</title>
   <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 GitHub | Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="3.1 Data | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 GitHub | Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="3.1 Data | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="toolbox-introduction.html"/>
-<link rel="next" href="getting-started.html"/>
+<link rel="prev" href="r-basics.html"/>
+<link rel="next" href="describing-numerical-data.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -212,8 +212,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="github" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> GitHub</h1> 
+<div id="rbasics-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Data</h2>
+<p>The central component of everything we will be doing in R this semester is <strong>data</strong>. Even non-data science programs revolve around data. At a very basic level, a computer is just a fancy calculator that takes in numbers and spits out an answer. To a computer, even things like words and pictures are stored internally as numbers.</p>
+<div id="rbasics-numbers" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Numbers</h3>
+<p>R can handle many types of data. For example, one type of data is a number. Let’s start by</p>
+<p>When you open RStudio, you will notice that the program is divided up into 3 or 4 panes. On the left, you should see a pane called <strong>Console</strong>. You can type programming language <strong>expressions</strong> into the Console after the <code>&gt;</code> symbol, hit enter, and the expression will be <strong>evaluated</strong>.</p>
+<p>Try entering a number after the <code>&gt;</code> in the Console (e.g. 2), then Enter, and see what happens.</p>
+<p>When you hit enter, the R interpreter reads in the line, evaluates it, and returns the answer. In this case, you entered 2, so the computer thinks “Hey, it’s a 2! Wow, a two! The result of 2 is… drum roll, please… 2!” and you get a two.</p>
+<p>Cool! But not, I confess, particularly useful. Let’s fix that: next we’ll add two numbers together. At the prompt, enter two numbers separated by a plus sign, +</p>
+<p><code>&gt; 2 + 2</code></p>
+<p>What do you get?</p>
+<p>The plus sign, +, is called an operator. As you might expect, it is the addition operator. There are many other operators in R.</p>
+<!-- ### How to import a repository -->
+<!-- To import a repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button. -->
+<!-- ```{r getting-to-know-step_6, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/repository_step_6.jpg") -->
+<!-- ``` -->
+<!-- The import process will start, and you will get a notification after completion of the import process. -->
+<!-- ```{r getting-to-know-step_7, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/repository_step_7.jpg") -->
+<!-- ``` -->
+<!-- In the end, you will be able to see the imported repository in your GitHub account. -->
+<!-- ```{r getting-to-know-step_8, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/repository_step_8.jpg") -->
+<!-- ``` -->
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
 </div>
 <script src="js/custom.js"></script>
             </section>
@@ -221,8 +252,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="toolbox-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="describing-numerical-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -244,7 +275,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/github.Rmd",
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/Rbasics.Rmd",
 "text": "Edit"
 },
 "history": {

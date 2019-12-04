@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.2 Cumulative distribution functions | Introduction to Computational and Data Sciences</title>
+  <title>5.2 Cumulative distribution functions | Introduction to Computational and Data Sciences</title>
   <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
-  <meta name="generator" content="bookdown  and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.2 Cumulative distribution functions | Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="5.2 Cumulative distribution functions | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,24 +16,25 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.2 Cumulative distribution functions | Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="5.2 Cumulative distribution functions | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
 
 <meta name="author" content="James K. Glasbrenner" />
 <meta name="author" content="Ajay Kulkarni" />
+<meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2019-04-02" />
+<meta name="date" content="2019-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="probability-mass-functions.html">
-<link rel="next" href="credits.html">
+<link rel="prev" href="probability-mass-functions.html"/>
+<link rel="next" href="credits.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +42,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -58,7 +62,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; position: absolute; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -156,30 +159,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.2" data-path="additional-topics.html"><a href="additional-topics.html#how-to-import-a-repository"><i class="fa fa-check"></i><b>2.4.2</b> How to import a repository</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>II Readings</b></span></li>
-<li class="chapter" data-level="3" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>3</b> Describing numerical data</a></li>
-<li class="chapter" data-level="4" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>4</b> Representing distributions</a><ul>
-<li class="chapter" data-level="4.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>4.1</b> Probability mass functions</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>4.1.1</b> Example dataset</a></li>
-<li class="chapter" data-level="4.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>4.1.2</b> PMFs</a></li>
-<li class="chapter" data-level="4.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>4.1.3</b> Plotting PMFs</a></li>
+<li class="part"><span><b>II R Programming</b></span></li>
+<li class="chapter" data-level="3" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>3</b> R basics</a><ul>
+<li class="chapter" data-level="3.1" data-path="rbasics-data.html"><a href="rbasics-data.html"><i class="fa fa-check"></i><b>3.1</b> Data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="rbasics-data.html"><a href="rbasics-data.html#rbasics-numbers"><i class="fa fa-check"></i><b>3.1.1</b> Numbers</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>4.2</b> Cumulative distribution functions</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>4.2.1</b> The limits of probability mass functions</a></li>
-<li class="chapter" data-level="4.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>4.2.2</b> Percentiles</a></li>
-<li class="chapter" data-level="4.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>4.2.3</b> CDFs</a></li>
-<li class="chapter" data-level="4.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>4.2.4</b> Representing CDFs</a></li>
-<li class="chapter" data-level="4.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>4.2.5</b> Comparing CDFs</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>4.3</b> Credits</a></li>
+<li class="part"><span><b>III Readings</b></span></li>
+<li class="chapter" data-level="4" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>4</b> Describing numerical data</a></li>
+<li class="chapter" data-level="5" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>5</b> Representing distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>5.1</b> Probability mass functions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>5.1.1</b> Example dataset</a></li>
+<li class="chapter" data-level="5.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>5.1.2</b> PMFs</a></li>
+<li class="chapter" data-level="5.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>5.1.3</b> Plotting PMFs</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>5</b> Statistical inference with infer</a><ul>
-<li class="chapter" data-level="5.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>5.1</b> Case study: Comparing work travel times</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>5.1.1</b> Work travel times in Iowa and Nebraska</a></li>
-<li class="chapter" data-level="5.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>5.1.2</b> Defining the hypothesis test</a></li>
-<li class="chapter" data-level="5.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>5.1.3</b> Building the null distribution</a></li>
-<li class="chapter" data-level="5.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>5.1.4</b> Computing the two-sided p-value</a></li>
-<li class="chapter" data-level="5.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>5.1.5</b> Computing the 95% confidence interval</a></li>
+<li class="chapter" data-level="5.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>5.2</b> Cumulative distribution functions</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>5.2.1</b> The limits of probability mass functions</a></li>
+<li class="chapter" data-level="5.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>5.2.2</b> Percentiles</a></li>
+<li class="chapter" data-level="5.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>5.2.3</b> CDFs</a></li>
+<li class="chapter" data-level="5.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>5.2.4</b> Representing CDFs</a></li>
+<li class="chapter" data-level="5.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>5.2.5</b> Comparing CDFs</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>5.3</b> Credits</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>6</b> Statistical inference with infer</a><ul>
+<li class="chapter" data-level="6.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>6.1</b> Case study: Comparing work travel times</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>6.1.1</b> Work travel times in Iowa and Nebraska</a></li>
+<li class="chapter" data-level="6.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>6.1.2</b> Defining the hypothesis test</a></li>
+<li class="chapter" data-level="6.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>6.1.3</b> Building the null distribution</a></li>
+<li class="chapter" data-level="6.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>6.1.4</b> Computing the two-sided p-value</a></li>
+<li class="chapter" data-level="6.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>6.1.5</b> Computing the 95% confidence interval</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -204,9 +213,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="cumulative-distribution-functions" class="section level2">
-<h2><span class="header-section-number">4.2</span> Cumulative distribution functions</h2>
+<h2><span class="header-section-number">5.2</span> Cumulative distribution functions</h2>
 <div id="the-limits-of-probability-mass-functions" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> The limits of probability mass functions</h3>
+<h3><span class="header-section-number">5.2.1</span> The limits of probability mass functions</h3>
 <p>Probability mass functions (PMFs) work well if the number of unique values is small.
 But as the number of unique values increases, the probability associated with each value gets smaller and the effect of random noise increases.</p>
 <p>Let’s recall that, in the previous reading, we plotted and compared PMFs of the average work travel time in Virginia and New Jersey, which resulted in this figure:</p>
@@ -225,7 +234,7 @@ On the other hand, using small bin sizes creates plots like the one above, which
 But before we discuss CDFs, we first have to understand the concept of percentiles.</p>
 </div>
 <div id="percentiles" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> Percentiles</h3>
+<h3><span class="header-section-number">5.2.2</span> Percentiles</h3>
 <p>If you have taken a standardized test, you probably got your results in the form of a raw score and a <strong>percentile rank</strong>.
 In this context, the percentile rank is the fraction of people who scored lower than you (or the same).
 So if you are “in the 90th percentile”, you did as well as or better than 90% of the people who took the exam.</p>
@@ -233,18 +242,18 @@ So if you are “in the 90th percentile”, you did as well as or better than 90
 <pre><code>55  66  77  88  99</code></pre>
 <p>If you received the score of 88, then what is your percentile rank?
 We can calculate it as follows:</p>
-<pre class="sourceCode r"><code class="sourceCode r">test_scores &lt;-<span class="st"> </span><span class="kw">data_frame</span>(<span class="dt">score =</span> <span class="kw">combine</span>(<span class="dv">55</span>, <span class="dv">66</span>, <span class="dv">77</span>, <span class="dv">88</span>, <span class="dv">99</span>))
-  
-number_of_tests &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">pull</span>(n)
-  
-number_of_lower_scores &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(score <span class="op">&lt;=</span><span class="st"> </span><span class="dv">88</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">pull</span>(n)
-  
-percentile_rank &lt;-<span class="st"> </span><span class="fl">100.0</span> <span class="op">*</span><span class="st"> </span>number_of_lower_scores <span class="op">/</span><span class="st"> </span>number_of_tests</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">test_scores &lt;-<span class="st"> </span><span class="kw">data_frame</span>(<span class="dt">score =</span> <span class="kw">combine</span>(<span class="dv">55</span>, <span class="dv">66</span>, <span class="dv">77</span>, <span class="dv">88</span>, <span class="dv">99</span>))</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">number_of_tests &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="st">  </span><span class="kw">pull</span>(n)</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  </a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">number_of_lower_scores &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-8" data-line-number="8"><span class="st">  </span><span class="kw">filter</span>(score <span class="op">&lt;=</span><span class="st"> </span><span class="dv">88</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="st">  </span><span class="kw">pull</span>(n)</a>
+<a class="sourceLine" id="cb12-11" data-line-number="11">  </a>
+<a class="sourceLine" id="cb12-12" data-line-number="12">percentile_rank &lt;-<span class="st"> </span><span class="fl">100.0</span> <span class="op">*</span><span class="st"> </span>number_of_lower_scores <span class="op">/</span><span class="st"> </span>number_of_tests</a></code></pre></div>
 <p>From this, we find that the percentile rank for a score of 88 is 80.
 Mathematically, the calculation is <span class="math inline">\(100 \times \dfrac{4}{5} = 80\)</span>.</p>
 <p>As you can see, if you are given a value, it is easy to find its percentile rank; going the other way is slightly harder.
@@ -252,11 +261,11 @@ One way to do this is to sort the scores and find the row number that correspond
 To find the row number, divide the total number of scores by 100, multiply that number by the desired percentile rank, and then <em>round up</em> to the nearest integer value.
 The rounding up operation can be handled via the <code>ceiling()</code> function.
 So, for our example, the value with percentile rank 55 is:</p>
-<pre class="sourceCode r"><code class="sourceCode r">percentile_rank_row_number &lt;-<span class="st"> </span><span class="kw">ceiling</span>(<span class="dv">55</span> <span class="op">*</span><span class="st"> </span>number_of_tests <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)
-
-test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">slice</span>(percentile_rank_row_number)</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">percentile_rank_row_number &lt;-<span class="st"> </span><span class="kw">ceiling</span>(<span class="dv">55</span> <span class="op">*</span><span class="st"> </span>number_of_tests <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="st">  </span><span class="kw">slice</span>(percentile_rank_row_number)</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -278,9 +287,9 @@ So this means that, in the distribution of exam scores, the 55th percentile corr
 <p>In R, there is a function called <code>quantile()</code> that can do the above calculation automatically, although you need to take care with the inputs.
 Let’s first show what happens when we aren’t careful.
 We might think that we can calculate the 55th percentile by running:</p>
-<pre class="sourceCode r"><code class="sourceCode r">test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>))</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>))</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -307,9 +316,9 @@ This happens because <code>quantile()</code> interpolates between the scores by 
 Sometimes you will want this behavior, other times you will not.
 When the dataset is this small, it doesn’t make as much sense to permit interpolation, as it can be based on rather aggressive assumptions about what intermediate scores might look like.
 To tell <code>quantile()</code> to compute scores in the same manner as we did above, add the input <code>type = 1</code>:</p>
-<pre class="sourceCode r"><code class="sourceCode r">test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>), <span class="dt">type =</span> <span class="dv">1</span>)</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>), <span class="dt">type =</span> <span class="dv">1</span>)</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -337,15 +346,15 @@ To summarize, if we want to know the percentage of people obtained scores equal 
 If we start with a percentile, then we are computing the score in the distribution that corresponds with it.</p>
 </div>
 <div id="cdfs" class="section level3">
-<h3><span class="header-section-number">4.2.3</span> CDFs</h3>
+<h3><span class="header-section-number">5.2.3</span> CDFs</h3>
 <p>Now that we understand percentiles and percentile ranks, we are ready to tackle the <strong>cumulative distribution function</strong> (CDF).
 The CDF is the function that maps from a value to its percentile rank.
 To find the CDF for any particular value in our distribution, we compute the fraction of values in the distribution less than or equal to our selected value.
 Computing this is similar to how we calculated the percentile rank, except that the result is a probability in the range 0 – 1 rather than a percentile rank in the range 0 – 100.
 For our test scores example, we can manually compute the CDF in the following way:</p>
-<pre class="sourceCode r"><code class="sourceCode r">test_scores_cdf &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cdf =</span> <span class="kw">row_number</span>() <span class="op">/</span><span class="st"> </span><span class="kw">n</span>())</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">test_scores_cdf &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cdf =</span> <span class="kw">row_number</span>() <span class="op">/</span><span class="st"> </span><span class="kw">n</span>())</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -409,29 +418,29 @@ If we select a value that is less than the smallest value in the sample, then th
 If we select a value that is greater than the largest value, then the CDF is 1.</p>
 </div>
 <div id="representing-cdfs" class="section level3">
-<h3><span class="header-section-number">4.2.4</span> Representing CDFs</h3>
+<h3><span class="header-section-number">5.2.4</span> Representing CDFs</h3>
 <p>While it’s good to know how to manually compute the CDF, we can construct the CDF of a sample automatically using the <code>geom_step()</code> function if we include <code>stat = &quot;ecdf&quot;</code> as an additional input.
 Let’s use this to look at the CDF for the average work travel time for the full dataset:</p>
-<pre class="sourceCode r"><code class="sourceCode r">county_complete <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_step</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel), <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb17-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_step</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel), <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
 <p><img src="distributions_files/figure-html/mean-work-travel-cdf-visualization-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>With this plot we can easily specify an average work travel time percentile and read the associated time from the plot and vice-versa.</p>
 </div>
 <div id="comparing-cdfs" class="section level3">
-<h3><span class="header-section-number">4.2.5</span> Comparing CDFs</h3>
+<h3><span class="header-section-number">5.2.5</span> Comparing CDFs</h3>
 <p>CDFs are especially useful for comparing distributions.
 Let’s revisit the comparison we made between the average work travel times in Nebraska and Iowa.
 Here is the full code that converts those distributions into CDFs:</p>
-<pre class="sourceCode r"><code class="sourceCode r">county_complete <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_step</span>(
-    <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel, <span class="dt">color =</span> state),
-    <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span>
-  ) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb18-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_step</span>(</a>
+<a class="sourceLine" id="cb18-5" data-line-number="5">    <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel, <span class="dt">color =</span> state),</a>
+<a class="sourceLine" id="cb18-6" data-line-number="6">    <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span></a>
+<a class="sourceLine" id="cb18-7" data-line-number="7">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb18-8" data-line-number="8"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
 <p><img src="distributions_files/figure-html/compare-cdf-of-ne-ia-travel-times-plot-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>This visualization makes the shapes of the distributions and the relative differences between them much clearer.
 We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time of 25 minutes, after which the Nebraska and Iowa distributions become similar to one another.</p>
@@ -450,11 +459,13 @@ We see that Nebraska has shorter average work travel times for most of the distr
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -469,6 +480,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -488,8 +503,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
