@@ -5,6 +5,8 @@ pandoc_version: 2.2.1
 repos:
   CRAN: https://cran.rstudio.com
 notifications:
+  recipients:
+    - dwhite34@gmu.edu
   email:
     on_failure: always
     on_success: never
