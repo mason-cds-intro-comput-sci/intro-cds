@@ -23,9 +23,4 @@ Imports:
   tinytex (>= 0.7),
   vctrs (>= 0.2.0.9007)
 Remotes:
-  r-lib/fs@v1.2.6,
-  rstudio/bookdown,
-  rstudio/rmarkdown,
-  tidyverse/ggplot2,
-  tidyverse/dplyr,
-  tidyverse/readr
+  r-lib/fs@v1.2.6
