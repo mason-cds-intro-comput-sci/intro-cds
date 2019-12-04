@@ -9,7 +9,7 @@ Authors@R: c(person("James", "Glasbrenner", role = c("aut", "cre"),
                     email = "akulkar8@gmu.edu"))
 URL: https://github.com/mason-cds-intro-comput-sci/intro-cds
 Depends:
-  R (>= 3.6)
+  R (>= 3.5)
 Imports:
   bookdown (>= 0.7),
   dplyr (>= 0.7.6),
