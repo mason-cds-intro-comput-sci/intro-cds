@@ -22,7 +22,7 @@ define cleanup
 endef
 
 define render_book
-	$(R) $(ROPTS) -e "bookdown::render_book(input='$(GITBOOK_INDEX)', output_format='$(1)', output_dir='docs')"
+	$(R) $(ROPTS) -e "bookdown::render_book(input='$(GITBOOK_INDEX)', output_format='$(1)')"
 endef
 
 .SILENT :
