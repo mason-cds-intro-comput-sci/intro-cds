@@ -30,19 +30,19 @@ knitr::opts_chunk$set(
 
 * <https://www.rstudio.com>
 
-## How to login to RStudio Server
+<!-- ## How to login to RStudio Server -->
 
-To log in to your RStudio Server account, you need to go to RStudio Server authentication page <https://rstudio.cos.gmu.edu/auth-sign-in>. On that page, you need to provide username and password of your Patriot web account. If you want to stay signed in, then click on the checkbox. After entering details click on "Sign In".
+<!-- To log in to your RStudio Server account, you need to go to RStudio Server authentication page <https://rstudio.cos.gmu.edu/auth-sign-in>. On that page, you need to provide username and password of your Patriot web account. If you want to stay signed in, then click on the checkbox. After entering details click on "Sign In". -->
 
-```{r login_step_1}
-knitr::include_graphics("img/login_step_1.png")
-```
+<!-- ```{r login_step_1} -->
+<!-- knitr::include_graphics("img/login_step_1.png") -->
+<!-- ``` -->
 
-You have successfully logged in to your RStudio Server account, and you will find a similar screen (given below) in your web browser. 
+<!-- You have successfully logged in to your RStudio Server account, and you will find a similar screen (given below) in your web browser.  -->
 
-```{r login_step_2}
-knitr::include_graphics("img/login_step_2.png")
-```
+<!-- ```{r login_step_2} -->
+<!-- knitr::include_graphics("img/login_step_2.png") -->
+<!-- ``` -->
 
 ## A guided tour of RStudio Server's default interface
 
@@ -196,6 +196,48 @@ knitr::include_graphics("img/help_step_6.png")
 ```
 
 **If you have any questions or stuck at any point, then please contact your instructor for the help.** 
+
+
+## Initial Set-up
+
+### Install required packages
+
+Before starting any of the assignments for the class, you need to install a set of extensions to R (called packages).
+
+In the console tab, type:
+
+`install.packages(tidyverse)`
+
+and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: `>`
+
+
+### Change Global Options
+
+To change the settings for RStudio Server, click Tools > Global Options… in the top menu bar. A pop-up menu will appear with many different options for you to change. You are free to explore all the different options on your own. For now, there are two things you should change:
+
+* Uncheck the box next to **Restore .RData into workspace at startup**
+
+* Click the drop-down menu next to **Save workspace to .RData on exit** and change the setting to *Never*
+
+Click the **Apply** button on the lower-right of the pop-up window, followed by the **OK** button.
+
+
+### Configure RStudio for use with Git
+
+In the bottom left pane, click on the *Terminal* tab.
+
+Wait for the prompt to load (it can take 10-20 seconds). When it appears, the prompt will end with a dollar symbol: `$`
+
+At the prompt, type and run two separate commands (replacing with the email you used to sign up for GitHub, and your name). Keep the quotation marks around these values.
+
+`git config --global user.email "you@gmu.edu"`
+
+`git config --global user.name "Your Name"`
+
+
+And you’re done.
+
+
 
 ## Installing and updating R packages on RStudio Server
 
