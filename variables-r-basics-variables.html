@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.3 Credits | Introduction to Computational and Data Sciences</title>
+  <title>5.2 Variables {r-basics-variables} | Introduction to Computational and Data Sciences</title>
   <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.3 Credits | Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="5.2 Variables {r-basics-variables} | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.3 Credits | Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="5.2 Variables {r-basics-variables} | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cumulative-distribution-functions.html"/>
-<link rel="next" href="statistical-inference-with-infer.html"/>
+<link rel="prev" href="rbasics-data.html"/>
+<link rel="next" href="more-complicated-data.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -291,20 +291,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="credits" class="section level2">
-<h2><span class="header-section-number">7.3</span> Credits</h2>
-<p>This chapter, “Representing distributions,” is a derivative of “Chapter 3 Probability mass functions” and “Chapter 4 Cumulative distribution functions” in <a href="http://a.co/grOJGrv">Allen B. Downey, <em>Think Stats: Exploratory Data Analysis</em>, 2nd ed. (O’Reilly Media, Sebastopol, CA, 2014)</a>, used under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-
+<div id="variables-r-basics-variables" class="section level2">
+<h2><span class="header-section-number">5.2</span> Variables {r-basics-variables}</h2>
+<p>There’s a problem with just entering numbers at the prompt like we have been doing so far. We type in our nice calculation (which we call an expression in programming jargon):</p>
+<pre><code>&gt; 5 + 6 / 4 * 5</code></pre>
+<p>hit enter, and get the following answer</p>
+<pre><code>[1] 12.5</code></pre>
+<p>But what if we need this for a subsequent expression? Alas, the answer has disappeared into the ether, because we haven’t saved it anywhere.</p>
+<p>To save the result of an expression, we can assign it to a variable. In R, we do this using a left-pointing arrow:</p>
+<pre><code>&gt; a &lt;- 5 + 6 / 4 * 5</code></pre>
+<p>Try running this line and see what happens.</p>
+<p>Hmm! The RStudio console no longer returns the result of the expression. However, take a look in the upper right pane of RStudio. You should see that the R environment now contains a variable a with an associated value of 12.5.</p>
+<p>So how do we reuse this variable? Simple: just replace one of the numbers in our expression with the variable, e.g.:</p>
+<pre><code>&gt; a + 10
+[1] 22.5</code></pre>
+<p>We could even save the result of this expression into a second variable:</p>
+<pre><code>&gt; b &lt;- a + 10</code></pre>
+<p>Take a look in the top right tab in RStudio (called <em>Environment</em>). You should see that there are two variables, <code>a</code> and <code>b</code>, with values 22.5 and 32.5 respectively. RStudio keeps track of all the variables that have been created, along with their values, and shows them here so that you can keep track of them more easily.</p>
 </div>
-<!-- </div> -->
 <script src="js/custom.js"></script>
             </section>
 
           </div>
         </div>
       </div>
-<a href="cumulative-distribution-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-inference-with-infer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rbasics-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="more-complicated-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -326,7 +338,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/distributions.Rmd",
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/Rbasics.Rmd",
 "text": "Edit"
 },
 "history": {

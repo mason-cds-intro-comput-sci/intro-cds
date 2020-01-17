@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.3 Credits | Introduction to Computational and Data Sciences</title>
+  <title>5.3 More Complicated Data | Introduction to Computational and Data Sciences</title>
   <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.3 Credits | Introduction to Computational and Data Sciences" />
+  <meta property="og:title" content="5.3 More Complicated Data | Introduction to Computational and Data Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.3 Credits | Introduction to Computational and Data Sciences" />
+  <meta name="twitter:title" content="5.3 More Complicated Data | Introduction to Computational and Data Sciences" />
   
   <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cumulative-distribution-functions.html"/>
-<link rel="next" href="statistical-inference-with-infer.html"/>
+<link rel="prev" href="variables-r-basics-variables.html"/>
+<link rel="next" href="functions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -291,20 +291,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="credits" class="section level2">
-<h2><span class="header-section-number">7.3</span> Credits</h2>
-<p>This chapter, “Representing distributions,” is a derivative of “Chapter 3 Probability mass functions” and “Chapter 4 Cumulative distribution functions” in <a href="http://a.co/grOJGrv">Allen B. Downey, <em>Think Stats: Exploratory Data Analysis</em>, 2nd ed. (O’Reilly Media, Sebastopol, CA, 2014)</a>, used under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-
+<div id="more-complicated-data" class="section level2">
+<h2><span class="header-section-number">5.3</span> More Complicated Data</h2>
+<p>But what’s that I hear you saying? “Dr. White, can’t I use anything other than simple numbers? What about if I want to store a bunch of numbers at once? Do I have to save each one as a its own variable? You said in the first class that computers can do billions of calculations per second! I can’t type in a billion variables - I have to get to my Latin class!”</p>
+<p>Never fear - there are lots of ways to store data in R. For example, you can store multiple numbers in a data type called a vector:</p>
+<pre><code>&gt; v &lt;- c(1, 2, 3, 4)</code></pre>
+<p>This should pop up in the Environment pane of RStudio.</p>
+<p>See what we did there? We used the <em>function</em> <code>c(...)</code> and put all the data that we wanted in the vector inside the braces (separated by commas). (More on functions soon).</p>
+<p>Here’s a question for you: can you use the operators from the first section on vectors?</p>
+<p>For example, what happens if you do:</p>
+<pre><code>&gt; v2 &lt;- c(5, 6, 7, 8)
+&gt; v + v2</code></pre>
+<p>What about the other operators? Do they all work on vectors?</p>
+<p>What happens if the vectors are different lengths? For example:</p>
+<pre><code>&gt; v + c(9, 10, 11)</code></pre>
+<p>Can you apply an operator to a vector and a number? Does it always give you the result that you expect? For example:</p>
+<pre><code>&gt; v + 1</code></pre>
 </div>
-<!-- </div> -->
 <script src="js/custom.js"></script>
             </section>
 
           </div>
         </div>
       </div>
-<a href="cumulative-distribution-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-inference-with-infer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="variables-r-basics-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -326,7 +337,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/distributions.Rmd",
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/Rbasics.Rmd",
 "text": "Edit"
 },
 "history": {
