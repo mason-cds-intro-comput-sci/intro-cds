@@ -75,7 +75,7 @@ We could even save the result of this expression into a second variable:
 
     > b <- a + 10
 
-Take a look in the top right tab in RStudio (called *Environment*). You should see that there are two variables, `a` and `b`, with values 22.5 and 32.5 respectively. RStudio keeps track of all the variables that have been created, along with their values, and shows them here so that you can keep track of them more easily.
+Take a look in the top right tab in RStudio (called *Environment*). You should see that there are two variables, `a` and `b`, with values 12.5 and 22.5 respectively. RStudio keeps track of all the variables that have been created, along with their values, and shows them here so that you can keep track of them more easily.
 
 ## More Complicated Data
 

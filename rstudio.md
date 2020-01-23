@@ -370,31 +370,19 @@ You have successfully cloned a repository from GitHub in RStudio Server. After c
 
 ### Step - 1
 
-Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. You can see the current repository in which you are working to the upper right corner. To push files on GitHub from RStudio Server you can create a new file by clicking on "File" option, or you can also upload the files from your local drive to RStudio Server.  
-
-<img src="img/stage_step_1.png" width="100%" style="display: block; margin: auto;" />
-
-### Step - 2
-
-When you click on the "Upload" button, then you will get a new window to upload the files. Click on "Choose File" button to select file and then click on "Ok". You can upload only one file at a time. So, if you want to upload multiple files, then please create a ".zip" file and then upload. 
-
-<img src="img/stage_step_2.png" width="100%" style="display: block; margin: auto;" />
-
-### Step - 3
-
-After uploading the files or creating a file in RStudio Server, you will be able to see those files in the lower right window. Click on the "Git" which is present in the upper right window. After clicking the Git button, you will find the recently uploaded or created file there.
+Click on the "Git" which is present in the upper right window. After clicking the Git button, you will see a list of all files that have been changed since the last commit.
 
 <img src="img/stage_step_3.png" width="100%" style="display: block; margin: auto;" />
 
-### Step - 4
+### Step - 2
 
 Click on the "Staged" checkbox to stage files which you want to push to GitHub and click on the "Commit".
 
 <img src="img/stage_step_4.png" width="100%" style="display: block; margin: auto;" />
 
-### Step - 5
+### Step - 3
 
-A new window will open, and it will reflect you the files which you want to commit to GitHub repository. You can also write a commit message in the "Commit message" textbox and then click the "Commit" button.
+A new window will open, and it will reflect you the files which you want to commit to GitHub repository. You can also write a commit message in the "Commit message" textbox and then click the "Commit" button. (DO NOT check the box which says "Amend previous commit" - this will only lead to disaster).
 
 <img src="img/stage_step_5.png" width="100%" style="display: block; margin: auto;" />
 
@@ -402,13 +390,13 @@ You will see the following screen after clicking on the "Commit" button. Close t
 
 <img src="img/stage_step_6.png" width="100%" style="display: block; margin: auto;" />
 
-### Step - 6
+### Step - 4
 
 After committing the files on GitHub, you will find the upper right window empty. It means that you have committed the files to the repository. Now, in the final step, you need to click on "Push" to push the files in the repository. 
 
 <img src="img/stage_step_7.png" width="100%" style="display: block; margin: auto;" />
 
-### Step - 7
+### Step - 5
 
 When you click the "Push" button, then RStudio Server will ask you for your GitHub username and password. Please give your details and then click on "Ok".
 
@@ -418,7 +406,7 @@ In the end, you will see a new window containing Git Push message. If everything
 
 <img src="img/stage_step_9.png" width="100%" style="display: block; margin: auto;" />
 
-### Step - 8 (Optional)
+### Step - 6
 
 You can also crosscheck on GitHub by accessing the specific repository. 
 
