@@ -165,7 +165,7 @@ Before starting any of the assignments for the class, you need to install a set 
 
 In the console tab, type:
 
-`install.packages(tidyverse)`
+`install.packages("tidyverse")`
 
 and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: `>`
 
