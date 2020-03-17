@@ -1,4 +1,3 @@
-
 # Describing numerical data
 
 Many of the figures that we will be creating and analyzing during the course will be representations of univariate (meaning one variable) and bivariate (meaning two variables) data.

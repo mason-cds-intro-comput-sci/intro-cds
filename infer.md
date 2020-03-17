@@ -1,4 +1,3 @@
-
 # Statistical inference with infer
 
 

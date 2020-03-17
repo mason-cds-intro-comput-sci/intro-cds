@@ -1,4 +1,3 @@
-
 # Representing distributions {#representing-distributions}
 
 
