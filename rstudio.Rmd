@@ -285,73 +285,74 @@ To update all the outdated packages  **update.packages(ask = FALSE)** command is
 knitr::include_graphics("img/packages_step_6.png")
 ```
 
-## Creating and adding an SSH key to your Github account
 
-In this tutorial, we will learn step by step how to create and add an SSH key to your GitHub account.
+<!-- ## Creating and adding an SSH key to your Github account -->
 
-Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. When RStudio Server will start then click on "Tools" option in the menu bar and then click on "Global Options..."
+<!-- In this tutorial, we will learn step by step how to create and add an SSH key to your GitHub account. -->
 
-```{r ssh-key-step_1, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_1.jpg")
-```
+<!-- Log in to your RStudio Server account on <https://rstudio.cos.gmu.edu/>. When RStudio Server will start then click on "Tools" option in the menu bar and then click on "Global Options..." -->
 
-After clicking "Global Options..." you will see a new window containing different options. From that window click on "Git/SVN" which will be present on the left side and then click on "Create RSA key".
+<!-- ```{r ssh-key-step_1, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_1.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_2, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_2.jpg")
-```
+<!-- After clicking "Global Options..." you will see a new window containing different options. From that window click on "Git/SVN" which will be present on the left side and then click on "Create RSA key". -->
 
-A new window will open, and there will be two textboxes. One textbox will be for entering a passphrase, and other will be for confirmation. Adding a passphrase will be an optional part. After that click on "Create" button and a new window will appear containing information about RSA key pair. Now, you can close that window by clicking on "Close" button.
+<!-- ```{r ssh-key-step_2, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_2.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_3, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_3.jpg")
-```
+<!-- A new window will open, and there will be two textboxes. One textbox will be for entering a passphrase, and other will be for confirmation. Adding a passphrase will be an optional part. After that click on "Create" button and a new window will appear containing information about RSA key pair. Now, you can close that window by clicking on "Close" button. -->
 
-```{r ssh-key-step_4, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_4.jpg")
-```
+<!-- ```{r ssh-key-step_3, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_3.jpg") -->
+<!-- ``` -->
 
-Click on the "View public key" option which will open another new window containing public key. After opening that window copy the public key and close the window.
+<!-- ```{r ssh-key-step_4, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_4.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_5, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_5.jpg")
-```
+<!-- Click on the "View public key" option which will open another new window containing public key. After opening that window copy the public key and close the window. -->
 
-```{r ssh-key-step_6, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_6.jpg")
-```
+<!-- ```{r ssh-key-step_5, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_5.jpg") -->
+<!-- ``` -->
 
-In the last step, we successfully generated a public key. Now, we need to add that public key to our GitHub account. To do that go to <https://github.com/> and login to your account. After logging in click on your profile picture and then click on "Settings" option in the list.
+<!-- ```{r ssh-key-step_6, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_6.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_7, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_7.jpg")
-```
+<!-- In the last step, we successfully generated a public key. Now, we need to add that public key to our GitHub account. To do that go to <https://github.com/> and login to your account. After logging in click on your profile picture and then click on "Settings" option in the list. -->
 
-You will see a list of options to configure your GitHub account. Now from the list click on "SSH and GPG keys" option.
+<!-- ```{r ssh-key-step_7, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_7.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_8, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_8.jpg")
-```
+<!-- You will see a list of options to configure your GitHub account. Now from the list click on "SSH and GPG keys" option. -->
 
-There will be two sections SSH keys and GPG keys. Click on "New SSH key" button.
+<!-- ```{r ssh-key-step_8, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_8.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_9, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_9.jpg")
-```
+<!-- There will be two sections SSH keys and GPG keys. Click on "New SSH key" button. -->
 
-After clicking "New SSH key" button, we need to specify details of SSH key. In the first textbox, you need to give a title to the key and in the second textbox paste the copied key. After entering these details click on "Add SSH key" button.
+<!-- ```{r ssh-key-step_9, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_9.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_10, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_10.jpg")
-```
+<!-- After clicking "New SSH key" button, we need to specify details of SSH key. In the first textbox, you need to give a title to the key and in the second textbox paste the copied key. After entering these details click on "Add SSH key" button. -->
 
-If all the steps were followed correctly, then you will see a key in SSH keys section.
+<!-- ```{r ssh-key-step_10, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_10.jpg") -->
+<!-- ``` -->
 
-```{r ssh-key-step_11, click.img = TRUE}
-knitr::include_graphics("img/SSH_Step_11.jpg")
-```
+<!-- If all the steps were followed correctly, then you will see a key in SSH keys section. -->
 
-**If you have any questions or concerns, then please contact your instructor.**
+<!-- ```{r ssh-key-step_11, click.img = TRUE} -->
+<!-- knitr::include_graphics("img/SSH_Step_11.jpg") -->
+<!-- ``` -->
+
+<!-- **If you have any questions or concerns, then please contact your instructor.** -->
 
 ## Interacting with your files on RStudio Server
 
@@ -559,57 +560,58 @@ knitr::include_graphics("img/switch_step_2.png")
 
 In this way, you can quickly switch from one repository to another in RStudio Server. If a particular repository is not available in RStudio Server then first you need to clone that repository from GitHub, and then you can use that repository in RStudio Server.
 
-## How to submit your homework assignment using Pull Requests
 
-### Step - 1
+<!-- ## How to submit your homework assignment using Pull Requests -->
 
-Log in to your GitHub account on <https://github.com/> and go into the repository which you would like to submit. Click the "Pull Requests" tab near the top of the page. 
+<!-- ### Step - 1 -->
 
-```{r pull_step_1}
-knitr::include_graphics("img/pull_step_1.png")
-```
+<!-- Log in to your GitHub account on <https://github.com/> and go into the repository which you would like to submit. Click the "Pull Requests" tab near the top of the page.  -->
 
-### Step - 2
+<!-- ```{r pull_step_1} -->
+<!-- knitr::include_graphics("img/pull_step_1.png") -->
+<!-- ``` -->
 
-Click the green button that says "New pull request".
+<!-- ### Step - 2 -->
 
-```{r pull_2}
-knitr::include_graphics("img/pull_step_2.png")
-```
+<!-- Click the green button that says "New pull request". -->
 
-### Step - 3
+<!-- ```{r pull_2} -->
+<!-- knitr::include_graphics("img/pull_step_2.png") -->
+<!-- ``` -->
 
-Click the drop-down menu button labeled "base:", and select the option starting.
+<!-- ### Step - 3 -->
 
-```{r pull_3}
-knitr::include_graphics("img/pull_step_3.png")
-```
+<!-- Click the drop-down menu button labeled "base:", and select the option starting. -->
 
-### Step - 4
+<!-- ```{r pull_3} -->
+<!-- knitr::include_graphics("img/pull_step_3.png") -->
+<!-- ``` -->
 
-Confirm that the drop-down menu button labeled "compare:" is set to master and click the green button that says “Create pull request”.
+<!-- ### Step - 4 -->
 
-```{r pull_4}
-knitr::include_graphics("img/pull_step_4.png")
-```
+<!-- Confirm that the drop-down menu button labeled "compare:" is set to master and click the green button that says “Create pull request”. -->
 
-### Step - 5
+<!-- ```{r pull_4} -->
+<!-- knitr::include_graphics("img/pull_step_4.png") -->
+<!-- ``` -->
 
-Give the pull request the following title: Submission: Homework 1/2/3/4, FirstName LastName, replacing FirstName and LastName with your actual first and last name. 
+<!-- ### Step - 5 -->
 
-In the message box, write: My homework submission is ready for grading @jkglasbrenner and click "Create pull request" to lock in your submission.
+<!-- Give the pull request the following title: Submission: Homework 1/2/3/4, FirstName LastName, replacing FirstName and LastName with your actual first and last name.  -->
 
-```{r pull_step_5}
-knitr::include_graphics("img/pull_step_5.png")
-```
+<!-- In the message box, write: My homework submission is ready for grading @jkglasbrenner and click "Create pull request" to lock in your submission. -->
 
-### Step - 6
+<!-- ```{r pull_step_5} -->
+<!-- knitr::include_graphics("img/pull_step_5.png") -->
+<!-- ``` -->
 
-After submitting the pull request, you will able to see the title and message which you wrote for submission.  
+<!-- ### Step - 6 -->
 
-```{r pull_step_6}
-knitr::include_graphics("img/pull_step_6.png")
-```
+<!-- After submitting the pull request, you will able to see the title and message which you wrote for submission.   -->
+
+<!-- ```{r pull_step_6} -->
+<!-- knitr::include_graphics("img/pull_step_6.png") -->
+<!-- ``` -->
 
 ## Other common questions about RStudio Server
 
