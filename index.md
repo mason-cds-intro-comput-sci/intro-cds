@@ -33,7 +33,7 @@ The R session information when compiling this book is shown below:
 
 
 ```
-## R version 3.5.3 (2019-03-11)
+## R version 3.6.3 (2020-02-29)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 16.04.6 LTS
 ## 
@@ -56,5 +56,5 @@ The R session information when compiling this book is shown below:
 ##   infer_0.5.3      kableExtra_1.3.1 knitr_1.30      
 ##   readr_1.4.0      rmarkdown_2.6    tinytex_0.28    
 ## 
-## Pandoc version: 2.2.1
+## Pandoc version: 2.3
 ```
