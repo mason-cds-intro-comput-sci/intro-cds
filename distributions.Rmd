@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(readr))
-county_complete <- read_rds(path = "data/county_complete.rds")
+county_complete <- read_rds("data/county_complete.rds")
 ```
 
 This chapter introduces us to two more ways we can represent univariate (single variable) data distributions as we start to learn how to compare two or more distributions and draw conclusions.

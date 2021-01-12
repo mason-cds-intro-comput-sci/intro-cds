@@ -8,7 +8,7 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(readr))
 suppressPackageStartupMessages(library(infer))
-county_complete <- read_rds(path = "data/county_complete.rds")
+county_complete <- read_rds("data/county_complete.rds")
 ```
 
 ## Case study: Comparing work travel times

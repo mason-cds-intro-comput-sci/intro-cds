@@ -15,6 +15,7 @@ before_chapter_script: _common.R
 rmd_files:
   - index.Rmd
   - toolbox.Rmd
+  - slack.Rmd
   - github.Rmd
   - rstudio.Rmd
   - Rprogramming.Rmd
