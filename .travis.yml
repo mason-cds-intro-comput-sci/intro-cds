@@ -1,7 +1,7 @@
 language: r
 cache: packages
-r: 3.5
-pandoc_version: 2.2.1
+r: 3.6
+pandoc_version: 2.3
 repos:
   CRAN: https://cran.rstudio.com
 notifications:
