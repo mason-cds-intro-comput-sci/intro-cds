@@ -316,8 +316,8 @@ ia_ne_ci95 <- ia_ne_mean_work_travel_bootstrap %>%
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
-   <th style="text-align:right;"> 2.5% </th>
-   <th style="text-align:right;"> 97.5% </th>
+   <th style="text-align:right;"> lower_ci </th>
+   <th style="text-align:right;"> upper_ci </th>
   </tr>
  </thead>
 <tbody>
