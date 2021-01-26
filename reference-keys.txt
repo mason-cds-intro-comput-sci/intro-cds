@@ -6,6 +6,7 @@ slack-policies
 how-to-use-slack
 channels
 direct-messages
+asking-questions
 github
 getting-started-1
 github-signup

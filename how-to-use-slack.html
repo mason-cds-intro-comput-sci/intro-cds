@@ -149,6 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html"><i class="fa fa-check"></i><b>2.2</b> How to use Slack</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#channels"><i class="fa fa-check"></i><b>2.2.1</b> Channels</a></li>
 <li class="chapter" data-level="2.2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#direct-messages"><i class="fa fa-check"></i><b>2.2.2</b> Direct messages</a></li>
+<li class="chapter" data-level="2.2.3" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#asking-questions"><i class="fa fa-check"></i><b>2.2.3</b> How to ask (good) questions on Slack</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>3</b> GitHub</a><ul>
@@ -300,19 +301,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You and other students from the your section (and other sections) will be assigned to shared channels.</p>
 <p>Here are some important channels in our Slack workspace and their uses:</p>
 <ul>
-<li><em>101-section-001</em>: This is a private channel for students in CDS 101 Section 001. You will be assigned to similar channel for your section of CDS 101 and/or 102. Your instructor will use it for communicating information relevant to your class only (and you may also use it if you have a reason to communicate with all other students in your section).</li>
+<li><p><em>#101-section-001</em>: This is an example of a private channel for students in CDS 101 Section 001. You will be assigned to similar channel for your section of CDS 101 and/or 102. Your instructor will use it for communicating information relevant to your class only (and you may also use it if you have a reason to communicate with all other students in your section).</p></li>
+<li><p><em>#101-module01-intro</em>: This is an example of a public channel for the 1st module of CDS 101. There will be a separate channel for each CDS 101 module (as well as a separate channel for each CDS 102 lab). You should use this channel to ask questions about any of the materials/quizzes/assignments for that module/lab.</p></li>
+<li><p><em>#announcements</em>: This channel will be used by instructos and STARS for course-wide announcements, e.g. office hour reminders.</p></li>
+<li><p><em>#rstudio-github-help</em>: A channel for general help questions about RStudio or GitHub rather than a particular module or lab (e.g. if you can’t login to RStudio),</p></li>
+<li><p><em>#random</em>: A channel for any other messages that would be off-topic in the other dedicated channels (e.g. general questions about this course, questions about other CDS courses, speculation about the Patriot’s chances in the NCAA, etc.)</p></li>
 </ul>
-<p>Please do not post extensive code (that another student could copy) in the public channels (use a direct message instead).</p>
+<p>To prevent plagiarism, please do not post extensive or working code for any of the exercises in channels (use a direct message instead).</p>
 </div>
 <div id="direct-messages" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Direct messages</h3>
 <p>You can send a private message to one or more people as a <em>Direct Message</em>.</p>
 <p>To do this, scroll down to the “Direct Messages” section of the left-hand menu in Slack, and click the + symbol. Then search for the users you want to message.</p>
-<p>If you want to include code in a question, please send it in a Direct Message to your instructor and one of the STARS for your section (i.e. use a single DM with 2 recipients so that we are all in the same message thread).</p>
-<!-- ### How to ask (good) questions on Slack {#asking-questions} -->
+<p>If you want to include code in a question, please send it in a Direct Message to your instructor and one of the STARS for your section (i.e. use a single DM with 2 recipients so that we are all in the same message thread). However, if your question doesn’t include an answer that other students could copy then it is preferable to post in in the shared channel for that Module/Lab, as then any other student with the same question can see how we were able to help you.</p>
+</div>
+<div id="asking-questions" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> How to ask (good) questions on Slack</h3>
+<p>Good questions:</p>
+<ul>
+<li>Post as much information about your problem as possible, so that we can help you as quickly as possible.</li>
+<li>Show that you have made a good faith effort to understand the question and answer it yourself before getting stuck.</li>
+<li>Don’t post an entire code chunk or multiple lines of working code in public channels (to prevent plagiarism). Use a direct message to your instructor + one of the STARS instead.</li>
+</ul>
+<p>Let’s go through some examples of bad questions to illustrate these principles:</p>
+<ul>
+<li><blockquote>
+<p>Help, I’m getting an error on Exercise 4.</p>
+</blockquote>
+<p>The problem with this question is that there are a huge range of errors that you could be getting - so our question to you will be “What error message?” This could significantly slow down our communication since Slack is an asynchronous tool.</p>
+<p>Instead, include as much relevant information as you can to help us fix the problem. It is helpful if you can copy the entire error message from RStudio, if you have one, as well as telling us which Exercise you were working on when this happened.</p>
+<p>For example,</p>
+<blockquote>
+<p>I’m getting this error message on Exercise 4:</p>
+<p><code>Error: object 'height' not found.</code></p>
+</blockquote></li>
+<li><blockquote>
+<p>I don’t understand Exercise 3.</p>
+</blockquote>
+<p>of</p>
+<blockquote>
+<p>Can somebody tell me the answer to Exercise 2?</p>
+</blockquote>
+<p>We want to see that you have made an effort to answer each exercise. To do this we need to know where you are in your understanding of each exercise.</p>
+<p>And while we will not just “tell you the answer”, we will help you until you are able to figure out the answer yourself. However, to do this we again need to know what about that question is giving you trouble.</p>
+<p>The answers to almost every question can be found by going back through the interactive tutorials/lecture videos/readings/assignment instructions. Therefore your first strategy when stuck should be to go back through these resources to find the answer.</p>
+<p>For example, here is how you might ask this question better:</p>
+<blockquote>
+<p>In Exercise 3, I am not sure how to procede with Part ii where it asks “Sort the dataframe in ascending order using the <code>name</code> column”. I’ve looked back through the interactive tutorial for a function to sort a dataframe, but I haven’t found one.</p>
+</blockquote></li>
+<li><blockquote>
+<p>This code chunk is giving me an error:</p>
+<pre><code>some code
+that is an
+entire code chunk
+(even if it currently isn&#39;t working)</code></pre>
+</blockquote>
+<p>In general you should avoid posting large amounts of code in a shared channel because:</p>
+<ol style="list-style-type: decimal">
+<li>Another student might just copy your code rather than solving the problem themselves</li>
+<li>We check for similarities between answers, and so you might get into trouble because another student copied code you posted on Slack</li>
+</ol>
+<p>You can circumvent these issues by posting just the error message and not the code, or if you think the code is necessary to help us answer your question, please send it as a Direct Message to an instructor + STAR rather than a message in a public channel.</p>
+<p>It is fine to post small amounts of code in the public channels, e.g. one line from a multi-line code chunk, or part of a line.</p>
+<p>A good rule of thumb is that whatever is posted in public channels should help other students with a similar problem figure out how to solve it. However they should not just be able to copy what you have posted and recycle it in their own assignment without understanding it.</p></li>
+</ul>
+<!-- ### How to answer questions on Slack {#answering-questions} -->
 <!-- ... -->
-<!-- ### How to aswer questions on Slack {#answering-questions} -->
-<!-- ... -->
+<!-- ### Useful Slack formatting -->
+<!-- ### Slack etiquette -->
+<!-- ### Using Slack efficiently -->
 
 </div>
 </div>
