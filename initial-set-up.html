@@ -26,7 +26,7 @@
 <meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2021-01-12" />
+<meta name="date" content="2021-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,8 +149,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html"><i class="fa fa-check"></i><b>2.2</b> How to use Slack</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#channels"><i class="fa fa-check"></i><b>2.2.1</b> Channels</a></li>
 <li class="chapter" data-level="2.2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#direct-messages"><i class="fa fa-check"></i><b>2.2.2</b> Direct messages</a></li>
-<li class="chapter" data-level="2.2.3" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#asking-questions"><i class="fa fa-check"></i><b>2.2.3</b> How to ask (good) questions on Slack</a></li>
-<li class="chapter" data-level="2.2.4" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#answering-questions"><i class="fa fa-check"></i><b>2.2.4</b> How to aswer questions on Slack</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>3</b> GitHub</a><ul>
@@ -192,9 +190,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="help-and-documentation-for-r-and-rstudio-server.html"><a href="help-and-documentation-for-r-and-rstudio-server.html"><i class="fa fa-check"></i><b>4.3</b> Help and documentation for R and RStudio Server</a></li>
 <li class="chapter" data-level="4.4" data-path="initial-set-up.html"><a href="initial-set-up.html"><i class="fa fa-check"></i><b>4.4</b> Initial Set-up</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#install-required-packages"><i class="fa fa-check"></i><b>4.4.1</b> Install required packages</a></li>
-<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.2</b> Change Global Options</a></li>
-<li class="chapter" data-level="4.4.3" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.3</b> Configure RStudio for use with Git</a></li>
+<li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.1</b> Change Global Options</a></li>
+<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.2</b> Configure RStudio for use with Git</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.5</b> Installing and updating R packages on RStudio Server</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html#option---1-without-commands"><i class="fa fa-check"></i><b>4.5.1</b> Option - 1 (Without commands)</a></li>
@@ -293,15 +290,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="initial-set-up" class="section level2">
 <h2><span class="header-section-number">4.4</span> Initial Set-up</h2>
-<div id="install-required-packages" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> Install required packages</h3>
-<p>Before starting any of the assignments for the class, you need to install a set of extensions to R (called packages).</p>
-<p>In the console tab, type:</p>
-<p><code>install.packages(&quot;tidyverse&quot;)</code></p>
-<p>and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: <code>&gt;</code></p>
-</div>
+<!-- ### Install required packages -->
+<!-- Before starting any of the assignments for the class, you need to install a set of extensions to R (called packages). -->
+<!-- In the console tab, type: -->
+<!-- `install.packages("tidyverse")` -->
+<!-- and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: `>` -->
 <div id="change-global-options" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> Change Global Options</h3>
+<h3><span class="header-section-number">4.4.1</span> Change Global Options</h3>
 <p>To change the settings for RStudio Server, click Tools &gt; Global Options… in the top menu bar. A pop-up menu will appear with many different options for you to change. You are free to explore all the different options on your own. For now, there are two things you should change:</p>
 <ul>
 <li><p>Uncheck the box next to <strong>Restore .RData into workspace at startup</strong></p></li>
@@ -310,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Click the <strong>Apply</strong> button on the lower-right of the pop-up window, followed by the <strong>OK</strong> button.</p>
 </div>
 <div id="configure-rstudio-for-use-with-git" class="section level3">
-<h3><span class="header-section-number">4.4.3</span> Configure RStudio for use with Git</h3>
+<h3><span class="header-section-number">4.4.2</span> Configure RStudio for use with Git</h3>
 <p>In the bottom left pane, click on the <em>Terminal</em> tab.</p>
 <p>Wait for the prompt to load (it can take 10-20 seconds). When it appears, the prompt will end with a dollar symbol: <code>$</code></p>
 <p>At the prompt, type and run two separate commands (replacing with the email you used to sign up for GitHub, and your name). Keep the quotation marks around these values.</p>

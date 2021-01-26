@@ -6,8 +6,6 @@ slack-policies
 how-to-use-slack
 channels
 direct-messages
-asking-questions
-answering-questions
 github
 getting-started-1
 github-signup
@@ -41,7 +39,6 @@ help-tab
 references
 help-and-documentation-for-r-and-rstudio-server
 initial-set-up
-install-required-packages
 change-global-options
 configure-rstudio-for-use-with-git
 installing-and-updating-r-packages-on-rstudio-server

@@ -158,15 +158,15 @@ You can also find more resources (for data science, RStudio, etc.,) on RStudio w
 
 ## Initial Set-up
 
-### Install required packages
+<!-- ### Install required packages -->
 
-Before starting any of the assignments for the class, you need to install a set of extensions to R (called packages).
+<!-- Before starting any of the assignments for the class, you need to install a set of extensions to R (called packages). -->
 
-In the console tab, type:
+<!-- In the console tab, type: -->
 
-`install.packages("tidyverse")`
+<!-- `install.packages("tidyverse")` -->
 
-and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: `>`
+<!-- and hit enter. This will take several minutes to finish, and you will see many lines of text flash past on the screen. The installation is finished when the console returns to the prompt symbol: `>` -->
 
 
 ### Change Global Options

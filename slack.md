@@ -33,16 +33,26 @@ Slack is a messaging tool (very similar to Discord, Microsoft Teams, etc.). Ther
 
 ### Channels
 
-...
+You and other students from the your section (and other sections) will be assigned to shared channels.
+
+Here are some important channels in our Slack workspace and their uses:
+
+* *101-section-001*: This is a private channel for students in CDS 101 Section 001. You will be assigned to similar channel for your section of CDS 101 and/or 102. Your instructor will use it for communicating information relevant to your class only (and you may also use it if you have a reason to communicate with all other students in your section).
+
+Please do not post extensive code (that another student could copy) in the public channels (use a direct message instead).
 
 ### Direct messages
 
-...
+You can send a private message to one or more people as a *Direct Message*.
 
-### How to ask (good) questions on Slack {#asking-questions}
+To do this, scroll down to the "Direct Messages" section of the left-hand menu in Slack, and click the + symbol. Then search for the users you want to message.
 
-...
+If you want to include code in a question, please send it in a Direct Message to your instructor and one of the STARS for your section (i.e. use a single DM with 2 recipients so that we are all in the same message thread).
 
-### How to aswer questions on Slack {#answering-questions}
+<!-- ### How to ask (good) questions on Slack {#asking-questions} -->
 
-...
+<!-- ... -->
+
+<!-- ### How to aswer questions on Slack {#answering-questions} -->
+
+<!-- ... -->
