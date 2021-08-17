@@ -10,7 +10,7 @@ _bookdown_files
 _main.rds
 bib/packages.bib
 
-docs/*.md
+#docs/*.md
 
 # ---------------------------
 # BEGIN ignore basic files
@@ -77,8 +77,8 @@ build/
 dist/
 downloads/
 etc/
-lib/
-lib64/
+#lib/
+#lib64/
 out/
 parts/
 sdist/
@@ -231,12 +231,7 @@ xcuserdata/
 *-tags.tex
 *-tikzDictionary
 *.?end
-*.[1-9]
-*.[1-9]R
-*.[1-9][0-9]
-*.[1-9][0-9]R
-*.[1-9][0-9][0-9]
-*.[1-9][0-9][0-9]R
+
 *.acn
 *.acr
 *.alg
@@ -358,7 +353,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 __pycache__/
 develop-eggs/
-docs/_build/
+#docs/_build/
 eggs/
 [eE][nN][vV]/
 env.bak/
@@ -391,3 +386,4 @@ vignettes/*.pdf
 !.style.yapf
 !.travis.yml
 !.env.example
+!docs/*
