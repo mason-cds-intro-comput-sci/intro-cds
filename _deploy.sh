@@ -6,8 +6,8 @@ set -e
 [ "${TRAVIS_BRANCH}" != "master" ] && exit 0
 
 # Set git config information
-git config --global user.name "James K. Glasbrenner (Travis-CI)"
-git config --global user.email "jglasbr2@gmu.edu"
+git config --global user.name "Dominic White (Travis-CI)"
+git config --global user.email "dwhite34@gmu.edu"
 
 # Clone the gh-pages repository
 git clone -b gh-pages \
