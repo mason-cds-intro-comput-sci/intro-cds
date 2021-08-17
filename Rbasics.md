@@ -45,7 +45,7 @@ or
 
 `> 5 == 5`
 
-## Variables {r-basics-variables}
+## Variables {#r-basics-variables}
 
 There’s a problem with just entering numbers at the prompt like we have been doing so far. We type in our nice calculation (which we call an expression in programming jargon):
 

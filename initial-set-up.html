@@ -26,7 +26,7 @@
 <meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2021-01-26" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|IBM+Plex+Serif:400,400i,500,500i|Montserrat:400,400i,500,500i,700,700i|Roboto:400,400i,500,500i&amp;subset=latin-ext" rel="stylesheet">
@@ -192,7 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="help-and-documentation-for-r-and-rstudio-server.html"><a href="help-and-documentation-for-r-and-rstudio-server.html"><i class="fa fa-check"></i><b>4.3</b> Help and documentation for R and RStudio Server</a></li>
 <li class="chapter" data-level="4.4" data-path="initial-set-up.html"><a href="initial-set-up.html"><i class="fa fa-check"></i><b>4.4</b> Initial Set-up</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.1</b> Change Global Options</a></li>
-<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.2</b> Configure RStudio for use with Git</a></li>
+<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#create-a-personal-access-token-on-github"><i class="fa fa-check"></i><b>4.4.2</b> Create a Personal Access Token on GitHub</a></li>
+<li class="chapter" data-level="4.4.3" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.3</b> Configure RStudio for use with Git</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.5</b> Installing and updating R packages on RStudio Server</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html#option---1-without-commands"><i class="fa fa-check"></i><b>4.5.1</b> Option - 1 (Without commands)</a></li>
@@ -238,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rbasics-data.html"><a href="rbasics-data.html"><i class="fa fa-check"></i><b>6.1</b> Data</a><ul>
 <li class="chapter" data-level="6.1.1" data-path="rbasics-data.html"><a href="rbasics-data.html#rbasics-numbers"><i class="fa fa-check"></i><b>6.1.1</b> Numbers</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="variables-r-basics-variables.html"><a href="variables-r-basics-variables.html"><i class="fa fa-check"></i><b>6.2</b> Variables {r-basics-variables}</a></li>
+<li class="chapter" data-level="6.2" data-path="r-basics-variables.html"><a href="r-basics-variables.html"><i class="fa fa-check"></i><b>6.2</b> Variables</a></li>
 <li class="chapter" data-level="6.3" data-path="more-complicated-data.html"><a href="more-complicated-data.html"><i class="fa fa-check"></i><b>6.3</b> More Complicated Data</a></li>
 <li class="chapter" data-level="6.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6.4</b> Functions</a></li>
 </ul></li>
@@ -305,14 +308,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Click the <strong>Apply</strong> button on the lower-right of the pop-up window, followed by the <strong>OK</strong> button.</p>
 </div>
+<div id="create-a-personal-access-token-on-github" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Create a Personal Access Token on GitHub</h3>
+<p>A personal access token is essentially a temporary password that you can create to use with your GitHub account instead of your main account. It is much more secure than using your main GitHub password when working on GitHub projects.</p>
+<p>Login to your account at GitHub account and follow steps 1-9 <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">here</a> under the section <em>Creating a Token</em>.</p>
+<p>A few notes:</p>
+<ul>
+<li>In step 7, give your token a long enough expiration so that it will last past the end of the semester.</li>
+<li>In step 8, you only need to check the box that says <strong>repo</strong>.</li>
+<li>In step 9, <strong>make sure you store a copy of the token</strong> that is generated for you (e.g. copy-and-paste it into a text file). You will never be able to view this token again on GitHub, so if you lose it, you will need to create a new token by repeating steps 1-9 all over again…</li>
+</ul>
+<p>Once you have created the token, return to RStudio, and move onto the next section:</p>
+</div>
 <div id="configure-rstudio-for-use-with-git" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> Configure RStudio for use with Git</h3>
-<p>In the bottom left pane, click on the <em>Terminal</em> tab.</p>
-<p>Wait for the prompt to load (it can take 10-20 seconds). When it appears, the prompt will end with a dollar symbol: <code>$</code></p>
-<p>At the prompt, type and run two separate commands (replacing with the email you used to sign up for GitHub, and your name). Keep the quotation marks around these values.</p>
-<p><code>git config --global user.email &quot;you@gmu.edu&quot;</code></p>
-<p><code>git config --global user.name &quot;Your Name&quot;</code></p>
-<p>And you’re done.</p>
+<h3><span class="header-section-number">4.4.3</span> Configure RStudio for use with Git</h3>
+<p>Take a look in the bottom-left pane of RStudio. You should see a tab called <em>Console</em> which is open by default, and another one called <em>Terminal</em>. Switch to the <em>Terminal</em> tab. (If you do not see a Terminal, create one from the top menu in RStudio by going to <em>Tools &gt; Terminal &gt; New Terminal</em>.)</p>
+<p>It may take a few seconds for the <em>Terminal</em> to load, but once it has done so you will see a line that ends with a dollar symbol <code>$</code> and a flashing black cursor.</p>
+<p>Copy-and-paste the following command into the <em>Terminal</em> and then press <code>Enter</code> to run it:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">git</span> config credential.helper store</a></code></pre></div>
+<p>Note that:</p>
+<ul>
+<li><p>You will not see any response in the <em>Terminal</em> if the line runs successfully. However you can check if it was successful by running this line <code>git config credential.helper</code> - you should get the response <code>store</code>.</p></li>
+<li><p>To paste copied text into the <em>Terminal</em> with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).</p></li>
+</ul>
+<p>Next, switch back to the <em>Console</em> tab of the bottom left pane (next to the <em>Terminal</em> tab).</p>
+<p>Copy-and-paste the following lines two lines of R code into the Console and hit <code>&lt;Enter&gt;</code>.</p>
+<pre><code>library(gitcreds)
+gitcreds_set()</code></pre>
+<p>Note that in the <em>Console</em> you can use Ctrl+v to paste instead of Ctrl+Shift+v (or just Cmd+v on a Mac).</p>
+<p>You will be prompted to enter the token that you just created above on GitHub.com. You should copy-and-paste the token from where you saved it to prevent any spelling errors, and then press <code>&lt;Enter&gt;</code> again.</p>
+<p>Now you should be all set up!</p>
 </div>
 </div>
 <script src="js/custom.js"></script>

@@ -41,6 +41,7 @@ references
 help-and-documentation-for-r-and-rstudio-server
 initial-set-up
 change-global-options
+create-a-personal-access-token-on-github
 configure-rstudio-for-use-with-git
 installing-and-updating-r-packages-on-rstudio-server
 option---1-without-commands
@@ -77,7 +78,7 @@ overview
 r-basics
 rbasics-data
 rbasics-numbers
-variables-r-basics-variables
+r-basics-variables
 more-complicated-data
 functions
 describing-numerical-data

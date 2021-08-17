@@ -180,20 +180,52 @@ To change the settings for RStudio Server, click Tools > Global Options… in th
 Click the **Apply** button on the lower-right of the pop-up window, followed by the **OK** button.
 
 
+### Create a Personal Access Token on GitHub
+
+A personal access token is essentially a temporary password that you can create to use with your GitHub account instead of your main account. It is much more secure than using your main GitHub password when working on GitHub projects.
+
+Login to your account at GitHub account and follow steps 1-9 [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) under the section *Creating a Token*.
+
+A few notes:
+
+* In step 7, give your token a long enough expiration so that it will last past the end of the semester.
+* In step 8, you only need to check the box that says **repo**.
+* In step 9, **make sure you store a copy of the token** that is generated for you (e.g. copy-and-paste it into a text file). You will never be able to view this token again on GitHub, so if you lose it, you will need to create a new token by repeating steps 1-9 all over again...
+
+Once you have created the token, return to RStudio, and move onto the next section:
+
 ### Configure RStudio for use with Git
 
-In the bottom left pane, click on the *Terminal* tab.
+Take a look in the bottom-left pane of RStudio. You should see a tab called *Console* which is open by default, and another one called *Terminal*. Switch to the *Terminal* tab. (If you do not see a Terminal, create one from the top menu in RStudio by going to *Tools > Terminal > New Terminal*.)
 
-Wait for the prompt to load (it can take 10-20 seconds). When it appears, the prompt will end with a dollar symbol: `$`
+It may take a few seconds for the *Terminal* to load, but once it has done so you will see a line that ends with a dollar symbol `$` and a flashing black cursor.
 
-At the prompt, type and run two separate commands (replacing with the email you used to sign up for GitHub, and your name). Keep the quotation marks around these values.
+Copy-and-paste the following command into the *Terminal* and then press `Enter` to run it:
 
-`git config --global user.email "you@gmu.edu"`
+```bash
+git config credential.helper store
+```
 
-`git config --global user.name "Your Name"`
+Note that:
 
+* You will not see any response in the *Terminal* if the line runs successfully. However you can check if it was successful by running this line `git config credential.helper` - you should get the response `store`.
 
-And you’re done.
+* To paste copied text into the *Terminal* with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).
+
+Next, switch back to the *Console* tab of the bottom left pane (next to the *Terminal* tab).
+
+Copy-and-paste the following lines two lines of R code into the Console and hit `<Enter>`.
+
+```
+library(gitcreds)
+gitcreds_set()
+```
+
+Note that in the *Console* you can use Ctrl+v to paste instead of Ctrl+Shift+v (or just Cmd+v on a Mac).
+
+You will be prompted to enter the token that you just created above on GitHub.com. You should copy-and-paste the token from where you saved it to prevent any spelling errors, and then press `<Enter>` again.
+
+Now you should be all set up!
 
 
 

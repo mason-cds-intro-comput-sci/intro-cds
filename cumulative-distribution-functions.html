@@ -26,7 +26,7 @@
 <meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2021-01-26" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|IBM+Plex+Serif:400,400i,500,500i|Montserrat:400,400i,500,500i,700,700i|Roboto:400,400i,500,500i&amp;subset=latin-ext" rel="stylesheet">
@@ -192,7 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="help-and-documentation-for-r-and-rstudio-server.html"><a href="help-and-documentation-for-r-and-rstudio-server.html"><i class="fa fa-check"></i><b>4.3</b> Help and documentation for R and RStudio Server</a></li>
 <li class="chapter" data-level="4.4" data-path="initial-set-up.html"><a href="initial-set-up.html"><i class="fa fa-check"></i><b>4.4</b> Initial Set-up</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.1</b> Change Global Options</a></li>
-<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.2</b> Configure RStudio for use with Git</a></li>
+<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#create-a-personal-access-token-on-github"><i class="fa fa-check"></i><b>4.4.2</b> Create a Personal Access Token on GitHub</a></li>
+<li class="chapter" data-level="4.4.3" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.3</b> Configure RStudio for use with Git</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.5</b> Installing and updating R packages on RStudio Server</a><ul>
 <li class="chapter" data-level="4.5.1" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html#option---1-without-commands"><i class="fa fa-check"></i><b>4.5.1</b> Option - 1 (Without commands)</a></li>
@@ -238,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="rbasics-data.html"><a href="rbasics-data.html"><i class="fa fa-check"></i><b>6.1</b> Data</a><ul>
 <li class="chapter" data-level="6.1.1" data-path="rbasics-data.html"><a href="rbasics-data.html#rbasics-numbers"><i class="fa fa-check"></i><b>6.1.1</b> Numbers</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="variables-r-basics-variables.html"><a href="variables-r-basics-variables.html"><i class="fa fa-check"></i><b>6.2</b> Variables {r-basics-variables}</a></li>
+<li class="chapter" data-level="6.2" data-path="r-basics-variables.html"><a href="r-basics-variables.html"><i class="fa fa-check"></i><b>6.2</b> Variables</a></li>
 <li class="chapter" data-level="6.3" data-path="more-complicated-data.html"><a href="more-complicated-data.html"><i class="fa fa-check"></i><b>6.3</b> More Complicated Data</a></li>
 <li class="chapter" data-level="6.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6.4</b> Functions</a></li>
 </ul></li>
@@ -319,18 +322,18 @@ So if you are “in the 90th percentile”, you did as well as or better than 90
 <pre><code>55  66  77  88  99</code></pre>
 <p>If you received the score of 88, then what is your percentile rank?
 We can calculate it as follows:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">test_scores &lt;-<span class="st"> </span><span class="kw">data_frame</span>(<span class="dt">score =</span> <span class="kw">combine</span>(<span class="dv">55</span>, <span class="dv">66</span>, <span class="dv">77</span>, <span class="dv">88</span>, <span class="dv">99</span>))</a>
-<a class="sourceLine" id="cb26-2" data-line-number="2">  </a>
-<a class="sourceLine" id="cb26-3" data-line-number="3">number_of_tests &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-4" data-line-number="4"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="st">  </span><span class="kw">pull</span>(n)</a>
-<a class="sourceLine" id="cb26-6" data-line-number="6">  </a>
-<a class="sourceLine" id="cb26-7" data-line-number="7">number_of_lower_scores &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-8" data-line-number="8"><span class="st">  </span><span class="kw">filter</span>(score <span class="op">&lt;=</span><span class="st"> </span><span class="dv">88</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-9" data-line-number="9"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-10" data-line-number="10"><span class="st">  </span><span class="kw">pull</span>(n)</a>
-<a class="sourceLine" id="cb26-11" data-line-number="11">  </a>
-<a class="sourceLine" id="cb26-12" data-line-number="12">percentile_rank &lt;-<span class="st"> </span><span class="fl">100.0</span> <span class="op">*</span><span class="st"> </span>number_of_lower_scores <span class="op">/</span><span class="st"> </span>number_of_tests</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">test_scores &lt;-<span class="st"> </span><span class="kw">data_frame</span>(<span class="dt">score =</span> <span class="kw">combine</span>(<span class="dv">55</span>, <span class="dv">66</span>, <span class="dv">77</span>, <span class="dv">88</span>, <span class="dv">99</span>))</a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">  </a>
+<a class="sourceLine" id="cb28-3" data-line-number="3">number_of_tests &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-4" data-line-number="4"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-5" data-line-number="5"><span class="st">  </span><span class="kw">pull</span>(n)</a>
+<a class="sourceLine" id="cb28-6" data-line-number="6">  </a>
+<a class="sourceLine" id="cb28-7" data-line-number="7">number_of_lower_scores &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-8" data-line-number="8"><span class="st">  </span><span class="kw">filter</span>(score <span class="op">&lt;=</span><span class="st"> </span><span class="dv">88</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-9" data-line-number="9"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb28-10" data-line-number="10"><span class="st">  </span><span class="kw">pull</span>(n)</a>
+<a class="sourceLine" id="cb28-11" data-line-number="11">  </a>
+<a class="sourceLine" id="cb28-12" data-line-number="12">percentile_rank &lt;-<span class="st"> </span><span class="fl">100.0</span> <span class="op">*</span><span class="st"> </span>number_of_lower_scores <span class="op">/</span><span class="st"> </span>number_of_tests</a></code></pre></div>
 <p>From this, we find that the percentile rank for a score of 88 is 80.
 Mathematically, the calculation is <span class="math inline">\(100 \times \dfrac{4}{5} = 80\)</span>.</p>
 <p>As you can see, if you are given a value, it is easy to find its percentile rank; going the other way is slightly harder.
@@ -338,11 +341,11 @@ One way to do this is to sort the scores and find the row number that correspond
 To find the row number, divide the total number of scores by 100, multiply that number by the desired percentile rank, and then <em>round up</em> to the nearest integer value.
 The rounding up operation can be handled via the <code>ceiling()</code> function.
 So, for our example, the value with percentile rank 55 is:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">percentile_rank_row_number &lt;-<span class="st"> </span><span class="kw">ceiling</span>(<span class="dv">55</span> <span class="op">*</span><span class="st"> </span>number_of_tests <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)</a>
-<a class="sourceLine" id="cb27-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb27-3" data-line-number="3">test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb27-5" data-line-number="5"><span class="st">  </span><span class="kw">slice</span>(percentile_rank_row_number)</a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">percentile_rank_row_number &lt;-<span class="st"> </span><span class="kw">ceiling</span>(<span class="dv">55</span> <span class="op">*</span><span class="st"> </span>number_of_tests <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb29-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb29-3" data-line-number="3">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb29-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb29-5" data-line-number="5"><span class="st">  </span><span class="kw">slice</span>(percentile_rank_row_number)</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -364,9 +367,9 @@ So this means that, in the distribution of exam scores, the 55th percentile corr
 <p>In R, there is a function called <code>quantile()</code> that can do the above calculation automatically, although you need to take care with the inputs.
 Let’s first show what happens when we aren’t careful.
 We might think that we can calculate the 55th percentile by running:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb28-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb28-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb30-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>))</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -393,9 +396,9 @@ This happens because <code>quantile()</code> interpolates between the scores by 
 Sometimes you will want this behavior, other times you will not.
 When the dataset is this small, it doesn’t make as much sense to permit interpolation, as it can be based on rather aggressive assumptions about what intermediate scores might look like.
 To tell <code>quantile()</code> to compute scores in the same manner as we did above, add the input <code>type = 1</code>:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb29-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb29-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>), <span class="dt">type =</span> <span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb31-2" data-line-number="2"><span class="st">  </span><span class="kw">pull</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb31-3" data-line-number="3"><span class="st">  </span><span class="kw">quantile</span>(<span class="dt">probs =</span> <span class="kw">combine</span>(<span class="fl">0.55</span>), <span class="dt">type =</span> <span class="dv">1</span>)</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -429,9 +432,9 @@ The CDF is the function that maps from a value to its percentile rank.
 To find the CDF for any particular value in our distribution, we compute the fraction of values in the distribution less than or equal to our selected value.
 Computing this is similar to how we calculated the percentile rank, except that the result is a probability in the range 0 – 1 rather than a percentile rank in the range 0 – 100.
 For our test scores example, we can manually compute the CDF in the following way:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1">test_scores_cdf &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb30-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cdf =</span> <span class="kw">row_number</span>() <span class="op">/</span><span class="st"> </span><span class="kw">n</span>())</a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">test_scores_cdf &lt;-<span class="st"> </span>test_scores <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(score) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb32-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cdf =</span> <span class="kw">row_number</span>() <span class="op">/</span><span class="st"> </span><span class="kw">n</span>())</a></code></pre></div>
 <table class="table table-striped table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -498,10 +501,10 @@ If we select a value that is greater than the largest value, then the CDF is 1.<
 <h3><span class="header-section-number">8.2.4</span> Representing CDFs</h3>
 <p>While it’s good to know how to manually compute the CDF, we can construct the CDF of a sample automatically using the <code>geom_step()</code> function if we include <code>stat = &quot;ecdf&quot;</code> as an additional input.
 Let’s use this to look at the CDF for the average work travel time for the full dataset:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb31-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb31-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_step</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel), <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb31-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb33-3" data-line-number="3"><span class="st">  </span><span class="kw">geom_step</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel), <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb33-4" data-line-number="4"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
 <p><img src="distributions_files/figure-html/mean-work-travel-cdf-visualization-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>With this plot we can easily specify an average work travel time percentile and read the associated time from the plot and vice-versa.</p>
 </div>
@@ -510,14 +513,14 @@ Let’s use this to look at the CDF for the average work travel time for the ful
 <p>CDFs are especially useful for comparing distributions.
 Let’s revisit the comparison we made between the average work travel times in Nebraska and Iowa.
 Here is the full code that converts those distributions into CDFs:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb32-3" data-line-number="3"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb32-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_step</span>(</a>
-<a class="sourceLine" id="cb32-5" data-line-number="5">    <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel, <span class="dt">color =</span> state),</a>
-<a class="sourceLine" id="cb32-6" data-line-number="6">    <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span></a>
-<a class="sourceLine" id="cb32-7" data-line-number="7">  ) <span class="op">+</span></a>
-<a class="sourceLine" id="cb32-8" data-line-number="8"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">county_complete <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Nebraska&quot;</span> <span class="op">|</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;Iowa&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb34-3" data-line-number="3"><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb34-4" data-line-number="4"><span class="st">  </span><span class="kw">geom_step</span>(</a>
+<a class="sourceLine" id="cb34-5" data-line-number="5">    <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> mean_work_travel, <span class="dt">color =</span> state),</a>
+<a class="sourceLine" id="cb34-6" data-line-number="6">    <span class="dt">stat =</span> <span class="st">&quot;ecdf&quot;</span></a>
+<a class="sourceLine" id="cb34-7" data-line-number="7">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb34-8" data-line-number="8"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;CDF&quot;</span>)</a></code></pre></div>
 <p><img src="distributions_files/figure-html/compare-cdf-of-ne-ia-travel-times-plot-1.svg" width="100%" style="display: block; margin: auto;" /></p>
 <p>This visualization makes the shapes of the distributions and the relative differences between them much clearer.
 We see that Nebraska has shorter average work travel times for most of the distribution, at least until you reach an average time of 25 minutes, after which the Nebraska and Iowa distributions become similar to one another.</p>

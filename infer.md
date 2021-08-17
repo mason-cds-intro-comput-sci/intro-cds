@@ -239,12 +239,12 @@ ia_ne_p_value_two_sided <- ia_ne_mean_work_travel_null %>%
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> 0.0344 </td>
+   <td style="text-align:right;"> 0.029 </td>
   </tr>
 </tbody>
 </table>
 
-Our two-sided p-value is 0.0344, which is below our significance level of $\alpha=0.05$. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.
+Our two-sided p-value is 0.029, which is below our significance level of $\alpha=0.05$. We therefore reject the null hypothesis in favor of the alternative hypothesis. The difference between the mean work travel times in Iowa and Nebraska is statistically significant.
 
 We visualize the meaning of the *p*-value in the following way:
 
@@ -322,13 +322,13 @@ ia_ne_ci95 <- ia_ne_mean_work_travel_bootstrap %>%
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> 0.1084 </td>
-   <td style="text-align:right;"> 2.162 </td>
+   <td style="text-align:right;"> 0.1167 </td>
+   <td style="text-align:right;"> 2.153 </td>
   </tr>
 </tbody>
 </table>
 
-This means that, if we keep collecting new samples of mean work travel times in Iowa and Nebraska, we expect that 95% of our samples will have a difference in mean work travel times that lies between 0.1084 and 2.1622.
+This means that, if we keep collecting new samples of mean work travel times in Iowa and Nebraska, we expect that 95% of our samples will have a difference in mean work travel times that lies between 0.1167 and 2.1534.
 Also note that the lower bound of the confidence interval does not intersect with a difference of means equal to zero, lending further support to the conclusion we reached using our two-sided hypothesis test.
 
 We close this example by visualizing the 95% confidence interval by shading the middle 95% of the data in the bootstrap distribution:
