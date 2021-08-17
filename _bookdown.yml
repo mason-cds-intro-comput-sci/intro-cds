@@ -1,7 +1,7 @@
 ---
 new_session: yes
 repo: https://github.com/mason-cds-intro-comput-sci/intro-cds/
-output_dir: _book
+output_dir: docs
 clean:
   - packages.bib
 language:

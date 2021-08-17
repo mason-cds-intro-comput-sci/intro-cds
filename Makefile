@@ -35,4 +35,4 @@ clean :
 
 gitbook :
 	$(call render_book,$(GITBOOK_OUTPUT))
-	$(ECHO) "book.cds101.com" > _book/CNAME
+	$(ECHO) "book.cds101.com" > docs/CNAME

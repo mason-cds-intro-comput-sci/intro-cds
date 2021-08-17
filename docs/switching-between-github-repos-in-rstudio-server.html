@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.10 Switching between Github repos in RStudio Server | Introduction to Computational and Data Sciences</title>
+  <meta name="description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.10 Switching between Github repos in RStudio Server | Introduction to Computational and Data Sciences" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  <meta name="github-repo" content="mason-cds-intro-comput-sci/intro-cds" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.10 Switching between Github repos in RStudio Server | Introduction to Computational and Data Sciences" />
+  
+  <meta name="twitter:description" content="Supplemental textbook for the CDS 101 course at George Mason University." />
+  
+
+<meta name="author" content="James K. Glasbrenner" />
+<meta name="author" content="Ajay Kulkarni" />
+<meta name="author" content="Dominic White" />
+
+
+<meta name="date" content="2021-08-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"/>
+<link rel="next" href="other-common-questions-about-rstudio-server.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|IBM+Plex+Serif:400,400i,500,500i|Montserrat:400,400i,500,500i,700,700i|Roboto:400,400i,500,500i&amp;subset=latin-ext" rel="stylesheet">
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Computational and Data Sciences</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Frontmatter</a><ul>
+<li class="chapter" data-level="" data-path="r-session-information.html"><a href="r-session-information.html"><i class="fa fa-check"></i>R session information</a></li>
+</ul></li>
+<li class="part"><span><b>I Toolbox</b></span></li>
+<li class="chapter" data-level="1" data-path="toolbox-introduction.html"><a href="toolbox-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="slack.html"><a href="slack.html"><i class="fa fa-check"></i><b>2</b> Slack</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2.1</b> Getting started</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="getting-started.html"><a href="getting-started.html#creating-a-slack-account"><i class="fa fa-check"></i><b>2.1.1</b> Creating a Slack account</a></li>
+<li class="chapter" data-level="2.1.2" data-path="getting-started.html"><a href="getting-started.html#slack-policies"><i class="fa fa-check"></i><b>2.1.2</b> Slack policies</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html"><i class="fa fa-check"></i><b>2.2</b> How to use Slack</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#channels"><i class="fa fa-check"></i><b>2.2.1</b> Channels</a></li>
+<li class="chapter" data-level="2.2.2" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#direct-messages"><i class="fa fa-check"></i><b>2.2.2</b> Direct messages</a></li>
+<li class="chapter" data-level="2.2.3" data-path="how-to-use-slack.html"><a href="how-to-use-slack.html#asking-questions"><i class="fa fa-check"></i><b>2.2.3</b> How to ask (good) questions on Slack</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>3</b> GitHub</a><ul>
+<li class="chapter" data-level="3.1" data-path="getting-started-1.html"><a href="getting-started-1.html"><i class="fa fa-check"></i><b>3.1</b> Getting started</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="getting-started-1.html"><a href="getting-started-1.html#github-signup"><i class="fa fa-check"></i><b>3.1.1</b> Account sign-up</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html"><i class="fa fa-check"></i><b>3.2</b> Navigating the GitHub site</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#github-navigation-main-dashboard"><i class="fa fa-check"></i><b>3.2.1</b> Main dashboard</a></li>
+<li class="chapter" data-level="3.2.2" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#profile-page"><i class="fa fa-check"></i><b>3.2.2</b> Profile page</a></li>
+<li class="chapter" data-level="3.2.3" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#settings"><i class="fa fa-check"></i><b>3.2.3</b> Settings</a></li>
+<li class="chapter" data-level="3.2.4" data-path="navigating-the-github-site.html"><a href="navigating-the-github-site.html#class-organization-page"><i class="fa fa-check"></i><b>3.2.4</b> Class organization page</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="repositories.html"><a href="repositories.html"><i class="fa fa-check"></i><b>3.3</b> Repositories</a></li>
+<li class="chapter" data-level="3.4" data-path="additional-topics.html"><a href="additional-topics.html"><i class="fa fa-check"></i><b>3.4</b> Additional topics</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="additional-topics.html"><a href="additional-topics.html#how-to-create-a-repository"><i class="fa fa-check"></i><b>3.4.1</b> How to create a repository</a></li>
+<li class="chapter" data-level="3.4.2" data-path="additional-topics.html"><a href="additional-topics.html#how-to-import-a-repository"><i class="fa fa-check"></i><b>3.4.2</b> How to import a repository</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio-server.html"><a href="rstudio-server.html"><i class="fa fa-check"></i><b>4</b> RStudio Server</a><ul>
+<li class="chapter" data-level="4.1" data-path="big-picture-overview-of-rstudio-server.html"><a href="big-picture-overview-of-rstudio-server.html"><i class="fa fa-check"></i><b>4.1</b> Big picture overview of RStudio Server</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="big-picture-overview-of-rstudio-server.html"><a href="big-picture-overview-of-rstudio-server.html#rstudio"><i class="fa fa-check"></i><b>4.1.1</b> RStudio</a></li>
+<li class="chapter" data-level="4.1.2" data-path="big-picture-overview-of-rstudio-server.html"><a href="big-picture-overview-of-rstudio-server.html#rstudio-server-1"><i class="fa fa-check"></i><b>4.1.2</b> RStudio Server</a></li>
+<li class="chapter" data-level="4.1.3" data-path="big-picture-overview-of-rstudio-server.html"><a href="big-picture-overview-of-rstudio-server.html#reference"><i class="fa fa-check"></i><b>4.1.3</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html"><i class="fa fa-check"></i><b>4.2</b> A guided tour of RStudio Server’s default interface</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#rstudio-server-sub-windows"><i class="fa fa-check"></i><b>4.2.1</b> RStudio Server sub-windows</a></li>
+<li class="chapter" data-level="4.2.2" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#file-tab"><i class="fa fa-check"></i><b>4.2.2</b> File tab</a></li>
+<li class="chapter" data-level="4.2.3" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#edit-tab"><i class="fa fa-check"></i><b>4.2.3</b> Edit tab</a></li>
+<li class="chapter" data-level="4.2.4" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#code-tab"><i class="fa fa-check"></i><b>4.2.4</b> Code tab</a></li>
+<li class="chapter" data-level="4.2.5" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#view-tab"><i class="fa fa-check"></i><b>4.2.5</b> View tab</a></li>
+<li class="chapter" data-level="4.2.6" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#plots-tab"><i class="fa fa-check"></i><b>4.2.6</b> Plots tab</a></li>
+<li class="chapter" data-level="4.2.7" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#session-tab"><i class="fa fa-check"></i><b>4.2.7</b> Session tab</a></li>
+<li class="chapter" data-level="4.2.8" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#build-tab"><i class="fa fa-check"></i><b>4.2.8</b> Build tab</a></li>
+<li class="chapter" data-level="4.2.9" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#debug-tab"><i class="fa fa-check"></i><b>4.2.9</b> Debug tab</a></li>
+<li class="chapter" data-level="4.2.10" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#proflie-tab"><i class="fa fa-check"></i><b>4.2.10</b> Proflie tab</a></li>
+<li class="chapter" data-level="4.2.11" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#tools-tab"><i class="fa fa-check"></i><b>4.2.11</b> Tools tab</a></li>
+<li class="chapter" data-level="4.2.12" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#help-tab"><i class="fa fa-check"></i><b>4.2.12</b> Help tab</a></li>
+<li class="chapter" data-level="4.2.13" data-path="a-guided-tour-of-rstudio-servers-default-interface.html"><a href="a-guided-tour-of-rstudio-servers-default-interface.html#references"><i class="fa fa-check"></i><b>4.2.13</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="help-and-documentation-for-r-and-rstudio-server.html"><a href="help-and-documentation-for-r-and-rstudio-server.html"><i class="fa fa-check"></i><b>4.3</b> Help and documentation for R and RStudio Server</a></li>
+<li class="chapter" data-level="4.4" data-path="initial-set-up.html"><a href="initial-set-up.html"><i class="fa fa-check"></i><b>4.4</b> Initial Set-up</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.1</b> Change Global Options</a></li>
+<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#create-a-personal-access-token-on-github"><i class="fa fa-check"></i><b>4.4.2</b> Create a Personal Access Token on GitHub</a></li>
+<li class="chapter" data-level="4.4.3" data-path="initial-set-up.html"><a href="initial-set-up.html#configure-rstudio-for-use-with-git"><i class="fa fa-check"></i><b>4.4.3</b> Configure RStudio for use with Git</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.5</b> Installing and updating R packages on RStudio Server</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html#option---1-without-commands"><i class="fa fa-check"></i><b>4.5.1</b> Option - 1 (Without commands)</a></li>
+<li class="chapter" data-level="4.5.2" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html#option---2-with-commands"><i class="fa fa-check"></i><b>4.5.2</b> Option - 2 (With commands)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.6</b> Interacting with your files on RStudio Server</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html#setting-path-for-the-working-directory"><i class="fa fa-check"></i><b>4.6.1</b> Setting path for the working directory</a></li>
+<li class="chapter" data-level="4.6.2" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html#creating-a-folder"><i class="fa fa-check"></i><b>4.6.2</b> Creating a folder</a></li>
+<li class="chapter" data-level="4.6.3" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html#uploading-a-file"><i class="fa fa-check"></i><b>4.6.3</b> Uploading a file</a></li>
+<li class="chapter" data-level="4.6.4" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html#deleting-or-renaming-a-file"><i class="fa fa-check"></i><b>4.6.4</b> Deleting or renaming a file</a></li>
+<li class="chapter" data-level="4.6.5" data-path="interacting-with-your-files-on-rstudio-server.html"><a href="interacting-with-your-files-on-rstudio-server.html#viewing-a-file"><i class="fa fa-check"></i><b>4.6.5</b> Viewing a file</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="creating-a-new-file-on-rstudio-server.html"><a href="creating-a-new-file-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.7</b> Creating a new file on RStudio Server</a></li>
+<li class="chapter" data-level="4.8" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><i class="fa fa-check"></i><b>4.8</b> Using RStudio Server to clone a Github Repo as a new project</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---1"><i class="fa fa-check"></i><b>4.8.1</b> Step - 1</a></li>
+<li class="chapter" data-level="4.8.2" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---2"><i class="fa fa-check"></i><b>4.8.2</b> Step - 2</a></li>
+<li class="chapter" data-level="4.8.3" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---3"><i class="fa fa-check"></i><b>4.8.3</b> Step - 3</a></li>
+<li class="chapter" data-level="4.8.4" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---4"><i class="fa fa-check"></i><b>4.8.4</b> Step - 4</a></li>
+<li class="chapter" data-level="4.8.5" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---5"><i class="fa fa-check"></i><b>4.8.5</b> Step - 5</a></li>
+<li class="chapter" data-level="4.8.6" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---6"><i class="fa fa-check"></i><b>4.8.6</b> Step - 6</a></li>
+<li class="chapter" data-level="4.8.7" data-path="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html"><a href="using-rstudio-server-to-clone-a-github-repo-as-a-new-project.html#step---7"><i class="fa fa-check"></i><b>4.8.7</b> Step - 7</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><i class="fa fa-check"></i><b>4.9</b> How to stage, commit, and push to Github using RStudio Server</a><ul>
+<li class="chapter" data-level="4.9.1" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---1-1"><i class="fa fa-check"></i><b>4.9.1</b> Step - 1</a></li>
+<li class="chapter" data-level="4.9.2" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---2-1"><i class="fa fa-check"></i><b>4.9.2</b> Step - 2</a></li>
+<li class="chapter" data-level="4.9.3" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---3-1"><i class="fa fa-check"></i><b>4.9.3</b> Step - 3</a></li>
+<li class="chapter" data-level="4.9.4" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---4-1"><i class="fa fa-check"></i><b>4.9.4</b> Step - 4</a></li>
+<li class="chapter" data-level="4.9.5" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---5-1"><i class="fa fa-check"></i><b>4.9.5</b> Step - 5</a></li>
+<li class="chapter" data-level="4.9.6" data-path="how-to-stage-commit-and-push-to-github-using-rstudio-server.html"><a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html#step---6-1"><i class="fa fa-check"></i><b>4.9.6</b> Step - 6</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="switching-between-github-repos-in-rstudio-server.html"><a href="switching-between-github-repos-in-rstudio-server.html"><i class="fa fa-check"></i><b>4.10</b> Switching between Github repos in RStudio Server</a><ul>
+<li class="chapter" data-level="4.10.1" data-path="switching-between-github-repos-in-rstudio-server.html"><a href="switching-between-github-repos-in-rstudio-server.html#step---1-2"><i class="fa fa-check"></i><b>4.10.1</b> Step - 1</a></li>
+<li class="chapter" data-level="4.10.2" data-path="switching-between-github-repos-in-rstudio-server.html"><a href="switching-between-github-repos-in-rstudio-server.html#step---2-2"><i class="fa fa-check"></i><b>4.10.2</b> Step - 2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.11" data-path="other-common-questions-about-rstudio-server.html"><a href="other-common-questions-about-rstudio-server.html"><i class="fa fa-check"></i><b>4.11</b> Other common questions about RStudio Server</a><ul>
+<li class="chapter" data-level="4.11.1" data-path="other-common-questions-about-rstudio-server.html"><a href="other-common-questions-about-rstudio-server.html#what-happens-if-you-close-the-browser-tab"><i class="fa fa-check"></i><b>4.11.1</b> What happens if you close the browser tab?</a></li>
+<li class="chapter" data-level="4.11.2" data-path="other-common-questions-about-rstudio-server.html"><a href="other-common-questions-about-rstudio-server.html#i-clicked-import-dataset-but-i-cant-find-the-file-i-downloaded-where-is-it"><i class="fa fa-check"></i><b>4.11.2</b> I clicked “import dataset,” but I can’t find the file I downloaded, where is it?</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II R Programming</b></span></li>
+<li class="chapter" data-level="5" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>5</b> Overview</a></li>
+<li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a><ul>
+<li class="chapter" data-level="6.1" data-path="rbasics-data.html"><a href="rbasics-data.html"><i class="fa fa-check"></i><b>6.1</b> Data</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="rbasics-data.html"><a href="rbasics-data.html#rbasics-numbers"><i class="fa fa-check"></i><b>6.1.1</b> Numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="r-basics-variables.html"><a href="r-basics-variables.html"><i class="fa fa-check"></i><b>6.2</b> Variables</a></li>
+<li class="chapter" data-level="6.3" data-path="more-complicated-data.html"><a href="more-complicated-data.html"><i class="fa fa-check"></i><b>6.3</b> More Complicated Data</a></li>
+<li class="chapter" data-level="6.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6.4</b> Functions</a></li>
+</ul></li>
+<li class="part"><span><b>III Readings</b></span></li>
+<li class="chapter" data-level="7" data-path="describing-numerical-data.html"><a href="describing-numerical-data.html"><i class="fa fa-check"></i><b>7</b> Describing numerical data</a></li>
+<li class="chapter" data-level="8" data-path="representing-distributions.html"><a href="representing-distributions.html"><i class="fa fa-check"></i><b>8</b> Representing distributions</a><ul>
+<li class="chapter" data-level="8.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html"><i class="fa fa-check"></i><b>8.1</b> Probability mass functions</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#example-dataset"><i class="fa fa-check"></i><b>8.1.1</b> Example dataset</a></li>
+<li class="chapter" data-level="8.1.2" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#pmfs"><i class="fa fa-check"></i><b>8.1.2</b> PMFs</a></li>
+<li class="chapter" data-level="8.1.3" data-path="probability-mass-functions.html"><a href="probability-mass-functions.html#plotting-pmfs"><i class="fa fa-check"></i><b>8.1.3</b> Plotting PMFs</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html"><i class="fa fa-check"></i><b>8.2</b> Cumulative distribution functions</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#the-limits-of-probability-mass-functions"><i class="fa fa-check"></i><b>8.2.1</b> The limits of probability mass functions</a></li>
+<li class="chapter" data-level="8.2.2" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#percentiles"><i class="fa fa-check"></i><b>8.2.2</b> Percentiles</a></li>
+<li class="chapter" data-level="8.2.3" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#cdfs"><i class="fa fa-check"></i><b>8.2.3</b> CDFs</a></li>
+<li class="chapter" data-level="8.2.4" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#representing-cdfs"><i class="fa fa-check"></i><b>8.2.4</b> Representing CDFs</a></li>
+<li class="chapter" data-level="8.2.5" data-path="cumulative-distribution-functions.html"><a href="cumulative-distribution-functions.html#comparing-cdfs"><i class="fa fa-check"></i><b>8.2.5</b> Comparing CDFs</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="credits.html"><a href="credits.html"><i class="fa fa-check"></i><b>8.3</b> Credits</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="statistical-inference-with-infer.html"><a href="statistical-inference-with-infer.html"><i class="fa fa-check"></i><b>9</b> Statistical inference with infer</a><ul>
+<li class="chapter" data-level="9.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html"><i class="fa fa-check"></i><b>9.1</b> Case study: Comparing work travel times</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#work-travel-times-in-iowa-and-nebraska"><i class="fa fa-check"></i><b>9.1.1</b> Work travel times in Iowa and Nebraska</a></li>
+<li class="chapter" data-level="9.1.2" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#defining-the-hypothesis-test"><i class="fa fa-check"></i><b>9.1.2</b> Defining the hypothesis test</a></li>
+<li class="chapter" data-level="9.1.3" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#building-the-null-distribution"><i class="fa fa-check"></i><b>9.1.3</b> Building the null distribution</a></li>
+<li class="chapter" data-level="9.1.4" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-two-sided-p-value"><i class="fa fa-check"></i><b>9.1.4</b> Computing the two-sided p-value</a></li>
+<li class="chapter" data-level="9.1.5" data-path="case-study-comparing-work-travel-times.html"><a href="case-study-comparing-work-travel-times.html#computing-the-95-confidence-interval"><i class="fa fa-check"></i><b>9.1.5</b> Computing the 95% confidence interval</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational and Data Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="switching-between-github-repos-in-rstudio-server" class="section level2">
+<h2><span class="header-section-number">4.10</span> Switching between Github repos in RStudio Server</h2>
+<p>In the last tutorial, we learned how to clone a repository from GitHub to RStudio Server. Now, we will see how to switch from one repository to another in RStudio Server.</p>
+<div id="step---1-2" class="section level3">
+<h3><span class="header-section-number">4.10.1</span> Step - 1</h3>
+<p>Log in to your RStudio Server account on <a href="https://rstudio.cos.gmu.edu/" class="uri">https://rstudio.cos.gmu.edu/</a>. You can see your current repository on the right side (cube containing R icon) button on RStudo Server screen. Currently, I am working in the “rstudio-server-tutorial” repository, and there are two other repositories which I have already cloned from GitHub (“test” and “github-tutorial”).</p>
+<p>To switch from one repository to another click on the right side (cube containing R icon) button and then click on the repository which you want to access. In this case, I want to move from “rstudio-server-tutorial” repository to “test” repository. (While performing tutorial, please note that you will have different repositories)</p>
+<p><img src="img/switch_step_1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step---2-2" class="section level3">
+<h3><span class="header-section-number">4.10.2</span> Step - 2</h3>
+<p>After clicking on the name of the repository, RStudio Server will switch to the respective repository. You can verify the repository by checking its name on the right side button.</p>
+<p><img src="img/switch_step_2.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>In this way, you can quickly switch from one repository to another in RStudio Server. If a particular repository is not available in RStudio Server then first you need to clone that repository from GitHub, and then you can use that repository in RStudio Server.</p>
+<!-- ## How to submit your homework assignment using Pull Requests -->
+<!-- ### Step - 1 -->
+<!-- Log in to your GitHub account on <https://github.com/> and go into the repository which you would like to submit. Click the "Pull Requests" tab near the top of the page.  -->
+<!-- ```{r pull_step_1} -->
+<!-- knitr::include_graphics("img/pull_step_1.png") -->
+<!-- ``` -->
+<!-- ### Step - 2 -->
+<!-- Click the green button that says "New pull request". -->
+<!-- ```{r pull_2} -->
+<!-- knitr::include_graphics("img/pull_step_2.png") -->
+<!-- ``` -->
+<!-- ### Step - 3 -->
+<!-- Click the drop-down menu button labeled "base:", and select the option starting. -->
+<!-- ```{r pull_3} -->
+<!-- knitr::include_graphics("img/pull_step_3.png") -->
+<!-- ``` -->
+<!-- ### Step - 4 -->
+<!-- Confirm that the drop-down menu button labeled "compare:" is set to master and click the green button that says “Create pull request”. -->
+<!-- ```{r pull_4} -->
+<!-- knitr::include_graphics("img/pull_step_4.png") -->
+<!-- ``` -->
+<!-- ### Step - 5 -->
+<!-- Give the pull request the following title: Submission: Homework 1/2/3/4, FirstName LastName, replacing FirstName and LastName with your actual first and last name.  -->
+<!-- In the message box, write: My homework submission is ready for grading @jkglasbrenner and click "Create pull request" to lock in your submission. -->
+<!-- ```{r pull_step_5} -->
+<!-- knitr::include_graphics("img/pull_step_5.png") -->
+<!-- ``` -->
+<!-- ### Step - 6 -->
+<!-- After submitting the pull request, you will able to see the title and message which you wrote for submission.   -->
+<!-- ```{r pull_step_6} -->
+<!-- knitr::include_graphics("img/pull_step_6.png") -->
+<!-- ``` -->
+</div>
+</div>
+<script src="js/custom.js"></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="how-to-stage-commit-and-push-to-github-using-rstudio-server.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="other-common-questions-about-rstudio-server.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/mason-cds-intro-comput-sci/intro-cds/edit/master/rstudio.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

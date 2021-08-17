@@ -10,6 +10,8 @@ _bookdown_files
 _main.rds
 bib/packages.bib
 
+docs/*.md
+
 # ---------------------------
 # BEGIN ignore basic files
 # ---------------------------
@@ -19,7 +21,6 @@ bib/packages.bib
 ~*
 
 # os generated files
-*.lnk
 *.stackdump
 [Dd]esktop.ini
 ehthumbs.db
@@ -380,7 +381,7 @@ vignettes/*.pdf
 # ---------------------------
 # BEGIN Whitelisted Files
 # ---------------------------
- 
+
 # track these files, if they exist
 !.editorconfig
 !.gitattributes

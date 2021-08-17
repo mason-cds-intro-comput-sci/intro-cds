@@ -1,4 +1,3 @@
-
 # R basics
 
 
@@ -27,24 +26,160 @@ Cool! But not, I confess, particularly useful. Let’s fix that: next we’ll ad
 
 What do you get?
 
-The plus sign, +, is called an operator. As you might expect, it is the addition operator. There are many other operators in R.
+The plus sign, `+`, is called an *operator*. As you might expect, it is the *addition operator*. There are many other operators in R. Here are a few of the more useful ones. See if you can figure out what they do:
 
-<!-- ### How to import a repository -->
+* `-` 
+* `/`
+* `*`
+* `^`
+* `%%`
+* `==`
+* `!=`
+* `<`
 
-<!-- To import a repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button. -->
+Enter each of these at the prompt, with a number on each side, and see what you get, e.g.
 
-<!-- ```{r getting-to-know-step_6, click.img = TRUE} -->
-<!-- knitr::include_graphics("img/repository_step_6.jpg") -->
-<!-- ``` -->
+`> 3 ** 2`
 
-<!-- The import process will start, and you will get a notification after completion of the import process. -->
+or
 
-<!-- ```{r getting-to-know-step_7, click.img = TRUE} -->
-<!-- knitr::include_graphics("img/repository_step_7.jpg") -->
-<!-- ``` -->
+`> 5 == 5`
 
-<!-- In the end, you will be able to see the imported repository in your GitHub account. -->
+## Variables {#r-basics-variables}
 
-<!-- ```{r getting-to-know-step_8, click.img = TRUE} -->
-<!-- knitr::include_graphics("img/repository_step_8.jpg") -->
-<!-- ``` -->
+There’s a problem with just entering numbers at the prompt like we have been doing so far. We type in our nice calculation (which we call an expression in programming jargon):
+
+    > 5 + 6 / 4 * 5
+
+hit enter, and get the following answer
+
+    [1] 12.5
+
+But what if we need this for a subsequent expression? Alas, the answer has disappeared into the ether, because we haven’t saved it anywhere.
+
+To save the result of an expression, we can assign it to a variable. In R, we do this using a left-pointing arrow:
+
+    > a <- 5 + 6 / 4 * 5
+
+Try running this line and see what happens.
+
+Hmm! The RStudio console no longer returns the result of the expression. However, take a look in the upper right pane of RStudio. You should see that the R environment now contains a variable a with an associated value of 12.5.
+
+So how do we reuse this variable? Simple: just replace one of the numbers in our expression with the variable, e.g.:
+
+    > a + 10
+    [1] 22.5
+
+We could even save the result of this expression into a second variable:
+
+    > b <- a + 10
+
+Take a look in the top right tab in RStudio (called *Environment*). You should see that there are two variables, `a` and `b`, with values 12.5 and 22.5 respectively. RStudio keeps track of all the variables that have been created, along with their values, and shows them here so that you can keep track of them more easily.
+
+## More Complicated Data
+
+But what’s that I hear you saying? “Dr. White, can’t I use anything other than simple numbers? What about if I want to store a bunch of numbers at once? Do I have to save each one as a its own variable? You said in the first class that computers can do billions of calculations per second! I can’t type in a billion variables - I have to get to my Latin class!”
+
+Never fear - there are lots of ways to store data in R. For example, you can store multiple numbers in a data type called a vector:
+
+    > v <- c(1, 2, 3, 4)
+
+This should pop up in the Environment pane of RStudio.
+
+See what we did there? We used the *function* `c(...)` and put all the data that we wanted in the vector inside the braces (separated by commas). (More on functions soon).
+
+Here’s a question for you: can you use the operators from the first section on vectors?
+
+For example, what happens if you do:
+
+    > v2 <- c(5, 6, 7, 8)
+    > v + v2
+
+What about the other operators? Do they all work on vectors?
+
+What happens if the vectors are different lengths? For example:
+
+    > v + c(9, 10, 11)
+
+Can you apply an operator to a vector and a number? Does it always give you the result that you expect? For example:
+
+    > v + 1
+
+
+## Functions
+
+Perhaps, keen mathematician that you are, you want to calculate the length of the hypotenuse of a triangle. Dredging up memories of early math classes, you will doubtless recall Pythagoras’s theorem that the hypotenuse (the long side) of triangle is given by:
+
+Let’s say we have a triangle where the shorter sides (a & b) are 3 and 4 units long. Can you calculate the length of side c in R using just the operators from the first section?
+
+*Hint #1:* The square root is equal to the 0.5 power of a number: `4 ^ 0.5 = 2`
+
+*Hint #2:* Just like in regular math equations, R will calculate some operators before others. For example it will do all multiplications before any additions. However, just like in regular math, we can change the order of operations by wrapping parts of our calculation in parentheses: `(...)`
+
+Did you get the answer 5? Fantastic!
+
+What’s that? Another complaint? You have to write out this long expression every time you need the hypotenuse of a triangle (no doubt this is a frequent chore in your day-to-day life at Mason)?
+
+Again, there is a solution! R allows us to save pieces of code in variables.  Yes, you heard that right: variables don’t just have to store data, they can also store code!
+
+These stored, reusable sections of code are called functions.
+
+For example, you could create a function to calculate the sum of two numbers:
+
+    adder <- function(number1, number2) {
+        result <- number1 + number2
+        return(result)
+    }
+
+
+Entering these 4 lines at the console prompt will be slow and error-prone, so let’s try something different.
+
+Click on the "File" menu at the top of RStudio. Select "New File" and then "R Script". A blank editor window should appear in a new pane above the console.
+
+Copy the adder function from the previous page into this empty script. Then press "Control + Alt + R" on your keyboard (simultaneously). This will run the contents of your script all at once.
+
+If successful, you should see that `adder` appears in the Environment pane under a new section called *Functions*.
+
+How do we use our adder function? Go back to the console, and type something like this:
+
+> adder(3, 5)
+
+If your function is working correctly you should get the result of the 2 numbers that you entered inside the braces.
+
+Let's take another look at the adder function to understand what's going on:
+
+    adder <- function(number1, number2) {
+        result <- number1 + number2
+        return(result)
+    }
+
+**Line 1:** The first line creates a new function with the `function` keyword and saves it to the name `adder` using the assignment operator `<-`, just as we did for variables. 
+
+After `function` are a pair of parentheses. Inside these, we put a list of the parameters that the function can take, separated by commas. In this case, our adder function has two paramters (the numbers to add together). We are going to give these numbers the temporary names `number1` and `number2` (creative, I know). We will use these parameter names inside the function to refer to these two numbers.
+
+We end the line with an opening curly bracket `{` to indicate that the code that follows is part of the function.
+
+**Line 2:** This is the meat of our adder function. We add our two number paramters together and store them in a variable called `result`. Its important to note that `result` only exists inside the curly brackets of the adder function (i.e. it vanishes after the function has finished).
+
+**Line 3:** Here we specify what the function is should return: in this case we want to return the `result` variable.
+
+**Line 4:** We signal the end of the function with a closing curly bracket (matching the one from the end of line 1).
+
+You might object (and not without reason) that our `adder` function is a very trivial example. Wouldn't it just be easier to use the `+` operator?
+
+Yes, it would! So let's make a more complicated function. Can you convert your Pythagorean code from earlier into a function?
+
+*Hint #3:* The general format of an R function is:
+
+    function_name <- function(argument1, argument2, argument3, ...etc.) {
+        some code
+        some more code
+        …etc.
+        return(something)
+    }
+
+*Hint #4:* Use an R function like this:
+
+    > function_name(variable1, 104, ...etc.)
+	
+i.e. the function name followed by parentheses containing a comma separated list of data and variables. Using a function is referred to as "calling a function".

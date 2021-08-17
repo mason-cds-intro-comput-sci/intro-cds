@@ -1,4 +1,3 @@
-
 # GitHub
 
 
@@ -11,7 +10,7 @@ To create an account on GitHub, begin by launching your web browser and navigate
 
 <div class='click-img'><img src="img/signup_step_1.jpg" width="100%" style="display: block; margin: auto;" /></div>
 
-In the signup form, enter your **your Mason `@gmu.edu` email address**, a username, and a password, and then click on the "sign up for GitHub" button
+In the signup form, enter your **your Mason `@gmu.edu` or `@masonlive.gmu.edu` email address**, a username, and a password, and then click on the "sign up for GitHub" button
 
 <div class='click-img'><img src="img/signup_step_2.jpg" width="100%" style="display: block; margin: auto;" /></div>
 
@@ -33,25 +32,6 @@ Please click on the link in the email to verify your account.
 
 <div class='click-img'><img src="img/signup_step_5.jpg" width="100%" style="display: block; margin: auto;" /></div>
 
-### Joining the class organization {#join-class-org}
-
-The next step after creating your account is to join the course organization.
-You should have received an email with a link to join the class organization on GitHub at the start of this semester.
-
-You should receive an email from the course instructor to join the class organization on GitHub at the start of the semester.
-In that email, there will be a link you need to click in order to join the organization.
-
-<div class='click-img'><img src="img/signup_step_6.jpg" width="100%" style="display: block; margin: auto;" /></div>
-
-If you cannot find the email, please contact your course instructor.
-
-After clicking the link, you may be greeted with this page.
-
-<div class='click-img'><img src="img/signup_step_7.jpg" width="100%" style="display: block; margin: auto;" /></div>
-
-This means your browser doesn't remember your sign-in, or you haven't signed up yet, which you should now do if that's the case.
-If you have an account, then click the sign-in link at the bottom and enter your username and password.
-Once you are logged in, you will be asked to approve the necessary permissions so that you can join the class organization, which you should do.
 
 ## Navigating the GitHub site
 
@@ -93,7 +73,8 @@ Clicking **Your profile** will take you to your account's profile page.
 
 Since you most likely have a new account, there won't be much here right now.
 If you click the **Repositories** tab at the top of your profile, it will display a list of repositories associated with your account, *however keep in mind that it will not have any content you work on for the class*.
-This is important to keep in mind when you are looking for your files!
+This is because the repositories you create for the class assignments are created under the class organization rather than associated with you.
+This is important to keep in mind when you are looking for your files - see below for how to find your class assignment repositories.
 
 ### Settings
 
@@ -107,18 +88,23 @@ You can also change how the site sends you email updates and notification alerts
 
 ### Class organization page
 
-Returning to the main dashboard, after you've joined the class organization and started using the site some more, your dashboard will begin to look more like this.
+Returning to the main dashboard, after you've complete a few of the assignments for the class, your dashboard will begin to look more like this.
 
 <div class='click-img'><img src="img/dashboard_dropdown_menu.png" width="100%" style="display: block; margin: auto;" /></div>
 
 As we learned while looking at the profile page, your classwork will not be visible there.
 Instead, you will need to navigate to the class organization in order to find your files for the class, so let's do that now.
-Click the gray icon with your username on the left side of the page, as outlined in the above screenshot, which will open up a dropdown menu.
 
-<div class='click-img'><img src="img/dashboard_dropdown_menu_opened.png" width="303px" style="display: block; margin: auto;" /></div>
+Your section's organization (for CDS 101) will be at a URL like this: 
 
-This menu lists all the GitHub organizations your account belongs to, and you can identify our class organization as it will have `cds-101` somewhere in its name.
-Clicking the class organization in the menu will bring you to the *class organization dashboard*.
+* https://github.com/mason-sp20-cds101-001
+* https://github.com/mason-sp20-cds101-002
+* https://github.com/mason-sp20-cds101-dl1
+* https://github.com/mason-sp20-cds101-dl2
+
+In these examples, `sp20` stands for the Spring 2020 semester, and the last three digits are the number of your section.
+
+When you navigate to your appropriate class organization page, you should see a page similar to this:
 
 <div class='click-img'><img src="img/dashboard_course_organization.png" width="100%" style="display: block; margin: auto;" /></div>
 
@@ -204,7 +190,7 @@ After clicking Readme.md file if you want to add any content in that file then c
 
 ### How to import a repository
 
-To import a repository from other account click on "+" sign and then click on "Import repository" option. After that, you need to provide a link of other repository which you need to clone or import and the repository name to store on your GitHub account. After giving all the details click on "Begin import" button.
+To import a repository from another account click on the "+" sign and then click on "Import repository" option. After that, you need to provide a link of the other repository which you need to clone or import and the repository name to store it under on your GitHub account. After giving all the details click on "Begin import" button.
 
 <div class='click-img'><img src="img/repository_step_6.jpg" width="100%" style="display: block; margin: auto;" /></div>
 
@@ -212,6 +198,6 @@ The import process will start, and you will get a notification after completion 
 
 <div class='click-img'><img src="img/repository_step_7.jpg" width="100%" style="display: block; margin: auto;" /></div>
 
-In the end, you will be able to see the imported repository in your GitHub account.
+Finally, you will be able to see the imported repository in your GitHub account.
 
 <div class='click-img'><img src="img/repository_step_8.jpg" width="100%" style="display: block; margin: auto;" /></div>
