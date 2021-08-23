@@ -4,7 +4,7 @@ author:
   - James K. Glasbrenner
   - Ajay Kulkarni
   - Dominic White
-date: "2021-08-17"
+date: "2021-08-23"
 description: Supplemental textbook for the CDS 101 course at George Mason University.
 documentclass: book
 output: bookdown::gitbook

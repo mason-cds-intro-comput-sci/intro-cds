@@ -26,7 +26,7 @@
 <meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2021-08-17" />
+<meta name="date" content="2021-08-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -325,15 +325,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Take a look in the bottom-left pane of RStudio. You should see a tab called <em>Console</em> which is open by default, and another one called <em>Terminal</em>. Switch to the <em>Terminal</em> tab. (If you do not see a Terminal, create one from the top menu in RStudio by going to <em>Tools &gt; Terminal &gt; New Terminal</em>.)</p>
 <p>It may take a few seconds for the <em>Terminal</em> to load, but once it has done so you will see a line that ends with a dollar symbol <code>$</code> and a flashing black cursor.</p>
 <p>Copy-and-paste the following command into the <em>Terminal</em> and then press <code>Enter</code> to run it:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">git</span> config credential.helper store</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">git</span> config --global credential.helper store</a></code></pre></div>
 <p>Note that:</p>
 <ul>
 <li><p>You will not see any response in the <em>Terminal</em> if the line runs successfully. However you can check if it was successful by running this line <code>git config credential.helper</code> - you should get the response <code>store</code>.</p></li>
 <li><p>To paste copied text into the <em>Terminal</em> with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).</p></li>
 </ul>
 <p>Next, switch back to the <em>Console</em> tab of the bottom left pane (next to the <em>Terminal</em> tab).</p>
-<p>Copy-and-paste the following lines two lines of R code into the Console and hit <code>&lt;Enter&gt;</code>.</p>
-<pre><code>library(gitcreds)
+<p>Copy-and-paste the following lines three lines of R code into the Console and hit <code>&lt;Enter&gt;</code>.</p>
+<pre><code>install.packages(&quot;gitcreds&quot;)
+library(gitcreds)
 gitcreds_set()</code></pre>
 <p>Note that in the <em>Console</em> you can use Ctrl+v to paste instead of Ctrl+Shift+v (or just Cmd+v on a Mac).</p>
 <p>You will be prompted to enter the token that you just created above on GitHub.com. You should copy-and-paste the token from where you saved it to prevent any spelling errors, and then press <code>&lt;Enter&gt;</code> again.</p>
