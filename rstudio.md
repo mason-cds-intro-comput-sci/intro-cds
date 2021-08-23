@@ -203,7 +203,7 @@ It may take a few seconds for the *Terminal* to load, but once it has done so yo
 Copy-and-paste the following command into the *Terminal* and then press `Enter` to run it:
 
 ```bash
-git config credential.helper store
+git config --global credential.helper store
 ```
 
 Note that:
@@ -214,9 +214,10 @@ Note that:
 
 Next, switch back to the *Console* tab of the bottom left pane (next to the *Terminal* tab).
 
-Copy-and-paste the following lines two lines of R code into the Console and hit `<Enter>`.
+Copy-and-paste the following lines three lines of R code into the Console and hit `<Enter>`.
 
 ```
+install.packages("gitcreds")
 library(gitcreds)
 gitcreds_set()
 ```
