@@ -331,6 +331,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>You will not see any response in the <em>Terminal</em> if the line runs successfully. However you can check if it was successful by running this line <code>git config credential.helper</code> - you should get the response <code>store</code>.</p></li>
 <li><p>To paste copied text into the <em>Terminal</em> with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).</p></li>
 </ul>
+<p>Next we need to run two more lines in the <em>Terminal</em>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="fu">git</span> config --global user.name <span class="st">&quot;FirstName LastName&quot;</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">git</span> config --global user.email <span class="st">&quot;netID@gmu.edu&quot;</span></a></code></pre></div>
+<p>You should obviously replace the values inside the quotation marks with your name on the first line, and your GMU email address on the second line (which should match the email address you used to sign up for your GitHub account).</p>
 <p>Next, switch back to the <em>Console</em> tab of the bottom left pane (next to the <em>Terminal</em> tab).</p>
 <p>Copy-and-paste the following lines three lines of R code into the Console and hit <code>&lt;Enter&gt;</code>.</p>
 <pre><code>install.packages(&quot;gitcreds&quot;)

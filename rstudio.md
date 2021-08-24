@@ -212,6 +212,15 @@ Note that:
 
 * To paste copied text into the *Terminal* with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).
 
+Next we need to run two more lines in the *Terminal*:
+
+```bash
+git config --global user.name "FirstName LastName"
+git config --global user.email "netID@gmu.edu"
+```
+
+You should obviously replace the values inside the quotation marks with your name on the first line, and your GMU email address on the second line (which should match the email address you used to sign up for your GitHub account).
+
 Next, switch back to the *Console* tab of the bottom left pane (next to the *Terminal* tab).
 
 Copy-and-paste the following lines three lines of R code into the Console and hit `<Enter>`.

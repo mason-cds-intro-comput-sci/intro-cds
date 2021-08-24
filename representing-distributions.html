@@ -299,12 +299,12 @@ So far we’ve focused on representing univariate distributions using frequency 
 Frequency histograms are useful for examining the particulars of a single variable, but have limited utility when directly comparing distributions that contain different numbers of observations.
 We resolve this issue by introducing the normalized version of the frequency histogram, the <strong>probability mass function</strong> (PMF).
 As we’ll see, the PMF still has its limitations, which will motivate us to consider other, more robust representations of data distributions, such as the very useful <strong>cumulative distribution function</strong> (CDF).</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># Packages</span></a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb18-3" data-line-number="3"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb18-4" data-line-number="4"><span class="kw">library</span>(readr)</a>
-<a class="sourceLine" id="cb18-5" data-line-number="5"><span class="co"># Dataset</span></a>
-<a class="sourceLine" id="cb18-6" data-line-number="6">county_complete &lt;-<span class="st"> </span><span class="kw">read_rds</span>(<span class="dt">path =</span> <span class="st">&quot;data/county_complete.rds&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="co"># Packages</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="kw">library</span>(readr)</a>
+<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="co"># Dataset</span></a>
+<a class="sourceLine" id="cb19-6" data-line-number="6">county_complete &lt;-<span class="st"> </span><span class="kw">read_rds</span>(<span class="dt">path =</span> <span class="st">&quot;data/county_complete.rds&quot;</span>)</a></code></pre></div>
 </div>
 <script src="js/custom.js"></script>
             </section>
