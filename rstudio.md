@@ -462,9 +462,11 @@ After committing the files on GitHub, you will find the upper right window empty
 
 ### Step - 5
 
-When you click the "Push" button, then RStudio Server will ask you for your GitHub username and password. Please give your details and then click on "Ok".
+If you have correctly set-up a GitHub PAT (instructions here), then the Push should run normally. If you get an error about authentication (e.g. "Support for password authentication was removed...") then you have probably not followed all of those set-up steps correctly.
 
-<img src="img/stage_step_8.png" width="100%" style="display: block; margin: auto;" />
+If you get an error about "merge conflicts" then you have somehow ended up with conflicting versions of the file in RStudio and on GitHub (this can happen if you manually uploaded a file to GitHub, or if you opened the project in multiple sessions of RStudio simultaneously). If you are not sure how to fix these merge conflicts, then you should contact an instructor for help.
+
+If you get an error about "unrelated histories", then you accidentally checked the "Ammend previous commit" box in Step 3 above. You will need to create a new version of the project in GitHub and 
 
 In the end, you will see a new window containing Git Push message. If everything is correct, then there will not be any errors, and your files have been successfully pushed in GitHub repository. 
 
