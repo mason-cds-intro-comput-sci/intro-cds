@@ -318,9 +318,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="step---5-1" class="section level3">
 <h3><span class="header-section-number">4.9.5</span> Step - 5</h3>
-<p>If you have correctly set-up a GitHub PAT (instructions here), then the Push should run normally. If you get an error about authentication (e.g. “Support for password authentication was removed…”) then you have probably not followed all of those set-up steps correctly.</p>
-<p>If you get an error about “merge conflicts” then you have somehow ended up with conflicting versions of the file in RStudio and on GitHub (this can happen if you manually uploaded a file to GitHub, or if you opened the project in multiple sessions of RStudio simultaneously). If you are not sure how to fix these merge conflicts, then you should contact an instructor for help.</p>
-<p>If you get an error about “unrelated histories”, then you accidentally checked the “Ammend previous commit” box in Step 3 above. You will need to create a new version of the project in GitHub and</p>
+<p>If you have correctly set-up a GitHub PAT (instructions here), then the Push should run normally.</p>
+<p>If there is a problem, one of these things may happen:</p>
+<ul>
+<li><p>If RStudio asks you for a GitHub username or password, or if you get an error about authentication (e.g. “Support for password authentication was removed…”) then you have probably not followed all of those set-up steps correctly to create a Personal Access Token for GitHub and store it in RStudio: <a href="https://book.cds101.com/initial-set-up.html" class="uri">https://book.cds101.com/initial-set-up.html</a></p></li>
+<li><p>If you get an error about “merge conflicts” then you have somehow ended up with conflicting versions of the file in RStudio and on GitHub (this can happen if you manually uploaded a file to GitHub, or if you opened the project in multiple sessions of RStudio simultaneously). If you are not sure how to fix these merge conflicts, then you should contact an instructor for help.</p></li>
+<li><p>If you get an error about “unrelated histories”, then you accidentally checked the “Ammend previous commit” box in Step 3 above. You will need to create a new version of the project in GitHub and</p></li>
+</ul>
 <p>In the end, you will see a new window containing Git Push message. If everything is correct, then there will not be any errors, and your files have been successfully pushed in GitHub repository.</p>
 <p><img src="img/stage_step_9.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
