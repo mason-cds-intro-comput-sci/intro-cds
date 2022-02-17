@@ -74,7 +74,7 @@ ia_ne_summary_stats <- ia_ne_county %>%
 
 ```{r ia-ne-summary-statistics-table, echo = FALSE}
 ia_ne_summary_stats %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -232,7 +232,7 @@ ia_ne_p_value_two_sided <- ia_ne_mean_work_travel_null %>%
 
 ```{r ia-ne-p-value-two-sided-print, echo = FALSE}
 ia_ne_p_value_two_sided %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -316,7 +316,7 @@ ia_ne_ci95 <- ia_ne_mean_work_travel_bootstrap %>%
 
 ```{r ia-ne-mean-work-travel-ci-print, echo = FALSE}
 ia_ne_ci95 %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE

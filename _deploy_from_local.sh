@@ -9,6 +9,7 @@ set -e
 git config --global user.name "Dominic White (Travis-CI)"
 git config --global user.email "dwhite34@gmu.edu"
 
+rm -Rf book-output
 # Clone the gh-pages repository
 git clone -b gh-pages \
     https://github.com/mason-cds-intro-comput-sci/intro-cds.git \

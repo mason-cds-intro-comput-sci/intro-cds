@@ -166,7 +166,7 @@ nebraska_iowa %>%
 ```{r ia-ne-count-summary, echo = FALSE}
 nebraska_iowa %>%
   count(state) %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"), full_width = FALSE
   )
@@ -225,7 +225,7 @@ county_complete %>%
 county_complete %>%
   filter(state == "New Jersey" | state == "Virginia") %>%
   count(state) %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -380,7 +380,7 @@ percentile_rank_row_number <- ceiling(55 * number_of_tests / 100)
 test_scores %>%
   arrange(score) %>%
   slice(percentile_rank_row_number) %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -404,7 +404,7 @@ test_scores %>%
 test_scores %>%
   pull(score) %>%
   quantile(probs = combine(0.55)) %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -427,7 +427,7 @@ test_scores %>%
 test_scores %>%
   pull(score) %>%
   quantile(probs = combine(0.55), type = 1) %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE
@@ -456,7 +456,7 @@ test_scores_cdf <- test_scores %>%
 
 ```{r test-scores-cdf-table, echo = FALSE}
 test_scores_cdf %>%
-  knitr::kable(format = "html") %>%
+  knitr::kable() %>% #format = "html") %>%
   kableExtra::kable_styling(
     bootstrap_options = combine("striped", "responsive"),
     full_width = FALSE

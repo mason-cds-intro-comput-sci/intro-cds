@@ -254,6 +254,15 @@ Note that:
 
 * To paste copied text into the *Terminal* with a keyboard shortcut, use Ctrl+Shift+v on your keyboard instead of just Ctrl+v (and if you are using a Mac, use the Cmd key instead of Ctrl).
 
+Next we need to run two more lines in the *Terminal*:
+
+```bash
+git config --global user.name "FirstName LastName"
+git config --global user.email "netID@gmu.edu"
+```
+
+You should obviously replace the values inside the quotation marks with your name on the first line, and your GMU email address on the second line (which should match the email address you used to sign up for your GitHub account).
+
 Next, switch back to the *Console* tab of the bottom left pane (next to the *Terminal* tab).
 
 Copy-and-paste the following lines three lines of R code into the Console and hit `<Enter>`.
@@ -547,13 +556,17 @@ knitr::include_graphics("img/stage_step_7.png")
 
 ### Step - 5
 
-When you click the "Push" button, then RStudio Server will ask you for your GitHub username and password. Please give your details and then click on "Ok".
+If you have correctly set-up a GitHub PAT (instructions here), then the Push should run normally. 
 
-```{r stage_step_8}
-knitr::include_graphics("img/stage_step_8.png")
-```
+If there is a problem, one of these things may have happened:
 
-In the end, you will see a new window containing Git Push message. If everything is correct, then there will not be any errors, and your files have been successfully pushed in GitHub repository. 
+* If RStudio asks you for a GitHub username or password, or if you get an error about authentication (e.g. "Support for password authentication was removed...") then you have probably not followed all of those set-up steps correctly to create a Personal Access Token for GitHub and store it in RStudio: https://book.cds101.com/initial-set-up.html
+
+* If you get an error about "merge conflicts" then you have somehow ended up with conflicting versions of the file in RStudio and on GitHub (this can happen if you manually uploaded a file to GitHub, or if you opened the project in multiple sessions of RStudio simultaneously). If you are not sure how to fix these merge conflicts, then you should contact an instructor for help.
+
+* If you get an error about "unrelated histories", then you accidentally checked the "Ammend previous commit" box in Step 3 above. You will need to create a new version of the project in GitHub and 
+
+In the end, you will see a new window containing Git Push message. If everything is correct, then there will not be any errors, and your files have been successfully pushed in GitHub repository.
 
 ```{r stage_step_9}
 knitr::include_graphics("img/stage_step_9.png")

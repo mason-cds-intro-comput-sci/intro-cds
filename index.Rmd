@@ -7,7 +7,10 @@ author:
 date: "`r Sys.Date()`"
 description: Supplemental textbook for the CDS 101 course at George Mason University.
 documentclass: book
-output: bookdown::gitbook
+output: 
+  - bookdown::gitbook
+  - bookdown::pdf_book:
+      - always_allow_html: true
 site: bookdown::bookdown_site
 bibliography:
   - bib/references.bib
