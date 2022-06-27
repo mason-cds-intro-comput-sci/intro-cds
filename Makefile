@@ -10,7 +10,7 @@ ROPTS			=
 CNAME			=		book.cds101.com
 
 GITBOOK_INDEX	=		index.Rmd
-GITBOOK_OUTPUT	=		bookdown::pdf_book
+GITBOOK_OUTPUT	=		bookdown::gitbook
 
 ALL_FILES		=		gitbook
 
