@@ -180,21 +180,23 @@ To change the settings for RStudio Server, click Tools > Global Options… in th
 Click the **Apply** button on the lower-right of the pop-up window, followed by the **OK** button.
 
 
-### Create a Personal Access Token on GitHub
+### Connecting RStudio Cloud to Github
 
-A personal access token is essentially a temporary password that you can create to use with your GitHub account instead of your main account. It is much more secure than using your main GitHub password when working on GitHub projects.
+If you are using RStudio Cloud (the online version of RStudio at https://rstudio.cloud ) then you need to give RStudio permission to access and update your work.
 
-Login to your account at GitHub account and follow steps 1-9 [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) under the section *Creating a Token*.
+To do this, log in to your account at https://rstudio.cloud and click on your username in the top right. In the menu that appears, click on the *Authentication* section.
 
-A few notes:
+Here you should see a line called GitHub with two checkboxes. One of these will enable your account to use GitHub and the other will allow it access to your private repositories. *You need to check both of these tick boxes.* When you check them you may be redirected to a GitHub page where you will have to authorize this connection.
 
-* In step 7, give your token a long enough expiration so that it will last past the end of the semester.
-* In step 8, you only need to check the box that says **repo**.
-* In step 9, **make sure you store a copy of the token** that is generated for you (e.g. copy-and-paste it into a text file). You will never be able to view this token again on GitHub, so if you lose it, you will need to create a new token by repeating steps 1-9 all over again...
+Once you have done this, you should be ready to begin the first assignment or lab.
 
-Once you have created the token, return to RStudio, and move onto the next section:
+### Connecting RStudio Desktop to Github
 
-### Configure RStudio for use with Git
+If you have downloaded RStudio to your own computer then you will need to authorize GitHub in the following steps.
+
+*The following steps are only necessary for RStudio Desktop, not for RStudio Cloud.*
+
+#### Store your GitHub username in RStudio
 
 Take a look in the bottom-left pane of RStudio. You should see a tab called *Console* which is open by default, and another one called *Terminal*. Switch to the *Terminal* tab. (If you do not see a Terminal, create one from the top menu in RStudio by going to *Tools > Terminal > New Terminal*.)
 
@@ -221,22 +223,37 @@ git config --global user.email "netID@gmu.edu"
 
 You should obviously replace the values inside the quotation marks with your name on the first line, and your GMU email address on the second line (which should match the email address you used to sign up for your GitHub account).
 
-Next, switch back to the *Console* tab of the bottom left pane (next to the *Terminal* tab).
+#### Create a Personal Access Token on GitHub
 
-Copy-and-paste the following lines three lines of R code into the Console and hit `<Enter>`.
+A personal access token is essentially a temporary password that you can create to use with your GitHub account instead of your main account. It is much more secure than using your main GitHub password when working on GitHub projects.
+
+Log in to your account at GitHub account and follow steps 1-9 [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) under the section *Creating a Token*.
+
+A few notes:
+
+* In step 7, give your token a long enough expiration so that it will last past the end of the semester.
+* In step 8, you only need to check the box that says **repo**.
+* In step 9, **make sure you store a copy of the token** that is generated for you (e.g. copy-and-paste it into a text file). You will never be able to view this token again on GitHub, so if you lose it, you will need to create a new token by repeating steps 1-9 all over again...
+
+Once you have created the token, return to RStudio, and move onto the next section:
+
+#### Configure RStudio for use with Git
+
+Next, switch back to the *Console* tab of the bottom left pane of RStudio (next to the *Terminal* tab).
+
+Copy-and-paste the each of the following lines two lines of R code into the Console and hit `<Enter>` to run each line.
 
 ```
 install.packages("gitcreds")
-library(gitcreds)
-gitcreds_set()
+
+gitcreds::gitcreds_set()
 ```
 
 Note that in the *Console* you can use Ctrl+v to paste instead of Ctrl+Shift+v (or just Cmd+v on a Mac).
 
 You will be prompted to enter the token that you just created above on GitHub.com. You should copy-and-paste the token from where you saved it to prevent any spelling errors, and then press `<Enter>` again.
 
-Now you should be all set up!
-
+Now you should be ready to begin the first assignment or lab.
 
 
 ## Installing and updating R packages on RStudio Server
@@ -464,7 +481,7 @@ After committing the files on GitHub, you will find the upper right window empty
 
 If you have correctly set-up a GitHub PAT (instructions here), then the Push should run normally. 
 
-If there is a problem, one of these things may happen:
+If there is a problem, one of these things may have happened:
 
 * If RStudio asks you for a GitHub username or password, or if you get an error about authentication (e.g. "Support for password authentication was removed...") then you have probably not followed all of those set-up steps correctly to create a Personal Access Token for GitHub and store it in RStudio: https://book.cds101.com/initial-set-up.html
 

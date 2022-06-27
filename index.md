@@ -4,10 +4,13 @@ author:
   - James K. Glasbrenner
   - Ajay Kulkarni
   - Dominic White
-date: "2021-08-24"
+date: "2022-06-27"
 description: Supplemental textbook for the CDS 101 course at George Mason University.
 documentclass: book
-output: bookdown::gitbook
+output: 
+  - bookdown::gitbook
+  - bookdown::pdf_book:
+      - always_allow_html: true
 site: bookdown::bookdown_site
 bibliography:
   - bib/references.bib
@@ -33,9 +36,9 @@ The R session information when compiling this book is shown below:
 
 
 ```
-## R version 3.5.2 (2018-12-20)
+## R version 4.1.2 (2021-11-01)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 19.04
+## Running under: Pop!_OS 22.04 LTS
 ## 
 ## Locale:
 ##   LC_CTYPE=en_US.UTF-8      
@@ -52,9 +55,12 @@ The R session information when compiling this book is shown below:
 ##   LC_IDENTIFICATION=C       
 ## 
 ## Package version:
-##   bookdown_0.21    dplyr_1.0.2      ggplot2_3.3.2   
-##   infer_0.5.3      kableExtra_1.2.1 knitr_1.30      
-##   readr_1.3.1      rmarkdown_2.5    tinytex_0.26    
+##   bookdown_0.26    dplyr_1.0.9      ggplot2_3.3.6   
+##   infer_1.0.2      kableExtra_1.3.4 knitr_1.39      
+##   readr_2.1.2      rmarkdown_2.14.1 tinytex_0.39    
 ## 
-## Pandoc version: 2.3.1
+## Pandoc version: 2.17.1.1
+## 
+## LaTeX version used: 
+##   TeX Live 2022 (TinyTeX) with tlmgr 2022-04-18
 ```

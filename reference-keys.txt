@@ -41,6 +41,9 @@ references
 help-and-documentation-for-r-and-rstudio-server
 initial-set-up
 change-global-options
+connecting-rstudio-cloud-to-github
+connecting-rstudio-desktop-to-github
+store-your-github-username-in-rstudio
 create-a-personal-access-token-on-github
 configure-rstudio-for-use-with-git
 installing-and-updating-r-packages-on-rstudio-server
