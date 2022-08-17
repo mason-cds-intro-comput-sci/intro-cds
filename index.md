@@ -4,7 +4,7 @@ author:
   - James K. Glasbrenner
   - Ajay Kulkarni
   - Dominic White
-date: "2022-06-27"
+date: "2022-08-17"
 description: Supplemental textbook for the CDS 101 course at George Mason University.
 documentclass: book
 output: 
@@ -59,7 +59,7 @@ The R session information when compiling this book is shown below:
 ##   infer_1.0.2      kableExtra_1.3.4 knitr_1.39      
 ##   readr_2.1.2      rmarkdown_2.14.1 tinytex_0.39    
 ## 
-## Pandoc version: 2.17.1.1
+## Pandoc version: 2.18
 ## 
 ## LaTeX version used: 
 ##   TeX Live 2022 (TinyTeX) with tlmgr 2022-04-18

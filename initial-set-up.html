@@ -25,7 +25,7 @@
 <meta name="author" content="Dominic White" />
 
 
-<meta name="date" content="2022-06-27" />
+<meta name="date" content="2022-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,8 +231,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.4" data-path="initial-set-up.html"><a href="initial-set-up.html"><i class="fa fa-check"></i><b>4.4</b> Initial Set-up</a>
 <ul>
 <li class="chapter" data-level="4.4.1" data-path="initial-set-up.html"><a href="initial-set-up.html#change-global-options"><i class="fa fa-check"></i><b>4.4.1</b> Change Global Options</a></li>
-<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#connecting-rstudio-cloud-to-github"><i class="fa fa-check"></i><b>4.4.2</b> Connecting RStudio Cloud to Github</a></li>
-<li class="chapter" data-level="4.4.3" data-path="initial-set-up.html"><a href="initial-set-up.html#connecting-rstudio-desktop-to-github"><i class="fa fa-check"></i><b>4.4.3</b> Connecting RStudio Desktop to Github</a></li>
+<li class="chapter" data-level="4.4.2" data-path="initial-set-up.html"><a href="initial-set-up.html#connecting-rstudio-to-github"><i class="fa fa-check"></i><b>4.4.2</b> Connecting RStudio to Github</a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="installing-and-updating-r-packages-on-rstudio-server.html"><a href="installing-and-updating-r-packages-on-rstudio-server.html"><i class="fa fa-check"></i><b>4.5</b> Installing and updating R packages on RStudio Server</a>
 <ul>
@@ -357,20 +356,19 @@ div.csl-indent {
 <li><p>Click the drop-down menu next to <strong>Save workspace to .RData on exit</strong> and change the setting to <em>Never</em></p></li>
 </ul>
 <p>Click the <strong>Apply</strong> button on the lower-right of the pop-up window, followed by the <strong>OK</strong> button.</p>
+<!-- ### Connecting RStudio Cloud to Github -->
+<!-- If you are using RStudio Cloud (the online version of RStudio at https://rstudio.cloud ) then you need to give RStudio permission to access and update your work. -->
+<!-- To do this, log in to your account at https://rstudio.cloud and click on your username in the top right. In the menu that appears, click on the *Authentication* section. -->
+<!-- Here you should see a line called GitHub with two checkboxes. One of these will enable your account to use GitHub and the other will allow it access to your private repositories. *You need to check both of these tick boxes.* When you check them you may be redirected to a GitHub page where you will have to authorize this connection. -->
+<!-- Once you have done this, you should be ready to begin the first assignment or lab. -->
 </div>
-<div id="connecting-rstudio-cloud-to-github" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> Connecting RStudio Cloud to Github<a href="initial-set-up.html#connecting-rstudio-cloud-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are using RStudio Cloud (the online version of RStudio at <a href="https://rstudio.cloud" class="uri">https://rstudio.cloud</a> ) then you need to give RStudio permission to access and update your work.</p>
-<p>To do this, log in to your account at <a href="https://rstudio.cloud" class="uri">https://rstudio.cloud</a> and click on your username in the top right. In the menu that appears, click on the <em>Authentication</em> section.</p>
-<p>Here you should see a line called GitHub with two checkboxes. One of these will enable your account to use GitHub and the other will allow it access to your private repositories. <em>You need to check both of these tick boxes.</em> When you check them you may be redirected to a GitHub page where you will have to authorize this connection.</p>
-<p>Once you have done this, you should be ready to begin the first assignment or lab.</p>
-</div>
-<div id="connecting-rstudio-desktop-to-github" class="section level3 hasAnchor" number="4.4.3">
-<h3><span class="header-section-number">4.4.3</span> Connecting RStudio Desktop to Github<a href="initial-set-up.html#connecting-rstudio-desktop-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you have downloaded RStudio to your own computer then you will need to authorize GitHub in the following steps.</p>
-<p><em>The following steps are only necessary for RStudio Desktop, not for RStudio Cloud.</em></p>
-<div id="store-your-github-username-in-rstudio" class="section level4 hasAnchor" number="4.4.3.1">
-<h4><span class="header-section-number">4.4.3.1</span> Store your GitHub username in RStudio<a href="initial-set-up.html#store-your-github-username-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="connecting-rstudio-to-github" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Connecting RStudio to Github<a href="initial-set-up.html#connecting-rstudio-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!-- ### Connecting RStudio Desktop to Github -->
+<!-- If you have downloaded RStudio to your own computer then you will need to authorize GitHub in the following steps. -->
+<!-- *The following steps are only necessary for RStudio Desktop, not for RStudio Cloud.* -->
+<div id="store-your-github-username-in-rstudio" class="section level4 hasAnchor" number="4.4.2.1">
+<h4><span class="header-section-number">4.4.2.1</span> Store your GitHub username in RStudio<a href="initial-set-up.html#store-your-github-username-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Take a look in the bottom-left pane of RStudio. You should see a tab called <em>Console</em> which is open by default, and another one called <em>Terminal</em>. Switch to the <em>Terminal</em> tab. (If you do not see a Terminal, create one from the top menu in RStudio by going to <em>Tools &gt; Terminal &gt; New Terminal</em>.)</p>
 <p>It may take a few seconds for the <em>Terminal</em> to load, but once it has done so you will see a line that ends with a dollar symbol <code>$</code> and a flashing black cursor.</p>
 <p>Copy-and-paste the following command into the <em>Terminal</em> and then press <code>Enter</code> to run it:</p>
@@ -385,8 +383,8 @@ div.csl-indent {
 <span id="cb4-2"><a href="initial-set-up.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;netID@gmu.edu&quot;</span></span></code></pre></div>
 <p>You should obviously replace the values inside the quotation marks with your name on the first line, and your GMU email address on the second line (which should match the email address you used to sign up for your GitHub account).</p>
 </div>
-<div id="create-a-personal-access-token-on-github" class="section level4 hasAnchor" number="4.4.3.2">
-<h4><span class="header-section-number">4.4.3.2</span> Create a Personal Access Token on GitHub<a href="initial-set-up.html#create-a-personal-access-token-on-github" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="create-a-personal-access-token-on-github" class="section level4 hasAnchor" number="4.4.2.2">
+<h4><span class="header-section-number">4.4.2.2</span> Create a Personal Access Token on GitHub<a href="initial-set-up.html#create-a-personal-access-token-on-github" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A personal access token is essentially a temporary password that you can create to use with your GitHub account instead of your main account. It is much more secure than using your main GitHub password when working on GitHub projects.</p>
 <p>Log in to your account at GitHub account and follow steps 1-9 <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">here</a> under the section <em>Creating a Token</em>.</p>
 <p>A few notes:</p>
@@ -397,8 +395,8 @@ div.csl-indent {
 </ul>
 <p>Once you have created the token, return to RStudio, and move onto the next section:</p>
 </div>
-<div id="configure-rstudio-for-use-with-git" class="section level4 hasAnchor" number="4.4.3.3">
-<h4><span class="header-section-number">4.4.3.3</span> Configure RStudio for use with Git<a href="initial-set-up.html#configure-rstudio-for-use-with-git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="configure-rstudio-for-use-with-git" class="section level4 hasAnchor" number="4.4.2.3">
+<h4><span class="header-section-number">4.4.2.3</span> Configure RStudio for use with Git<a href="initial-set-up.html#configure-rstudio-for-use-with-git" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Next, switch back to the <em>Console</em> tab of the bottom left pane of RStudio (next to the <em>Terminal</em> tab).</p>
 <p>Copy-and-paste the each of the following lines two lines of R code into the Console and hit <code>&lt;Enter&gt;</code> to run each line.</p>
 <pre><code>install.packages(&quot;gitcreds&quot;)

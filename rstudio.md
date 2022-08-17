@@ -180,21 +180,22 @@ To change the settings for RStudio Server, click Tools > Global Options… in th
 Click the **Apply** button on the lower-right of the pop-up window, followed by the **OK** button.
 
 
-### Connecting RStudio Cloud to Github
+<!-- ### Connecting RStudio Cloud to Github -->
 
-If you are using RStudio Cloud (the online version of RStudio at https://rstudio.cloud ) then you need to give RStudio permission to access and update your work.
+<!-- If you are using RStudio Cloud (the online version of RStudio at https://rstudio.cloud ) then you need to give RStudio permission to access and update your work. -->
 
-To do this, log in to your account at https://rstudio.cloud and click on your username in the top right. In the menu that appears, click on the *Authentication* section.
+<!-- To do this, log in to your account at https://rstudio.cloud and click on your username in the top right. In the menu that appears, click on the *Authentication* section. -->
 
-Here you should see a line called GitHub with two checkboxes. One of these will enable your account to use GitHub and the other will allow it access to your private repositories. *You need to check both of these tick boxes.* When you check them you may be redirected to a GitHub page where you will have to authorize this connection.
+<!-- Here you should see a line called GitHub with two checkboxes. One of these will enable your account to use GitHub and the other will allow it access to your private repositories. *You need to check both of these tick boxes.* When you check them you may be redirected to a GitHub page where you will have to authorize this connection. -->
 
-Once you have done this, you should be ready to begin the first assignment or lab.
+<!-- Once you have done this, you should be ready to begin the first assignment or lab. -->
 
-### Connecting RStudio Desktop to Github
+### Connecting RStudio to Github
+<!-- ### Connecting RStudio Desktop to Github -->
 
-If you have downloaded RStudio to your own computer then you will need to authorize GitHub in the following steps.
+<!-- If you have downloaded RStudio to your own computer then you will need to authorize GitHub in the following steps. -->
 
-*The following steps are only necessary for RStudio Desktop, not for RStudio Cloud.*
+<!-- *The following steps are only necessary for RStudio Desktop, not for RStudio Cloud.* -->
 
 #### Store your GitHub username in RStudio
 
